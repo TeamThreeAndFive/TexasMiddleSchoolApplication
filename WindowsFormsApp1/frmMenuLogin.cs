@@ -22,5 +22,10 @@ namespace WindowsFormsApp1
             frmMenuTeacher fm = new frmMenuTeacher();
             fm.Show();
         }
+
+        private void frmMenuLogin_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Test");
+        }
     }
 }
