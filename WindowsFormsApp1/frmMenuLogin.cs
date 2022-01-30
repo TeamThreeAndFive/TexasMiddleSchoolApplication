@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
         private void frmMenuLogin_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Test");
+            MessageBox.Show("Test");
         }
     }
 }
