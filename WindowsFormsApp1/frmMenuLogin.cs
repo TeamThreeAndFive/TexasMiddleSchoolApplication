@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
                 tbxUserName.Text = Properties.Settings.Default.UserName;
                 tbxPassword.Text = Properties.Settings.Default.Password;
             }
-
+            
         }
     }
 }
