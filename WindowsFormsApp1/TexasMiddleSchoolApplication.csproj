@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEditAcademicOfficers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAcademicOfficers.Designer.cs">
+      <DependentUpon>frmEditAcademicOfficers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditCourses.Designer.cs">
+      <DependentUpon>frmEditCourses.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditStudents.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditStudents.Designer.cs">
       <DependentUpon>frmEditStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditTeachers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditTeachers.Designer.cs">
+      <DependentUpon>frmEditTeachers.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuAcademicOfficer.cs">
       <SubType>Form</SubType>
@@ -120,6 +138,18 @@
     <Compile Include="frmTeacherSeatingChart.Designer.cs">
       <DependentUpon>frmTeacherSeatingChart.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmEditAcademicOfficers.resx">
+      <DependentUpon>frmEditAcademicOfficers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditCourses.resx">
+      <DependentUpon>frmEditCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditStudents.resx">
+      <DependentUpon>frmEditStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditTeachers.resx">
+      <DependentUpon>frmEditTeachers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAcademicOfficer.resx">
       <DependentUpon>frmMenuAcademicOfficer.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,6 +191,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Recources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wp3340065.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class frmEditStudents : Form
+    public partial class frmEditAcademicOfficers : Form
     {
-        public frmEditStudents()
+        public frmEditAcademicOfficers()
         {
             InitializeComponent();
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
