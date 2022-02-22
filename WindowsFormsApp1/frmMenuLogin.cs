@@ -53,6 +53,9 @@ namespace WindowsFormsApp1
 
         private void frmMenuLogin_Load(object sender, EventArgs e)
         {
+            // open Database connections.
+            ProgOps.openDatabseConnection();
+
             ///
             /// First check if user already have checked keep logged in
             /// 
@@ -67,6 +70,18 @@ namespace WindowsFormsApp1
                 tbxPassword.Text = Properties.Settings.Default.Password;
             }
             
+        }
+
+        private void frmMenuLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // when form closes we close database and dispose data.
+            ProgOps.closeDatabaseConnection();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            // Close Application
+            Application.Exit();
         }
     }
 }
