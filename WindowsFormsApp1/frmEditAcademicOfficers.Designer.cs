@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.btnBack = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblAcademicOfficerInfo = new System.Windows.Forms.Label();
             this.gbxAcademicOfficerInformation = new System.Windows.Forms.GroupBox();
             this.tbxEmail = new System.Windows.Forms.TextBox();
             this.tbxPhone = new System.Windows.Forms.TextBox();
@@ -59,29 +59,29 @@ namespace WindowsFormsApp1
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1363, 83);
-            this.label1.TabIndex = 52;
-            this.label1.Text = "Texas Middle School";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(40, 33);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1363, 83);
+            this.lblTitle.TabIndex = 52;
+            this.lblTitle.Text = "Texas Middle School";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
+            // lblAcademicOfficerInfo
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 134);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1363, 83);
-            this.label2.TabIndex = 53;
-            this.label2.Text = "Edit Academic Officer Information";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAcademicOfficerInfo.BackColor = System.Drawing.Color.Transparent;
+            this.lblAcademicOfficerInfo.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAcademicOfficerInfo.Location = new System.Drawing.Point(40, 134);
+            this.lblAcademicOfficerInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAcademicOfficerInfo.Name = "lblAcademicOfficerInfo";
+            this.lblAcademicOfficerInfo.Size = new System.Drawing.Size(1363, 83);
+            this.lblAcademicOfficerInfo.TabIndex = 53;
+            this.lblAcademicOfficerInfo.Text = "Edit Academic Officer Information";
+            this.lblAcademicOfficerInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gbxAcademicOfficerInformation
             // 
@@ -225,8 +225,8 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxAcademicOfficerInformation);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.lblAcademicOfficerInfo);
             this.Name = "frmEditAcademicOfficers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditAcademicOfficers";
@@ -239,8 +239,8 @@ namespace WindowsFormsApp1
         #endregion
 
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblAcademicOfficerInfo;
         private System.Windows.Forms.GroupBox gbxAcademicOfficerInformation;
         private System.Windows.Forms.TextBox tbxEmail;
         private System.Windows.Forms.TextBox tbxPhone;

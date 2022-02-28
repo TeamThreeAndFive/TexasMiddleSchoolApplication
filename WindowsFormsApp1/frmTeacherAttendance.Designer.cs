@@ -30,17 +30,17 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTeacherAttendance));
-            this.label3 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.lblCourse = new System.Windows.Forms.Label();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.gbxTakeRoll = new System.Windows.Forms.GroupBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.rbPresent = new System.Windows.Forms.RadioButton();
+            this.rbLate = new System.Windows.Forms.RadioButton();
+            this.rbAbsent = new System.Windows.Forms.RadioButton();
+            this.cbxCourse = new System.Windows.Forms.ComboBox();
+            this.lbxStudents = new System.Windows.Forms.ListBox();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,164 +49,164 @@ namespace WindowsFormsApp1
             this.seatingChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblAttendance = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.gbxTakeRoll.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // lblCourse
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(676, 286);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 59);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Course:";
+            this.lblCourse.AutoSize = true;
+            this.lblCourse.BackColor = System.Drawing.Color.Transparent;
+            this.lblCourse.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCourse.Location = new System.Drawing.Point(676, 286);
+            this.lblCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCourse.Name = "lblCourse";
+            this.lblCourse.Size = new System.Drawing.Size(202, 59);
+            this.lblCourse.TabIndex = 26;
+            this.lblCourse.Text = "Course:";
             // 
-            // button4
+            // btnPrevious
             // 
-            this.button4.BackColor = System.Drawing.Color.Gainsboro;
-            this.button4.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(7, 138);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(245, 89);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Previous";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnPrevious.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnPrevious.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrevious.Location = new System.Drawing.Point(7, 138);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(245, 89);
+            this.btnPrevious.TabIndex = 17;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnNext
             // 
-            this.button3.BackColor = System.Drawing.Color.Gainsboro;
-            this.button3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(257, 138);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 89);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Next";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnNext.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnNext.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Location = new System.Drawing.Point(257, 138);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(219, 89);
+            this.btnNext.TabIndex = 16;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
             // 
-            // groupBox1
+            // gbxTakeRoll
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(679, 386);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(707, 257);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Take Roll";
+            this.gbxTakeRoll.BackColor = System.Drawing.Color.White;
+            this.gbxTakeRoll.Controls.Add(this.btnPrevious);
+            this.gbxTakeRoll.Controls.Add(this.btnSave);
+            this.gbxTakeRoll.Controls.Add(this.btnNext);
+            this.gbxTakeRoll.Controls.Add(this.rbPresent);
+            this.gbxTakeRoll.Controls.Add(this.rbLate);
+            this.gbxTakeRoll.Controls.Add(this.rbAbsent);
+            this.gbxTakeRoll.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxTakeRoll.Location = new System.Drawing.Point(679, 386);
+            this.gbxTakeRoll.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxTakeRoll.Name = "gbxTakeRoll";
+            this.gbxTakeRoll.Padding = new System.Windows.Forms.Padding(2);
+            this.gbxTakeRoll.Size = new System.Drawing.Size(707, 257);
+            this.gbxTakeRoll.TabIndex = 24;
+            this.gbxTakeRoll.TabStop = false;
+            this.gbxTakeRoll.Text = "Take Roll";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.BackColor = System.Drawing.Color.Gainsboro;
-            this.button2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(481, 138);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(219, 89);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(481, 138);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(219, 89);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // rbPresent
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(51, 58);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(206, 53);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Present";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbPresent.AutoSize = true;
+            this.rbPresent.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbPresent.Location = new System.Drawing.Point(51, 58);
+            this.rbPresent.Margin = new System.Windows.Forms.Padding(2);
+            this.rbPresent.Name = "rbPresent";
+            this.rbPresent.Size = new System.Drawing.Size(206, 53);
+            this.rbPresent.TabIndex = 13;
+            this.rbPresent.TabStop = true;
+            this.rbPresent.Text = "Present";
+            this.rbPresent.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbLate
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(294, 58);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(139, 53);
-            this.radioButton1.TabIndex = 12;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Late";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbLate.AutoSize = true;
+            this.rbLate.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbLate.Location = new System.Drawing.Point(294, 58);
+            this.rbLate.Margin = new System.Windows.Forms.Padding(2);
+            this.rbLate.Name = "rbLate";
+            this.rbLate.Size = new System.Drawing.Size(139, 53);
+            this.rbLate.TabIndex = 12;
+            this.rbLate.TabStop = true;
+            this.rbLate.Text = "Late";
+            this.rbLate.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rbAbsent
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(488, 58);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(194, 53);
-            this.radioButton3.TabIndex = 14;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Absent";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbAbsent.AutoSize = true;
+            this.rbAbsent.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbAbsent.Location = new System.Drawing.Point(488, 58);
+            this.rbAbsent.Margin = new System.Windows.Forms.Padding(2);
+            this.rbAbsent.Name = "rbAbsent";
+            this.rbAbsent.Size = new System.Drawing.Size(194, 53);
+            this.rbAbsent.TabIndex = 14;
+            this.rbAbsent.TabStop = true;
+            this.rbAbsent.Text = "Absent";
+            this.rbAbsent.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbxCourse
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxCourse.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxCourse.FormattingEnabled = true;
+            this.cbxCourse.Items.AddRange(new object[] {
             "Math",
             "Science",
             "English",
             "Spanish",
             "Physical Education"});
-            this.comboBox1.Location = new System.Drawing.Point(962, 290);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(7);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(424, 57);
-            this.comboBox1.TabIndex = 25;
+            this.cbxCourse.Location = new System.Drawing.Point(962, 290);
+            this.cbxCourse.Margin = new System.Windows.Forms.Padding(7);
+            this.cbxCourse.Name = "cbxCourse";
+            this.cbxCourse.Size = new System.Drawing.Size(424, 57);
+            this.cbxCourse.TabIndex = 25;
             // 
-            // listBox1
+            // lbxStudents
             // 
-            this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 41;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lbxStudents.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbxStudents.FormattingEnabled = true;
+            this.lbxStudents.ItemHeight = 41;
+            this.lbxStudents.Items.AddRange(new object[] {
             "List of Students",
             "Will Appear Here "});
-            this.listBox1.Location = new System.Drawing.Point(37, 288);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(622, 578);
-            this.listBox1.TabIndex = 23;
+            this.lbxStudents.Location = new System.Drawing.Point(37, 288);
+            this.lbxStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.lbxStudents.Name = "lbxStudents";
+            this.lbxStudents.Size = new System.Drawing.Size(622, 578);
+            this.lbxStudents.TabIndex = 23;
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip.ImageScalingSize = new System.Drawing.Size(36, 36);
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.menuToolStripMenuItem,
             this.helpToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1472, 57);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1472, 57);
+            this.menuStrip.TabIndex = 19;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
@@ -263,63 +263,63 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 921);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 89);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(11, 921);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.TabIndex = 20;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // lblAttendance
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 179);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1363, 83);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Attendance";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblAttendance.BackColor = System.Drawing.Color.Transparent;
+            this.lblAttendance.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttendance.Location = new System.Drawing.Point(37, 179);
+            this.lblAttendance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAttendance.Name = "lblAttendance";
+            this.lblAttendance.Size = new System.Drawing.Size(1363, 83);
+            this.lblAttendance.TabIndex = 22;
+            this.lblAttendance.Text = "Attendance";
+            this.lblAttendance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 78);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1363, 83);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Texas Middle School";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(37, 78);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1363, 83);
+            this.lblTitle.TabIndex = 21;
+            this.lblTitle.Text = "Texas Middle School";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // frmAttendance
+            // frmTeacherAttendance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1472, 1021);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "frmAttendance";
+            this.Controls.Add(this.lblCourse);
+            this.Controls.Add(this.gbxTakeRoll);
+            this.Controls.Add(this.cbxCourse);
+            this.Controls.Add(this.lbxStudents);
+            this.Controls.Add(this.menuStrip);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblAttendance);
+            this.Controls.Add(this.lblTitle);
+            this.Name = "frmTeacherAttendance";
             this.Text = "Texas Middle School - Attendance ";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.gbxTakeRoll.ResumeLayout(false);
+            this.gbxTakeRoll.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,17 +327,17 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label lblCourse;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.GroupBox gbxTakeRoll;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.RadioButton rbPresent;
+        private System.Windows.Forms.RadioButton rbLate;
+        private System.Windows.Forms.RadioButton rbAbsent;
+        private System.Windows.Forms.ComboBox cbxCourse;
+        private System.Windows.Forms.ListBox lbxStudents;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -346,8 +346,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem seatingChartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradebookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblAttendance;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
