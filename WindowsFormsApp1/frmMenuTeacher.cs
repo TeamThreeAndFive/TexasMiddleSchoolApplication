@@ -19,23 +19,27 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Back Button
             this.Hide();
         }
 
         private void btnGradebook_Click(object sender, EventArgs e)
         {
+            // Opens Gradebook Form
             frmTeacherGradebook fg = new frmTeacherGradebook();
             fg.Show();
         }
 
         private void btnSeating_Click(object sender, EventArgs e)
         {
+            // Opens Seating Arrangement Form
             frmTeacherSeatingChart fs = new frmTeacherSeatingChart();
             fs.Show();
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)
         {
+            // Opens Attendance Form
             frmTeacherAttendance fa = new frmTeacherAttendance();
             fa.Show();
         }

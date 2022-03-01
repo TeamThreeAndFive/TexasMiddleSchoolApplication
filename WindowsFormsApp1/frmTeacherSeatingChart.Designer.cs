@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblSeating = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.gbxSeating = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
@@ -87,6 +87,7 @@ namespace WindowsFormsApp1
             this.btnShuffle.TabIndex = 15;
             this.btnShuffle.Text = "Shuffle Seating Arrangement";
             this.btnShuffle.UseVisualStyleBackColor = false;
+            this.btnShuffle.Click += new System.EventHandler(this.btnShuffle_Click);
             // 
             // seatingChartToolStripMenuItem
             // 
@@ -113,7 +114,7 @@ namespace WindowsFormsApp1
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // cbxCourse
@@ -150,7 +151,7 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // menuStrip
@@ -190,17 +191,18 @@ namespace WindowsFormsApp1
             this.lblSeating.Text = "Seating Chart";
             this.lblSeating.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 926);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 89);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(11, 926);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.TabIndex = 28;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblTitle
             // 
@@ -242,6 +244,7 @@ namespace WindowsFormsApp1
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmTeacherSeatingChart
             // 
@@ -254,7 +257,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lbxStudents);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lblSeating);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Name = "frmTeacherSeatingChart";
             this.Text = "Texas Middle School - Seating Chart";
@@ -283,7 +286,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.Label lblSeating;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.GroupBox gbxSeating;
         private System.Windows.Forms.Button btnSave;

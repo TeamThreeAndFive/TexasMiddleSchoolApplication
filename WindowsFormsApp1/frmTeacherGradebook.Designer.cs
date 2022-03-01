@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
             this.btnSubmit.TabIndex = 24;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblChangeGrade
             // 
@@ -138,6 +139,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 19;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // helpToolStripMenuItem
             // 
