@@ -130,6 +130,7 @@
     <Compile Include="frmInfoTeachers.Designer.cs">
       <DependentUpon>frmInfoTeachers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProgOps.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmTeacherSeatingChart.cs">
