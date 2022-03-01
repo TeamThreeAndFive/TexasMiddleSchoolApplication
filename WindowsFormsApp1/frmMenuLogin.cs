@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
                 /// If user want to keep logged in then
                 
                 // Set UserName and Password in properties setting
-                Properties.Settings.Default.UserName = tbxUserName.Text;
+                Properties.Settings.Default.UserName = tbxUsername.Text;
                 Properties.Settings.Default.Password = tbxPassword.Text;
                 Properties.Settings.Default.Save();
                 
@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
                 // for userName and password
 
                 // Show userName and password
-                tbxUserName.Text = Properties.Settings.Default.UserName;
+                tbxUsername.Text = Properties.Settings.Default.UserName;
                 tbxPassword.Text = Properties.Settings.Default.Password;
             }
             

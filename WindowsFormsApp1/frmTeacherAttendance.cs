@@ -16,5 +16,25 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            //Previous Button
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            //Next Button
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //Save Button
+        }
     }
 }

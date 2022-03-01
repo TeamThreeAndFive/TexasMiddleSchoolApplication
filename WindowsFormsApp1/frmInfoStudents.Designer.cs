@@ -30,7 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfoStudents));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblStudentInfo = new System.Windows.Forms.Label();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,17 +56,18 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 929);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 89);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(11, 929);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.TabIndex = 54;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblStudentInfo
             // 
@@ -184,6 +185,7 @@ namespace WindowsFormsApp1
             this.btnEdit.TabIndex = 41;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -196,6 +198,7 @@ namespace WindowsFormsApp1
             this.btnSave.TabIndex = 45;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -208,6 +211,7 @@ namespace WindowsFormsApp1
             this.btnDelete.TabIndex = 42;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUndo
             // 
@@ -220,6 +224,7 @@ namespace WindowsFormsApp1
             this.btnUndo.TabIndex = 44;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = false;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnAdd
             // 
@@ -232,6 +237,7 @@ namespace WindowsFormsApp1
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gbxMakeChanges
             // 
@@ -262,6 +268,7 @@ namespace WindowsFormsApp1
             this.btnClear.TabIndex = 49;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblAddInfo
             // 
@@ -294,7 +301,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1472, 1021);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblStudentInfo);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lbxStudents);
@@ -313,7 +320,7 @@ namespace WindowsFormsApp1
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblStudentInfo;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;

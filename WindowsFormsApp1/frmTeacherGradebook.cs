@@ -16,5 +16,15 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            //Submit Grade Changes Button
+        }
     }
 }

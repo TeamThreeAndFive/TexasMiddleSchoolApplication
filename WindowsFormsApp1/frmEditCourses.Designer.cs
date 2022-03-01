@@ -180,6 +180,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 81;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblTitle
             // 
@@ -216,6 +217,7 @@ namespace WindowsFormsApp1
             this.btnSaveChanges.TabIndex = 84;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
+            this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
             // frmEditCourses
             // 

@@ -79,6 +79,7 @@ namespace WindowsFormsApp1
             this.btnPrevious.TabIndex = 17;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnNext
             // 
@@ -91,6 +92,7 @@ namespace WindowsFormsApp1
             this.btnNext.TabIndex = 16;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // gbxTakeRoll
             // 
@@ -122,6 +124,7 @@ namespace WindowsFormsApp1
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // rbPresent
             // 
@@ -274,6 +277,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 20;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblAttendance
             // 

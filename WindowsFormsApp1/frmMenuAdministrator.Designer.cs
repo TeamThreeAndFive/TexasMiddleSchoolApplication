@@ -71,6 +71,7 @@ namespace WindowsFormsApp1
             this.btnAcademicOfficers.TabIndex = 55;
             this.btnAcademicOfficers.Text = "Academic Officers";
             this.btnAcademicOfficers.UseVisualStyleBackColor = false;
+            this.btnAcademicOfficers.Click += new System.EventHandler(this.btnAcademicOfficers_Click);
             // 
             // lblTitle
             // 
@@ -130,6 +131,7 @@ namespace WindowsFormsApp1
             this.btnTeachers.TabIndex = 48;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.UseVisualStyleBackColor = false;
+            this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
             // 
             // btnCourses
             // 
@@ -143,6 +145,7 @@ namespace WindowsFormsApp1
             this.btnCourses.TabIndex = 46;
             this.btnCourses.Text = "Courses";
             this.btnCourses.UseVisualStyleBackColor = false;
+            this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
             // 
             // lblAdminMenu
             // 
@@ -165,6 +168,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 52;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnStudents
             // 
@@ -177,6 +181,7 @@ namespace WindowsFormsApp1
             this.btnStudents.TabIndex = 47;
             this.btnStudents.Text = "Students";
             this.btnStudents.UseVisualStyleBackColor = false;
+            this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
             // frmMenuAdministrator
             // 

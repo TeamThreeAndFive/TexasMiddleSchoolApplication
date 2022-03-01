@@ -139,6 +139,7 @@ namespace WindowsFormsApp1
             this.btnBack.TabIndex = 41;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnStudents
             // 

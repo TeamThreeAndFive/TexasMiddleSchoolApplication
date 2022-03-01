@@ -40,5 +40,10 @@ namespace WindowsFormsApp1
             frmInfoAcademicOfficers fo = new frmInfoAcademicOfficers();
             fo.Show();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

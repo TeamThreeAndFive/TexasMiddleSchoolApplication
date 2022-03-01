@@ -21,5 +21,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            // Back Button
+        }
+
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+            // Save Changes Button
+        }
     }
 }

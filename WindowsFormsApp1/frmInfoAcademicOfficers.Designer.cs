@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblAcademicOfficerInfo = new System.Windows.Forms.Label();
             this.gbxMakeChanges.SuspendLayout();
@@ -67,6 +67,7 @@ namespace WindowsFormsApp1
             this.btnClear.TabIndex = 49;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblAddInfo
             // 
@@ -117,6 +118,7 @@ namespace WindowsFormsApp1
             this.btnEdit.TabIndex = 41;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSave
             // 
@@ -129,6 +131,7 @@ namespace WindowsFormsApp1
             this.btnSave.TabIndex = 45;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
@@ -141,6 +144,7 @@ namespace WindowsFormsApp1
             this.btnDelete.TabIndex = 42;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUndo
             // 
@@ -153,6 +157,7 @@ namespace WindowsFormsApp1
             this.btnUndo.TabIndex = 44;
             this.btnUndo.Text = "Undo";
             this.btnUndo.UseVisualStyleBackColor = false;
+            this.btnUndo.Click += new System.EventHandler(this.btnUndo_Click);
             // 
             // btnAdd
             // 
@@ -165,6 +170,7 @@ namespace WindowsFormsApp1
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lbxAcademicOfficers
             // 
@@ -251,17 +257,18 @@ namespace WindowsFormsApp1
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // button1
+            // btnBack
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 916);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 89);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(13, 916);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.TabIndex = 48;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblTitle
             // 
@@ -297,7 +304,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.gbxMakeChanges);
             this.Controls.Add(this.lbxAcademicOfficers);
             this.Controls.Add(this.menuStrip);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblAcademicOfficerInfo);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -333,7 +340,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAcademicOfficerInfo;
     }

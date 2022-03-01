@@ -16,5 +16,20 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnShuffle_Click(object sender, EventArgs e)
+        {
+            //Shuffle Seating Arrangement 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            //Save Seating Arrangement
+        }
     }
 }
