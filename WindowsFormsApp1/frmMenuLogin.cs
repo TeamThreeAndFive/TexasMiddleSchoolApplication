@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
                 Properties.Settings.Default.UserName = tbxUserName.Text;
                 Properties.Settings.Default.Password = tbxPassword.Text;
                 Properties.Settings.Default.Save();
-
                 
             }
             
@@ -53,6 +52,7 @@ namespace WindowsFormsApp1
 
         private void frmMenuLogin_Load(object sender, EventArgs e)
         {
+
             // open Database connections.
             ProgOps.openDatabseConnection();
 

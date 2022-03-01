@@ -30,30 +30,30 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuTeacher));
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTeacherMenu = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.pbxAttendance = new System.Windows.Forms.PictureBox();
+            this.pbxSeating = new System.Windows.Forms.PictureBox();
+            this.pbxGrades = new System.Windows.Forms.PictureBox();
             this.btnSeating = new System.Windows.Forms.Button();
             this.btnGradebook = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAttendance)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSeating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGrades)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // lblTeacherMenu
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1448, 82);
-            this.label2.TabIndex = 33;
-            this.label2.Text = "Teacher Menu";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTeacherMenu.BackColor = System.Drawing.Color.Transparent;
+            this.lblTeacherMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTeacherMenu.Location = new System.Drawing.Point(12, 156);
+            this.lblTeacherMenu.Name = "lblTeacherMenu";
+            this.lblTeacherMenu.Size = new System.Drawing.Size(1448, 82);
+            this.lblTeacherMenu.TabIndex = 33;
+            this.lblTeacherMenu.Text = "Teacher Menu";
+            this.lblTeacherMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnBack
             // 
@@ -67,52 +67,52 @@ namespace WindowsFormsApp1
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // label1
+            // lblTitle
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1448, 82);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Texas Middle School";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(12, 57);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1448, 82);
+            this.lblTitle.TabIndex = 32;
+            this.lblTitle.Text = "Texas Middle School";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox3
+            // pbxAttendance
             // 
-            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(978, 280);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(331, 318);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 29;
-            this.pictureBox3.TabStop = false;
+            this.pbxAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxAttendance.Image = ((System.Drawing.Image)(resources.GetObject("pbxAttendance.Image")));
+            this.pbxAttendance.Location = new System.Drawing.Point(978, 280);
+            this.pbxAttendance.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxAttendance.Name = "pbxAttendance";
+            this.pbxAttendance.Size = new System.Drawing.Size(331, 318);
+            this.pbxAttendance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxAttendance.TabIndex = 29;
+            this.pbxAttendance.TabStop = false;
             // 
-            // pictureBox2
+            // pbxSeating
             // 
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(553, 280);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(331, 318);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
+            this.pbxSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxSeating.Image = ((System.Drawing.Image)(resources.GetObject("pbxSeating.Image")));
+            this.pbxSeating.Location = new System.Drawing.Point(553, 280);
+            this.pbxSeating.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxSeating.Name = "pbxSeating";
+            this.pbxSeating.Size = new System.Drawing.Size(331, 318);
+            this.pbxSeating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxSeating.TabIndex = 28;
+            this.pbxSeating.TabStop = false;
             // 
-            // pictureBox1
+            // pbxGrades
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(138, 280);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 318);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
+            this.pbxGrades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxGrades.Image = ((System.Drawing.Image)(resources.GetObject("pbxGrades.Image")));
+            this.pbxGrades.Location = new System.Drawing.Point(138, 280);
+            this.pbxGrades.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxGrades.Name = "pbxGrades";
+            this.pbxGrades.Size = new System.Drawing.Size(331, 318);
+            this.pbxGrades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxGrades.TabIndex = 27;
+            this.pbxGrades.TabStop = false;
             // 
             // btnSeating
             // 
@@ -154,40 +154,40 @@ namespace WindowsFormsApp1
             this.btnAttendance.UseVisualStyleBackColor = false;
             this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
-            // frmTeacherMenu
+            // frmMenuTeacher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1472, 1021);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTeacherMenu);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.pbxAttendance);
+            this.Controls.Add(this.pbxSeating);
+            this.Controls.Add(this.pbxGrades);
             this.Controls.Add(this.btnSeating);
             this.Controls.Add(this.btnGradebook);
             this.Controls.Add(this.btnAttendance);
-            this.Name = "frmTeacherMenu";
+            this.Name = "frmMenuTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Teacher Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAttendance)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxSeating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxGrades)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTeacherMenu;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.PictureBox pbxAttendance;
+        private System.Windows.Forms.PictureBox pbxSeating;
+        private System.Windows.Forms.PictureBox pbxGrades;
         private System.Windows.Forms.Button btnSeating;
         private System.Windows.Forms.Button btnGradebook;
         private System.Windows.Forms.Button btnAttendance;

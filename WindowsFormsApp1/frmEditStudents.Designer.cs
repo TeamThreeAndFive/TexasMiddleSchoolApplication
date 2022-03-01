@@ -57,7 +57,7 @@ namespace WindowsFormsApp1
             this.tbxGuardianID = new System.Windows.Forms.TextBox();
             this.tbxGuardianName = new System.Windows.Forms.TextBox();
             this.gbxStudentInformation = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthdate = new System.Windows.Forms.DateTimePicker();
             this.tbxZip = new System.Windows.Forms.TextBox();
             this.tbxCity = new System.Windows.Forms.TextBox();
             this.tbxState = new System.Windows.Forms.TextBox();
@@ -389,7 +389,7 @@ namespace WindowsFormsApp1
             // 
             // gbxStudentInformation
             // 
-            this.gbxStudentInformation.Controls.Add(this.dateTimePicker1);
+            this.gbxStudentInformation.Controls.Add(this.dtpBirthdate);
             this.gbxStudentInformation.Controls.Add(this.tbxZip);
             this.gbxStudentInformation.Controls.Add(this.tbxCity);
             this.gbxStudentInformation.Controls.Add(this.tbxState);
@@ -424,14 +424,14 @@ namespace WindowsFormsApp1
             this.gbxStudentInformation.Text = "Student Information";
             this.gbxStudentInformation.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
-            // dateTimePicker1
+            // dtpBirthdate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(215, 357);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(280, 42);
-            this.dateTimePicker1.TabIndex = 80;
+            this.dtpBirthdate.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthdate.Location = new System.Drawing.Point(215, 357);
+            this.dtpBirthdate.Name = "dtpBirthdate";
+            this.dtpBirthdate.Size = new System.Drawing.Size(280, 42);
+            this.dtpBirthdate.TabIndex = 80;
             // 
             // tbxZip
             // 
@@ -607,7 +607,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TextBox tbxFirstName;
         private System.Windows.Forms.TextBox tbxMiddleName;
         private System.Windows.Forms.TextBox tbxStudentID;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpBirthdate;
         private System.Windows.Forms.Button btnSaveChanges;
     }
 }
