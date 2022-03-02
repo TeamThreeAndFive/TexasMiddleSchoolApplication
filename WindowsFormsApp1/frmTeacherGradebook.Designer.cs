@@ -54,9 +54,9 @@ namespace WindowsFormsApp1
             // 
             this.btnSubmit.BackColor = System.Drawing.Color.White;
             this.btnSubmit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(1220, 932);
+            this.btnSubmit.Location = new System.Drawing.Point(1195, 865);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(182, 59);
+            this.btnSubmit.Size = new System.Drawing.Size(207, 89);
             this.btnSubmit.TabIndex = 24;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -67,7 +67,7 @@ namespace WindowsFormsApp1
             this.lblChangeGrade.AutoSize = true;
             this.lblChangeGrade.BackColor = System.Drawing.Color.Transparent;
             this.lblChangeGrade.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChangeGrade.Location = new System.Drawing.Point(667, 927);
+            this.lblChangeGrade.Location = new System.Drawing.Point(667, 881);
             this.lblChangeGrade.Name = "lblChangeGrade";
             this.lblChangeGrade.Size = new System.Drawing.Size(365, 59);
             this.lblChangeGrade.TabIndex = 23;
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             // tbxChangeGrade
             // 
             this.tbxChangeGrade.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxChangeGrade.Location = new System.Drawing.Point(1038, 932);
+            this.tbxChangeGrade.Location = new System.Drawing.Point(1038, 881);
             this.tbxChangeGrade.Name = "tbxChangeGrade";
             this.tbxChangeGrade.Size = new System.Drawing.Size(151, 56);
             this.tbxChangeGrade.TabIndex = 22;
@@ -91,7 +91,7 @@ namespace WindowsFormsApp1
             "Will Appear Here"});
             this.lbxStudents.Location = new System.Drawing.Point(44, 281);
             this.lbxStudents.Name = "lbxStudents";
-            this.lbxStudents.Size = new System.Drawing.Size(569, 619);
+            this.lbxStudents.Size = new System.Drawing.Size(569, 578);
             this.lbxStudents.TabIndex = 16;
             // 
             // lbxAssignments
@@ -104,7 +104,7 @@ namespace WindowsFormsApp1
             "Homework, Quiz, Test, Exam etc..."});
             this.lbxAssignments.Location = new System.Drawing.Point(677, 281);
             this.lbxAssignments.Name = "lbxAssignments";
-            this.lbxAssignments.Size = new System.Drawing.Size(725, 619);
+            this.lbxAssignments.Size = new System.Drawing.Size(725, 578);
             this.lbxAssignments.TabIndex = 17;
             // 
             // lblGradebook
@@ -133,7 +133,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 927);
+            this.btnBack.Location = new System.Drawing.Point(44, 865);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(200, 89);
             this.btnBack.TabIndex = 19;
@@ -227,9 +227,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.menuStrip);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmTeacherGradebook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Gradebook";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.ResumeLayout(false);

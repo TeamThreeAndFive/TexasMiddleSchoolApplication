@@ -59,9 +59,9 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(12, 930);
+            this.btnBack.Location = new System.Drawing.Point(39, 891);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(200, 89);
+            this.btnBack.Size = new System.Drawing.Size(200, 100);
             this.btnBack.TabIndex = 31;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -160,6 +160,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(1472, 1021);
             this.Controls.Add(this.lblTeacherMenu);
             this.Controls.Add(this.btnBack);
@@ -170,6 +171,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnSeating);
             this.Controls.Add(this.btnGradebook);
             this.Controls.Add(this.btnAttendance);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmMenuTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Teacher Menu";

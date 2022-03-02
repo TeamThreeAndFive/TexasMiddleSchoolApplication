@@ -307,7 +307,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblCourseInfo);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmInfoCourses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Courses";
             this.gbxMakeChanges.ResumeLayout(false);
             this.gbxMakeChanges.PerformLayout();

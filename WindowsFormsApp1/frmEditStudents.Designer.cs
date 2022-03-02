@@ -556,6 +556,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblEditStudents);
+            this.MinimumSize = new System.Drawing.Size(2000, 1100);
             this.Name = "frmEditStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Edit Student";

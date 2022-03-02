@@ -47,10 +47,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxMascot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxMascot.Image = ((System.Drawing.Image)(resources.GetObject("pbxMascot.Image")));
-            this.pbxMascot.Location = new System.Drawing.Point(54, 346);
+            this.pbxMascot.Location = new System.Drawing.Point(53, 288);
             this.pbxMascot.Margin = new System.Windows.Forms.Padding(4);
             this.pbxMascot.Name = "pbxMascot";
-            this.pbxMascot.Size = new System.Drawing.Size(488, 567);
+            this.pbxMascot.Size = new System.Drawing.Size(488, 625);
             this.pbxMascot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxMascot.TabIndex = 25;
             this.pbxMascot.TabStop = false;
@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
             // tbxPassword
             // 
             this.tbxPassword.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(880, 551);
+            this.tbxPassword.Location = new System.Drawing.Point(880, 495);
             this.tbxPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.Size = new System.Drawing.Size(468, 56);
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
             // tbxUsername
             // 
             this.tbxUsername.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUsername.Location = new System.Drawing.Point(880, 439);
+            this.tbxUsername.Location = new System.Drawing.Point(880, 383);
             this.tbxUsername.Margin = new System.Windows.Forms.Padding(4);
             this.tbxUsername.Name = "tbxUsername";
             this.tbxUsername.Size = new System.Drawing.Size(468, 56);
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(626, 558);
+            this.lblPassword.Location = new System.Drawing.Point(626, 502);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(234, 49);
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
             this.llblForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.llblForgotPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblForgotPassword.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.llblForgotPassword.Location = new System.Drawing.Point(956, 639);
+            this.llblForgotPassword.Location = new System.Drawing.Point(935, 588);
             this.llblForgotPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.llblForgotPassword.Name = "llblForgotPassword";
             this.llblForgotPassword.Size = new System.Drawing.Size(337, 48);
@@ -118,7 +118,7 @@ namespace WindowsFormsApp1
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(623, 439);
+            this.lblUsername.Location = new System.Drawing.Point(623, 383);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(237, 49);
@@ -140,7 +140,7 @@ namespace WindowsFormsApp1
             // lblEmployeePortal
             // 
             this.lblEmployeePortal.BackColor = System.Drawing.Color.Transparent;
-            this.lblEmployeePortal.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeePortal.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmployeePortal.Location = new System.Drawing.Point(29, 142);
             this.lblEmployeePortal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmployeePortal.Name = "lblEmployeePortal";
@@ -155,7 +155,7 @@ namespace WindowsFormsApp1
             this.cbxKeepLoggedIn.Checked = true;
             this.cbxKeepLoggedIn.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxKeepLoggedIn.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxKeepLoggedIn.Location = new System.Drawing.Point(975, 707);
+            this.cbxKeepLoggedIn.Location = new System.Drawing.Point(975, 688);
             this.cbxKeepLoggedIn.Margin = new System.Windows.Forms.Padding(5);
             this.cbxKeepLoggedIn.Name = "cbxKeepLoggedIn";
             this.cbxKeepLoggedIn.Size = new System.Drawing.Size(373, 76);
@@ -166,6 +166,7 @@ namespace WindowsFormsApp1
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(635, 792);
@@ -179,10 +180,12 @@ namespace WindowsFormsApp1
             // 
             // frmMenuLogin
             // 
+            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1472, 1021);
             this.Controls.Add(this.pbxMascot);
             this.Controls.Add(this.btnLogin);
@@ -195,7 +198,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblEmployeePortal);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbxKeepLoggedIn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmMenuLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Login";

@@ -170,6 +170,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblAcademicOfficerMenu);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnStudents);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmMenuAcademicOfficer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Academic Officer Menu";

@@ -229,6 +229,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblAcademicOfficerInfo);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmEditAcademicOfficers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditAcademicOfficers";
