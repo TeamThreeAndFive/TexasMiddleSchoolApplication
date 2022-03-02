@@ -308,7 +308,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblAcademicOfficerInfo);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmInfoAcademicOfficers";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Academic Officers";
             this.gbxMakeChanges.ResumeLayout(false);
             this.gbxMakeChanges.PerformLayout();

@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // cbxCourse
@@ -151,7 +151,7 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // menuStrip
@@ -195,7 +195,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(11, 926);
+            this.btnBack.Location = new System.Drawing.Point(37, 875);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(201, 89);
@@ -259,7 +259,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblSeating);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmTeacherSeatingChart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Seating Chart";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

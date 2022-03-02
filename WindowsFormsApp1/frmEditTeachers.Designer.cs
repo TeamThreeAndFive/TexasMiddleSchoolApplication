@@ -223,12 +223,13 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1472, 881);
+            this.ClientSize = new System.Drawing.Size(1472, 1021);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxTeacherInformation);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblEditTeachers);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmEditTeachers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Edit Teacher";

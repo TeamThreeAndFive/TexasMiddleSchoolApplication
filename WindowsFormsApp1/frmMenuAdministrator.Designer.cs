@@ -201,7 +201,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblAdminMenu);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnStudents);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmMenuAdministrator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Administrator Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pbxAcademicOfficers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCourses)).EndInit();

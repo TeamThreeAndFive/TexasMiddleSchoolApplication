@@ -270,7 +270,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(11, 921);
+            this.btnBack.Location = new System.Drawing.Point(37, 870);
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(201, 89);
@@ -318,7 +318,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblAttendance);
             this.Controls.Add(this.lblTitle);
+            this.MinimumSize = new System.Drawing.Size(1500, 1100);
             this.Name = "frmTeacherAttendance";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Attendance ";
             this.gbxTakeRoll.ResumeLayout(false);
             this.gbxTakeRoll.PerformLayout();
