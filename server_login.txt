@@ -1,0 +1,4 @@
+Server:  cstnt.tstc.edu
+Database:  inew2330sp22
+username:  group3fa212330
+password:  3926456

@@ -57,33 +57,33 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 51);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(9, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(202, 59);
+            this.label3.Size = new System.Drawing.Size(117, 33);
             this.label3.TabIndex = 34;
             this.label3.Text = "Course:";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(79, 33);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // gradebookToolStripMenuItem
             // 
             this.gradebookToolStripMenuItem.Name = "gradebookToolStripMenuItem";
-            this.gradebookToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.gradebookToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.gradebookToolStripMenuItem.Text = "Gradebook";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Gainsboro;
             this.button2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(25, 142);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(14, 78);
+            this.button2.Margin = new System.Windows.Forms.Padding(1);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(424, 137);
+            this.button2.Size = new System.Drawing.Size(242, 76);
             this.button2.TabIndex = 15;
             this.button2.Text = "Shuffle Seating Arrangement";
             this.button2.UseVisualStyleBackColor = false;
@@ -91,13 +91,13 @@ namespace WindowsFormsApp1
             // seatingChartToolStripMenuItem
             // 
             this.seatingChartToolStripMenuItem.Name = "seatingChartToolStripMenuItem";
-            this.seatingChartToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.seatingChartToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.seatingChartToolStripMenuItem.Text = "Seating Chart";
             // 
             // attendanceToolStripMenuItem
             // 
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
-            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.attendanceToolStripMenuItem.Text = "Attendance";
             // 
             // menuToolStripMenuItem
@@ -107,13 +107,13 @@ namespace WindowsFormsApp1
             this.seatingChartToolStripMenuItem,
             this.gradebookToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(154, 53);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(91, 33);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // comboBox1
@@ -126,37 +126,36 @@ namespace WindowsFormsApp1
             "English",
             "Spanish",
             "Physical Education"});
-            this.comboBox1.Location = new System.Drawing.Point(239, 51);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(7);
+            this.comboBox1.Location = new System.Drawing.Point(137, 28);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(424, 57);
+            this.comboBox1.Size = new System.Drawing.Size(244, 35);
             this.comboBox1.TabIndex = 33;
             // 
             // listBox1
             // 
             this.listBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 41;
+            this.listBox1.ItemHeight = 23;
             this.listBox1.Items.AddRange(new object[] {
             "Student Information",
             "Will Appear Here ",
             "With Seat Number"});
-            this.listBox1.Location = new System.Drawing.Point(37, 293);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.Location = new System.Drawing.Point(21, 162);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(1);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(622, 578);
+            this.listBox1.Size = new System.Drawing.Size(357, 303);
             this.listBox1.TabIndex = 31;
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -164,8 +163,8 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1472, 57);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(841, 35);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -175,17 +174,17 @@ namespace WindowsFormsApp1
             this.closeToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 53);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 33);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(37, 184);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(21, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1363, 83);
+            this.label2.Size = new System.Drawing.Size(779, 46);
             this.label2.TabIndex = 30;
             this.label2.Text = "Seating Chart";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -194,10 +193,10 @@ namespace WindowsFormsApp1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 926);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(6, 511);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(201, 89);
+            this.button1.Size = new System.Drawing.Size(115, 49);
             this.button1.TabIndex = 28;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
@@ -206,10 +205,10 @@ namespace WindowsFormsApp1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(37, 83);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(21, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1363, 83);
+            this.label1.Size = new System.Drawing.Size(779, 46);
             this.label1.TabIndex = 29;
             this.label1.Text = "Texas Middle School";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -222,11 +221,11 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(693, 293);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(396, 162);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(707, 307);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(1);
+            this.groupBox1.Size = new System.Drawing.Size(404, 169);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Shuffle Seating";
@@ -235,28 +234,31 @@ namespace WindowsFormsApp1
             // 
             this.button3.BackColor = System.Drawing.Color.Gainsboro;
             this.button3.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(467, 142);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(267, 78);
+            this.button3.Margin = new System.Windows.Forms.Padding(1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(219, 137);
+            this.button3.Size = new System.Drawing.Size(125, 76);
             this.button3.TabIndex = 15;
             this.button3.Text = "Save";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // frmTeacherSeatingChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1472, 1021);
+            this.ClientSize = new System.Drawing.Size(841, 563);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmTeacherSeatingChart";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Seating Chart";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

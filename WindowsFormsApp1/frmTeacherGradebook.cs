@@ -16,5 +16,24 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void seatingChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacherSeatingChart seatingChart = new frmTeacherSeatingChart();
+            seatingChart.ShowDialog();
+            this.Hide();
+        }
+
+        private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacherAttendance attendance = new frmTeacherAttendance();
+            attendance.ShowDialog();
+            this.Hide();
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

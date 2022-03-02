@@ -51,10 +51,10 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(1127, 251);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox4.Location = new System.Drawing.Point(644, 138);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(331, 318);
+            this.pictureBox4.Size = new System.Drawing.Size(190, 176);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 56;
             this.pictureBox4.TabStop = false;
@@ -64,10 +64,10 @@ namespace WindowsFormsApp1
             this.btnAcademicOfficers.BackColor = System.Drawing.Color.White;
             this.btnAcademicOfficers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAcademicOfficers.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcademicOfficers.Location = new System.Drawing.Point(1124, 627);
-            this.btnAcademicOfficers.Margin = new System.Windows.Forms.Padding(7);
+            this.btnAcademicOfficers.Location = new System.Drawing.Point(642, 346);
+            this.btnAcademicOfficers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcademicOfficers.Name = "btnAcademicOfficers";
-            this.btnAcademicOfficers.Size = new System.Drawing.Size(334, 165);
+            this.btnAcademicOfficers.Size = new System.Drawing.Size(191, 91);
             this.btnAcademicOfficers.TabIndex = 55;
             this.btnAcademicOfficers.Text = "Academic Officers";
             this.btnAcademicOfficers.UseVisualStyleBackColor = false;
@@ -76,9 +76,10 @@ namespace WindowsFormsApp1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(49, 25);
+            this.label1.Location = new System.Drawing.Point(28, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1363, 82);
+            this.label1.Size = new System.Drawing.Size(779, 45);
             this.label1.TabIndex = 53;
             this.label1.Text = "Texas Middle School";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -87,10 +88,10 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(761, 251);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox3.Location = new System.Drawing.Point(435, 138);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(331, 318);
+            this.pictureBox3.Size = new System.Drawing.Size(190, 176);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 51;
             this.pictureBox3.TabStop = false;
@@ -99,10 +100,10 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(387, 251);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox2.Location = new System.Drawing.Point(221, 138);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(331, 318);
+            this.pictureBox2.Size = new System.Drawing.Size(190, 176);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 50;
             this.pictureBox2.TabStop = false;
@@ -111,10 +112,10 @@ namespace WindowsFormsApp1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 251);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(7);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 138);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(331, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(190, 176);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
@@ -123,10 +124,10 @@ namespace WindowsFormsApp1
             // 
             this.btnTeachers.BackColor = System.Drawing.Color.White;
             this.btnTeachers.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTeachers.Location = new System.Drawing.Point(387, 627);
-            this.btnTeachers.Margin = new System.Windows.Forms.Padding(7);
+            this.btnTeachers.Location = new System.Drawing.Point(221, 346);
+            this.btnTeachers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTeachers.Name = "btnTeachers";
-            this.btnTeachers.Size = new System.Drawing.Size(334, 165);
+            this.btnTeachers.Size = new System.Drawing.Size(191, 91);
             this.btnTeachers.TabIndex = 48;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.UseVisualStyleBackColor = false;
@@ -136,10 +137,10 @@ namespace WindowsFormsApp1
             this.btnCourses.BackColor = System.Drawing.Color.White;
             this.btnCourses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCourses.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCourses.Location = new System.Drawing.Point(761, 627);
-            this.btnCourses.Margin = new System.Windows.Forms.Padding(7);
+            this.btnCourses.Location = new System.Drawing.Point(435, 346);
+            this.btnCourses.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCourses.Name = "btnCourses";
-            this.btnCourses.Size = new System.Drawing.Size(334, 165);
+            this.btnCourses.Size = new System.Drawing.Size(191, 91);
             this.btnCourses.TabIndex = 46;
             this.btnCourses.Text = "Courses";
             this.btnCourses.UseVisualStyleBackColor = false;
@@ -148,9 +149,10 @@ namespace WindowsFormsApp1
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(49, 125);
+            this.label2.Location = new System.Drawing.Point(28, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1363, 82);
+            this.label2.Size = new System.Drawing.Size(779, 45);
             this.label2.TabIndex = 54;
             this.label2.Text = "Administrator Menu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,9 +161,10 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(14, 907);
+            this.btnBack.Location = new System.Drawing.Point(8, 500);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(200, 89);
+            this.btnBack.Size = new System.Drawing.Size(114, 49);
             this.btnBack.TabIndex = 52;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -170,21 +173,21 @@ namespace WindowsFormsApp1
             // 
             this.btnStudents.BackColor = System.Drawing.Color.White;
             this.btnStudents.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudents.Location = new System.Drawing.Point(19, 627);
-            this.btnStudents.Margin = new System.Windows.Forms.Padding(7);
+            this.btnStudents.Location = new System.Drawing.Point(11, 346);
+            this.btnStudents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnStudents.Name = "btnStudents";
-            this.btnStudents.Size = new System.Drawing.Size(334, 165);
+            this.btnStudents.Size = new System.Drawing.Size(191, 91);
             this.btnStudents.TabIndex = 47;
             this.btnStudents.Text = "Students";
             this.btnStudents.UseVisualStyleBackColor = false;
             // 
-            // frmAdministratorMenu
+            // frmMenuAdministrator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1472, 1021);
+            this.ClientSize = new System.Drawing.Size(841, 563);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnAcademicOfficers);
             this.Controls.Add(this.label1);
@@ -196,7 +199,9 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnStudents);
-            this.Name = "frmAdministratorMenu";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmMenuAdministrator";
             this.Text = "Texas Middle School - Administrator Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
