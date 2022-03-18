@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
+
+
     public partial class frmMenuLogin : Form
     {
+
+        // Initialize new employee -- as current user
+        Employee currentUser;
+
         public frmMenuLogin()
         {
             InitializeComponent();
@@ -19,20 +25,20 @@ namespace WindowsFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
 
             if (cbxKeepLoggedIn.Checked)
             {
                 /// This check if user want to keep logged in
                 /// If user want to keep logged in then
-                
+
                 // Set UserName and Password in properties setting
                 Properties.Settings.Default.UserName = tbxUsername.Text;
                 Properties.Settings.Default.Password = tbxPassword.Text;
                 Properties.Settings.Default.Save();
-                
+
             }
-            
+
             if (!cbxKeepLoggedIn.Checked)
             {
                 /// This check if user want to keep logged in
@@ -45,10 +51,42 @@ namespace WindowsFormsApp1
                 Properties.Settings.Default.Save();
             }
 
-            // Finally Show Menu
-            frmMenuTeacher fm = new frmMenuTeacher();
-            fm.Show();
+            // check if user has provided some email and password
+            if (tbxUsername.Text == string.Empty || tbxPassword.Text == string.Empty)
+            {
+                // if its empty
+                MessageBox.Show("Username or Password can not be empty, Username and Password is required to login.", "Empty filed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // Lets authenticate the user
+                if (Authentication.authenticate(tbxUsername.Text, tbxPassword.Text) == true)
+                {
+                    // if user exists, assign global current user to the ProgOps currentEmployee
+                    currentUser = ProgOps.currentEmployee;
+
+                    // finally show the menu, based on the role type
+                    if (currentUser.getRole() == "Academic Officer")
+                    {
+                        frmMenuAcademicOfficer academicOfficerMenu = new frmMenuAcademicOfficer();
+                        academicOfficerMenu.Show();
+                    }
+                    else if (currentUser.getRole() == "Teacher")
+                    {
+                        frmMenuTeacher teacherMenu = new frmMenuTeacher();
+                        teacherMenu.Show();
+                    }
+                    else
+                    {
+                        frmMenuAdministrator adminMenu = new frmMenuAdministrator();
+                        adminMenu.Show();
+                    }
+
+                }
+
+            }
         }
+
 
         private void frmMenuLogin_Load(object sender, EventArgs e)
         {
@@ -59,7 +97,6 @@ namespace WindowsFormsApp1
             ///
             /// First check if user already have checked keep logged in
             /// 
-
             if (Properties.Settings.Default.UserName != string.Empty)
             {
                 // This body only runs if Properties has any value
@@ -72,16 +109,19 @@ namespace WindowsFormsApp1
             
         }
 
+
         private void frmMenuLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             // when form closes we close database and dispose data.
             ProgOps.closeDatabaseConnection();
         }
 
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             // Close Application
             Application.Exit();
         }
+
     }
 }

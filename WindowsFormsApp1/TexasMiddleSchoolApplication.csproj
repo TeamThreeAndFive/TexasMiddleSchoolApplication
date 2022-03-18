@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication.cs" />
+    <Compile Include="Employee.cs" />
     <Compile Include="frmEditAcademicOfficers.cs">
       <SubType>Form</SubType>
     </Compile>
