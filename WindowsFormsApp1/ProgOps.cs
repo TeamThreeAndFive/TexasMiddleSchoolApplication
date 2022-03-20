@@ -31,13 +31,14 @@ namespace WindowsFormsApp1
         // current employee
         public static Employee currentEmployee;
 
+        
         /// <summary>
         /// Connect to inew2330sp22 database and open connection.
         /// Display status of connection on Message Box.
         /// 
         /// Parameters: None
         /// </summary>
-        public static void openDatabseConnection()
+        public static void OpenDatabseConnection()
         {
             // Try to connect 
             try
@@ -57,13 +58,14 @@ namespace WindowsFormsApp1
             }
         }
 
+
         /// <summary>
         /// Close connection and dispose database.
         /// Display status of connection on Message Box.
         /// 
         /// Parameters: None
         /// </summary>
-        public static void closeDatabaseConnection()
+        public static void CloseDatabaseConnection()
         {
             // Try to close connections 
             try
@@ -83,13 +85,14 @@ namespace WindowsFormsApp1
             }
         }
 
+        
         /// <summary>
         /// 
         /// login user and add data to employee.
         /// </summary>
         /// <param name="query"></param>
         /// <returns>Boolean: True if found user else false.</returns>
-        public static bool login(string query)
+        public static bool Login(string query)
         {
             try
             {
@@ -139,6 +142,98 @@ namespace WindowsFormsApp1
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Check if user exists with provided email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns>Boolean: True if user found, false if not found.</returns>
+        public static bool SearchByEmail(string email)
+        {
+            // selecting query
+            String query = "SELECT * FROM group3fa212330.Employees " +
+                "WHERE email = '" + email + "'";
+
+            // 
+            try
+            {
+
+                // EST command and data adapter
+                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                DataTable dataTable = new DataTable();
+
+                // creating new user data table and filling the 
+                dataAdapter.SelectCommand = dbCommand;
+                dataAdapter.Fill(dataTable);
+
+                // Dispose unnecessary data
+                dbCommand.Dispose();
+                dataAdapter.Dispose();
+
+                if (dataTable.Rows.Count != 0)
+                {
+                    // dispose data table
+                    dataTable.Dispose();
+                    return true;
+                }
+                else
+                {
+                    // if nothing returned 
+                    dataTable.Dispose();
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Unknown Error.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return false;
+        }
+
+        
+        /// <summary>
+        /// Update password of given user email.
+        /// 
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="newPassword"></param>
+        public static void UpdatePassword(string email, string newPassword)
+        {
+            // Update query
+            string query = "UPDATE group3fa212330.Employees " +
+                "SET password = " + "@newPassword " +
+                "WHERE email = @email";
+
+            try
+            {
+                // Make a database connection
+                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                dbCommand.Parameters.AddWithValue("@newPassword", newPassword);
+                dbCommand.Parameters.AddWithValue("@email", email);
+
+                // Execute non query and check if it returned anything
+                if (dbCommand.ExecuteNonQuery() < 0)
+                {
+                    // if nothing returned, show message, cannot update new password
+                    MessageBox.Show("Cannot update password please try again in few minutes.", "Insertion Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    // if something is returned, show message -- successfully updated.
+                    MessageBox.Show("Your password has been successfully updated. Please go back to login and login with your new password.", "Update successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                // Dispose data
+                dbCommand.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
