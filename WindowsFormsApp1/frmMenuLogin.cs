@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             else
             {
                 // Lets authenticate the user
-                if (Authentication.authenticate(tbxUsername.Text, tbxPassword.Text) == true)
+                if (Authentication.Authenticate(tbxUsername.Text, tbxPassword.Text) == true)
                 {
                     // if user exists, assign global current user to the ProgOps currentEmployee
                     currentUser = ProgOps.currentEmployee;
@@ -92,7 +92,7 @@ namespace WindowsFormsApp1
         {
 
             // open Database connections.
-            ProgOps.openDatabseConnection();
+            ProgOps.OpenDatabseConnection();
 
             ///
             /// First check if user already have checked keep logged in
@@ -113,7 +113,7 @@ namespace WindowsFormsApp1
         private void frmMenuLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             // when form closes we close database and dispose data.
-            ProgOps.closeDatabaseConnection();
+            ProgOps.CloseDatabaseConnection();
         }
 
 
@@ -123,5 +123,10 @@ namespace WindowsFormsApp1
             Application.Exit();
         }
 
+        private void llblForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPassword forgotPasswordForm = new frmForgotPassword();
+            forgotPasswordForm.Show();
+        }
     }
 }
