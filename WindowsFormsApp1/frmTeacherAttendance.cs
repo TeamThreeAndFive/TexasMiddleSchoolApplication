@@ -20,6 +20,8 @@ namespace WindowsFormsApp1
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
+            frmMenuTeacher menu = new frmMenuTeacher();
+            menu.Show();
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
@@ -35,6 +37,25 @@ namespace WindowsFormsApp1
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Save Button
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void seatingChartToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacherSeatingChart sc = new frmTeacherSeatingChart();
+            sc.Show();
+            this.Hide();
+        }
+
+        private void gradebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacherGradebook gradebook = new frmTeacherGradebook();
+            gradebook.Show();
+            this.Hide();
         }
     }
 }

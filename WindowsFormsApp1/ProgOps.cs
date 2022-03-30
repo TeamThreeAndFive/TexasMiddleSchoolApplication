@@ -23,10 +23,10 @@ namespace WindowsFormsApp1
             "password=3926456";
         
         // Database connection
-        static SqlConnection dbConnection;
+        public static SqlConnection dbConnection;
 
         // Data tables
-        static DataTable _userTable;
+        public static DataTable _userTable;
 
         // current employee
         public static Employee currentEmployee;
@@ -194,7 +194,6 @@ namespace WindowsFormsApp1
             return false;
         }
 
-        
         /// <summary>
         /// Update password of given user email.
         /// 

@@ -48,9 +48,10 @@ namespace WindowsFormsApp1
             // 
             this.lblTeacherMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblTeacherMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeacherMenu.Location = new System.Drawing.Point(12, 156);
+            this.lblTeacherMenu.Location = new System.Drawing.Point(7, 86);
+            this.lblTeacherMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTeacherMenu.Name = "lblTeacherMenu";
-            this.lblTeacherMenu.Size = new System.Drawing.Size(1448, 82);
+            this.lblTeacherMenu.Size = new System.Drawing.Size(827, 45);
             this.lblTeacherMenu.TabIndex = 33;
             this.lblTeacherMenu.Text = "Teacher Menu";
             this.lblTeacherMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -58,10 +59,12 @@ namespace WindowsFormsApp1
             // btnBack
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(39, 891);
+            this.btnBack.Location = new System.Drawing.Point(22, 491);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(200, 100);
+            this.btnBack.Size = new System.Drawing.Size(114, 55);
             this.btnBack.TabIndex = 31;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -71,9 +74,10 @@ namespace WindowsFormsApp1
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(12, 57);
+            this.lblTitle.Location = new System.Drawing.Point(7, 31);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1448, 82);
+            this.lblTitle.Size = new System.Drawing.Size(827, 45);
             this.lblTitle.TabIndex = 32;
             this.lblTitle.Text = "Texas Middle School";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -82,10 +86,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxAttendance.Image = ((System.Drawing.Image)(resources.GetObject("pbxAttendance.Image")));
-            this.pbxAttendance.Location = new System.Drawing.Point(978, 280);
-            this.pbxAttendance.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxAttendance.Location = new System.Drawing.Point(570, 146);
+            this.pbxAttendance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxAttendance.Name = "pbxAttendance";
-            this.pbxAttendance.Size = new System.Drawing.Size(331, 318);
+            this.pbxAttendance.Size = new System.Drawing.Size(190, 176);
             this.pbxAttendance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAttendance.TabIndex = 29;
             this.pbxAttendance.TabStop = false;
@@ -94,10 +98,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxSeating.Image = ((System.Drawing.Image)(resources.GetObject("pbxSeating.Image")));
-            this.pbxSeating.Location = new System.Drawing.Point(553, 280);
-            this.pbxSeating.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxSeating.Location = new System.Drawing.Point(327, 146);
+            this.pbxSeating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxSeating.Name = "pbxSeating";
-            this.pbxSeating.Size = new System.Drawing.Size(331, 318);
+            this.pbxSeating.Size = new System.Drawing.Size(190, 176);
             this.pbxSeating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxSeating.TabIndex = 28;
             this.pbxSeating.TabStop = false;
@@ -106,10 +110,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxGrades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxGrades.Image = ((System.Drawing.Image)(resources.GetObject("pbxGrades.Image")));
-            this.pbxGrades.Location = new System.Drawing.Point(138, 280);
-            this.pbxGrades.Margin = new System.Windows.Forms.Padding(7);
+            this.pbxGrades.Location = new System.Drawing.Point(90, 146);
+            this.pbxGrades.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxGrades.Name = "pbxGrades";
-            this.pbxGrades.Size = new System.Drawing.Size(331, 318);
+            this.pbxGrades.Size = new System.Drawing.Size(190, 176);
             this.pbxGrades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxGrades.TabIndex = 27;
             this.pbxGrades.TabStop = false;
@@ -118,10 +122,10 @@ namespace WindowsFormsApp1
             // 
             this.btnSeating.BackColor = System.Drawing.Color.White;
             this.btnSeating.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeating.Location = new System.Drawing.Point(550, 656);
-            this.btnSeating.Margin = new System.Windows.Forms.Padding(7);
+            this.btnSeating.Location = new System.Drawing.Point(325, 354);
+            this.btnSeating.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSeating.Name = "btnSeating";
-            this.btnSeating.Size = new System.Drawing.Size(334, 165);
+            this.btnSeating.Size = new System.Drawing.Size(191, 91);
             this.btnSeating.TabIndex = 26;
             this.btnSeating.Text = "Seating Arrangement";
             this.btnSeating.UseVisualStyleBackColor = false;
@@ -131,10 +135,10 @@ namespace WindowsFormsApp1
             // 
             this.btnGradebook.BackColor = System.Drawing.Color.White;
             this.btnGradebook.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGradebook.Location = new System.Drawing.Point(135, 656);
-            this.btnGradebook.Margin = new System.Windows.Forms.Padding(7);
+            this.btnGradebook.Location = new System.Drawing.Point(88, 354);
+            this.btnGradebook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGradebook.Name = "btnGradebook";
-            this.btnGradebook.Size = new System.Drawing.Size(334, 165);
+            this.btnGradebook.Size = new System.Drawing.Size(191, 91);
             this.btnGradebook.TabIndex = 25;
             this.btnGradebook.Text = "Gradebook";
             this.btnGradebook.UseVisualStyleBackColor = false;
@@ -145,10 +149,10 @@ namespace WindowsFormsApp1
             this.btnAttendance.BackColor = System.Drawing.Color.White;
             this.btnAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAttendance.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendance.Location = new System.Drawing.Point(975, 656);
-            this.btnAttendance.Margin = new System.Windows.Forms.Padding(7);
+            this.btnAttendance.Location = new System.Drawing.Point(568, 354);
+            this.btnAttendance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Size = new System.Drawing.Size(334, 165);
+            this.btnAttendance.Size = new System.Drawing.Size(191, 91);
             this.btnAttendance.TabIndex = 24;
             this.btnAttendance.Text = "Attendance";
             this.btnAttendance.UseVisualStyleBackColor = false;
@@ -156,12 +160,12 @@ namespace WindowsFormsApp1
             // 
             // frmMenuTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnBack;
-            this.ClientSize = new System.Drawing.Size(1472, 1021);
+            this.ClientSize = new System.Drawing.Size(849, 563);
             this.Controls.Add(this.lblTeacherMenu);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
@@ -172,9 +176,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnGradebook);
             this.Controls.Add(this.btnAttendance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1500, 1100);
+            this.MinimumSize = new System.Drawing.Size(865, 583);
             this.Name = "frmMenuTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Teacher Menu";

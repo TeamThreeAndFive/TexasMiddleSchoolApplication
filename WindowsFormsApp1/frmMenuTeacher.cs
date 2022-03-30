@@ -28,6 +28,7 @@ namespace WindowsFormsApp1
             // Opens Gradebook Form
             frmTeacherGradebook fg = new frmTeacherGradebook();
             fg.Show();
+            this.Hide();
         }
 
         private void btnSeating_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace WindowsFormsApp1
             // Opens Seating Arrangement Form
             frmTeacherSeatingChart fs = new frmTeacherSeatingChart();
             fs.Show();
+            this.Hide();
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)
@@ -42,6 +44,7 @@ namespace WindowsFormsApp1
             // Opens Attendance Form
             frmTeacherAttendance fa = new frmTeacherAttendance();
             fa.Show();
+            this.Hide();
         }
     }
 }
