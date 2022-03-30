@@ -57,33 +57,34 @@ namespace WindowsFormsApp1
             this.lblCourse.AutoSize = true;
             this.lblCourse.BackColor = System.Drawing.Color.Transparent;
             this.lblCourse.Font = new System.Drawing.Font("Arial Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourse.Location = new System.Drawing.Point(15, 51);
-            this.lblCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCourse.Location = new System.Drawing.Point(9, 36);
+            this.lblCourse.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCourse.Name = "lblCourse";
-            this.lblCourse.Size = new System.Drawing.Size(202, 59);
+            this.lblCourse.Size = new System.Drawing.Size(117, 33);
             this.lblCourse.TabIndex = 34;
             this.lblCourse.Text = "Course:";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(79, 33);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // gradebookToolStripMenuItem
             // 
             this.gradebookToolStripMenuItem.Name = "gradebookToolStripMenuItem";
-            this.gradebookToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.gradebookToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.gradebookToolStripMenuItem.Text = "Gradebook";
+            this.gradebookToolStripMenuItem.Click += new System.EventHandler(this.gradebookToolStripMenuItem_Click);
             // 
             // btnShuffle
             // 
             this.btnShuffle.BackColor = System.Drawing.Color.Gainsboro;
             this.btnShuffle.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShuffle.Location = new System.Drawing.Point(25, 142);
-            this.btnShuffle.Margin = new System.Windows.Forms.Padding(2);
+            this.btnShuffle.Location = new System.Drawing.Point(14, 86);
+            this.btnShuffle.Margin = new System.Windows.Forms.Padding(1);
             this.btnShuffle.Name = "btnShuffle";
-            this.btnShuffle.Size = new System.Drawing.Size(424, 137);
+            this.btnShuffle.Size = new System.Drawing.Size(242, 76);
             this.btnShuffle.TabIndex = 15;
             this.btnShuffle.Text = "Shuffle Seating Arrangement";
             this.btnShuffle.UseVisualStyleBackColor = false;
@@ -92,14 +93,15 @@ namespace WindowsFormsApp1
             // seatingChartToolStripMenuItem
             // 
             this.seatingChartToolStripMenuItem.Name = "seatingChartToolStripMenuItem";
-            this.seatingChartToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.seatingChartToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.seatingChartToolStripMenuItem.Text = "Seating Chart";
             // 
             // attendanceToolStripMenuItem
             // 
             this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
-            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(450, 58);
+            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(256, 34);
             this.attendanceToolStripMenuItem.Text = "Attendance";
+            this.attendanceToolStripMenuItem.Click += new System.EventHandler(this.attendanceToolStripMenuItem_Click);
             // 
             // menuToolStripMenuItem
             // 
@@ -108,14 +110,15 @@ namespace WindowsFormsApp1
             this.seatingChartToolStripMenuItem,
             this.gradebookToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(154, 53);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(91, 33);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // cbxCourse
             // 
@@ -127,37 +130,36 @@ namespace WindowsFormsApp1
             "English",
             "Spanish",
             "Physical Education"});
-            this.cbxCourse.Location = new System.Drawing.Point(239, 51);
-            this.cbxCourse.Margin = new System.Windows.Forms.Padding(7);
+            this.cbxCourse.Location = new System.Drawing.Point(137, 36);
+            this.cbxCourse.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCourse.Name = "cbxCourse";
-            this.cbxCourse.Size = new System.Drawing.Size(424, 57);
+            this.cbxCourse.Size = new System.Drawing.Size(244, 35);
             this.cbxCourse.TabIndex = 33;
             // 
             // lbxStudents
             // 
             this.lbxStudents.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxStudents.FormattingEnabled = true;
-            this.lbxStudents.ItemHeight = 41;
+            this.lbxStudents.ItemHeight = 23;
             this.lbxStudents.Items.AddRange(new object[] {
             "Student Information",
             "Will Appear Here ",
             "With Seat Number"});
-            this.lbxStudents.Location = new System.Drawing.Point(37, 293);
-            this.lbxStudents.Margin = new System.Windows.Forms.Padding(2);
+            this.lbxStudents.Location = new System.Drawing.Point(35, 163);
+            this.lbxStudents.Margin = new System.Windows.Forms.Padding(1);
             this.lbxStudents.Name = "lbxStudents";
-            this.lbxStudents.Size = new System.Drawing.Size(622, 578);
+            this.lbxStudents.Size = new System.Drawing.Size(357, 303);
             this.lbxStudents.TabIndex = 31;
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // menuStrip
             // 
             this.menuStrip.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -165,8 +167,8 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(1472, 57);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip.Size = new System.Drawing.Size(847, 35);
             this.menuStrip.TabIndex = 27;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -176,17 +178,17 @@ namespace WindowsFormsApp1
             this.closeToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 53);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 33);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // lblSeating
             // 
             this.lblSeating.BackColor = System.Drawing.Color.Transparent;
             this.lblSeating.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSeating.Location = new System.Drawing.Point(37, 184);
-            this.lblSeating.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSeating.Location = new System.Drawing.Point(21, 102);
+            this.lblSeating.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblSeating.Name = "lblSeating";
-            this.lblSeating.Size = new System.Drawing.Size(1363, 83);
+            this.lblSeating.Size = new System.Drawing.Size(779, 46);
             this.lblSeating.TabIndex = 30;
             this.lblSeating.Text = "Seating Chart";
             this.lblSeating.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -195,10 +197,10 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(37, 875);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(21, 500);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.Size = new System.Drawing.Size(115, 49);
             this.btnBack.TabIndex = 28;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -208,10 +210,10 @@ namespace WindowsFormsApp1
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(37, 83);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(21, 46);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1363, 83);
+            this.lblTitle.Size = new System.Drawing.Size(779, 46);
             this.lblTitle.TabIndex = 29;
             this.lblTitle.Text = "Texas Middle School";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -224,11 +226,11 @@ namespace WindowsFormsApp1
             this.gbxSeating.Controls.Add(this.cbxCourse);
             this.gbxSeating.Controls.Add(this.btnShuffle);
             this.gbxSeating.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSeating.Location = new System.Drawing.Point(693, 293);
-            this.gbxSeating.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxSeating.Location = new System.Drawing.Point(410, 163);
+            this.gbxSeating.Margin = new System.Windows.Forms.Padding(1);
             this.gbxSeating.Name = "gbxSeating";
-            this.gbxSeating.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxSeating.Size = new System.Drawing.Size(707, 307);
+            this.gbxSeating.Padding = new System.Windows.Forms.Padding(1);
+            this.gbxSeating.Size = new System.Drawing.Size(404, 182);
             this.gbxSeating.TabIndex = 35;
             this.gbxSeating.TabStop = false;
             this.gbxSeating.Text = "Shuffle Seating";
@@ -237,10 +239,10 @@ namespace WindowsFormsApp1
             // 
             this.btnSave.BackColor = System.Drawing.Color.Gainsboro;
             this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(467, 142);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(267, 86);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(1);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(219, 137);
+            this.btnSave.Size = new System.Drawing.Size(125, 76);
             this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -248,18 +250,21 @@ namespace WindowsFormsApp1
             // 
             // frmTeacherSeatingChart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1472, 1021);
+            this.ClientSize = new System.Drawing.Size(847, 563);
             this.Controls.Add(this.gbxSeating);
             this.Controls.Add(this.lbxStudents);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lblSeating);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
-            this.MinimumSize = new System.Drawing.Size(1500, 1100);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(865, 583);
             this.Name = "frmTeacherSeatingChart";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Seating Chart";

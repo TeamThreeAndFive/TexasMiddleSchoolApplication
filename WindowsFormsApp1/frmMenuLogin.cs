@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
             if (tbxUsername.Text == string.Empty || tbxPassword.Text == string.Empty)
             {
                 // if its empty
-                MessageBox.Show("Username or Password can not be empty, Username and Password is required to login.", "Empty filed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Username or Password can not be empty, Username and Password is required to login.", "Empty File", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -70,17 +70,21 @@ namespace WindowsFormsApp1
                     {
                         frmMenuAcademicOfficer academicOfficerMenu = new frmMenuAcademicOfficer();
                         academicOfficerMenu.Show();
+                        this.Hide();
                     }
                     else if (currentUser.getRole() == "Teacher")
                     {
                         frmMenuTeacher teacherMenu = new frmMenuTeacher();
                         teacherMenu.Show();
+                        this.Hide();
                     }
                     else
                     {
                         frmMenuAdministrator adminMenu = new frmMenuAdministrator();
                         adminMenu.Show();
+                        this.Hide();
                     }
+                    
 
                 }
 
@@ -90,7 +94,6 @@ namespace WindowsFormsApp1
 
         private void frmMenuLogin_Load(object sender, EventArgs e)
         {
-
             // open Database connections.
             ProgOps.OpenDatabseConnection();
 

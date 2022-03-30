@@ -47,10 +47,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxMascot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxMascot.Image = ((System.Drawing.Image)(resources.GetObject("pbxMascot.Image")));
-            this.pbxMascot.Location = new System.Drawing.Point(22, 129);
-            this.pbxMascot.Margin = new System.Windows.Forms.Padding(2);
+            this.pbxMascot.Location = new System.Drawing.Point(29, 159);
+            this.pbxMascot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxMascot.Name = "pbxMascot";
-            this.pbxMascot.Size = new System.Drawing.Size(210, 282);
+            this.pbxMascot.Size = new System.Drawing.Size(279, 347);
             this.pbxMascot.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxMascot.TabIndex = 25;
             this.pbxMascot.TabStop = false;
@@ -60,10 +60,10 @@ namespace WindowsFormsApp1
             this.btnLogin.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(391, 355);
+            this.btnLogin.Location = new System.Drawing.Point(521, 437);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(1);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(187, 54);
+            this.btnLogin.Size = new System.Drawing.Size(249, 66);
             this.btnLogin.TabIndex = 24;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -72,20 +72,20 @@ namespace WindowsFormsApp1
             // tbxPassword
             // 
             this.tbxPassword.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(377, 222);
-            this.tbxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPassword.Location = new System.Drawing.Point(503, 273);
+            this.tbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
-            this.tbxPassword.Size = new System.Drawing.Size(203, 29);
+            this.tbxPassword.Size = new System.Drawing.Size(269, 34);
             this.tbxPassword.TabIndex = 23;
             // 
             // tbxUsername
             // 
             this.tbxUsername.Font = new System.Drawing.Font("Arial Narrow", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxUsername.Location = new System.Drawing.Point(377, 171);
-            this.tbxUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxUsername.Location = new System.Drawing.Point(503, 210);
+            this.tbxUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.Size = new System.Drawing.Size(203, 29);
+            this.tbxUsername.Size = new System.Drawing.Size(269, 34);
             this.tbxUsername.TabIndex = 22;
             // 
             // lblPassword
@@ -93,10 +93,9 @@ namespace WindowsFormsApp1
             this.lblPassword.AutoSize = true;
             this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(268, 225);
-            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassword.Location = new System.Drawing.Point(357, 277);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(110, 22);
+            this.lblPassword.Size = new System.Drawing.Size(133, 29);
             this.lblPassword.TabIndex = 21;
             this.lblPassword.Text = "Password:";
             // 
@@ -106,10 +105,9 @@ namespace WindowsFormsApp1
             this.llblForgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.llblForgotPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llblForgotPassword.LinkColor = System.Drawing.SystemColors.HotTrack;
-            this.llblForgotPassword.Location = new System.Drawing.Point(400, 263);
-            this.llblForgotPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.llblForgotPassword.Location = new System.Drawing.Point(533, 324);
             this.llblForgotPassword.Name = "llblForgotPassword";
-            this.llblForgotPassword.Size = new System.Drawing.Size(157, 23);
+            this.llblForgotPassword.Size = new System.Drawing.Size(191, 28);
             this.llblForgotPassword.TabIndex = 20;
             this.llblForgotPassword.TabStop = true;
             this.llblForgotPassword.Text = "Forgot Password";
@@ -120,10 +118,9 @@ namespace WindowsFormsApp1
             this.lblUsername.AutoSize = true;
             this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(267, 171);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(356, 210);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(111, 22);
+            this.lblUsername.Size = new System.Drawing.Size(134, 29);
             this.lblUsername.TabIndex = 19;
             this.lblUsername.Text = "Username:";
             // 
@@ -131,10 +128,9 @@ namespace WindowsFormsApp1
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(5, 14);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Location = new System.Drawing.Point(7, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(620, 46);
+            this.lblTitle.Size = new System.Drawing.Size(827, 57);
             this.lblTitle.TabIndex = 17;
             this.lblTitle.Text = "Texas Middle School";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -143,10 +139,9 @@ namespace WindowsFormsApp1
             // 
             this.lblEmployeePortal.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployeePortal.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeePortal.Location = new System.Drawing.Point(13, 63);
-            this.lblEmployeePortal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmployeePortal.Location = new System.Drawing.Point(17, 78);
             this.lblEmployeePortal.Name = "lblEmployeePortal";
-            this.lblEmployeePortal.Size = new System.Drawing.Size(613, 45);
+            this.lblEmployeePortal.Size = new System.Drawing.Size(817, 55);
             this.lblEmployeePortal.TabIndex = 18;
             this.lblEmployeePortal.Text = "Employee Portal";
             this.lblEmployeePortal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -157,10 +152,10 @@ namespace WindowsFormsApp1
             this.cbxKeepLoggedIn.Checked = true;
             this.cbxKeepLoggedIn.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbxKeepLoggedIn.Font = new System.Drawing.Font("Arial", 10F);
-            this.cbxKeepLoggedIn.Location = new System.Drawing.Point(418, 309);
-            this.cbxKeepLoggedIn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbxKeepLoggedIn.Location = new System.Drawing.Point(557, 380);
+            this.cbxKeepLoggedIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbxKeepLoggedIn.Name = "cbxKeepLoggedIn";
-            this.cbxKeepLoggedIn.Size = new System.Drawing.Size(160, 34);
+            this.cbxKeepLoggedIn.Size = new System.Drawing.Size(213, 42);
             this.cbxKeepLoggedIn.TabIndex = 26;
             this.cbxKeepLoggedIn.Text = "Remember me";
             this.cbxKeepLoggedIn.UseVisualStyleBackColor = false;
@@ -171,10 +166,10 @@ namespace WindowsFormsApp1
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(272, 355);
+            this.btnExit.Location = new System.Drawing.Point(363, 437);
             this.btnExit.Margin = new System.Windows.Forms.Padding(1);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(106, 54);
+            this.btnExit.Size = new System.Drawing.Size(141, 66);
             this.btnExit.TabIndex = 27;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -183,12 +178,12 @@ namespace WindowsFormsApp1
             // frmMenuLogin
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(637, 479);
+            this.ClientSize = new System.Drawing.Size(847, 563);
             this.Controls.Add(this.pbxMascot);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.tbxUsername);
@@ -201,10 +196,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbxKeepLoggedIn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(653, 519);
+            this.MinimumSize = new System.Drawing.Size(865, 610);
             this.Name = "frmMenuLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Login";
