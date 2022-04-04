@@ -29,10 +29,7 @@ namespace WindowsFormsApp1
             //Submit Grade Changes Button
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -64,6 +61,14 @@ namespace WindowsFormsApp1
             {
                 lbxStudents.Items.Add(ProgOps._userTable.Rows[i].ToString());
             }
+        }
+
+
+        private void backToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuTeacher menu = new frmMenuTeacher();
+            menu.Show();
         }
     }
 }
