@@ -39,10 +39,6 @@ namespace WindowsFormsApp1
             //Save Button
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void seatingChartToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -56,6 +52,13 @@ namespace WindowsFormsApp1
             frmTeacherGradebook gradebook = new frmTeacherGradebook();
             gradebook.Show();
             this.Hide();
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuTeacher menu = new frmMenuTeacher();
+            menu.Show();
         }
     }
 }
