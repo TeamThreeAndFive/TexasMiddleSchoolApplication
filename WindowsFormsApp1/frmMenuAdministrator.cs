@@ -50,5 +50,14 @@ namespace WindowsFormsApp1
             // Back Button
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure you want to log-out and exit the application?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                // If user want to exit the application
+                Application.Exit();
+            }
+        }
     }
 }
