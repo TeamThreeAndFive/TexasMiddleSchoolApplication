@@ -34,10 +34,7 @@ namespace WindowsFormsApp1
             //Save Seating Arrangement
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+
 
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,6 +48,13 @@ namespace WindowsFormsApp1
             frmTeacherGradebook gb = new frmTeacherGradebook();
             gb.Show();
             this.Hide();
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMenuTeacher menu = new frmMenuTeacher();
+            menu.Show();
         }
     }
 }
