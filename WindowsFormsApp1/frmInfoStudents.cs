@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
