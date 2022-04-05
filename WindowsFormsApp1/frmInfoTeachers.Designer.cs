@@ -36,10 +36,6 @@ namespace WindowsFormsApp1
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seatingChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gradebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbxTeachers = new System.Windows.Forms.ListBox();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -69,7 +65,7 @@ namespace WindowsFormsApp1
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(308, 493);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 40);
             this.btnBack.TabIndex = 37;
@@ -89,13 +85,13 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // menuStrip
@@ -104,7 +100,6 @@ namespace WindowsFormsApp1
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.menuToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -112,34 +107,6 @@ namespace WindowsFormsApp1
             this.menuStrip.Size = new System.Drawing.Size(652, 28);
             this.menuStrip.TabIndex = 36;
             this.menuStrip.Text = "menuStrip1";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.attendanceToolStripMenuItem,
-            this.seatingChartToolStripMenuItem,
-            this.gradebookToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // attendanceToolStripMenuItem
-            // 
-            this.attendanceToolStripMenuItem.Name = "attendanceToolStripMenuItem";
-            this.attendanceToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.attendanceToolStripMenuItem.Text = "Attendance";
-            // 
-            // seatingChartToolStripMenuItem
-            // 
-            this.seatingChartToolStripMenuItem.Name = "seatingChartToolStripMenuItem";
-            this.seatingChartToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.seatingChartToolStripMenuItem.Text = "Seating Chart";
-            // 
-            // gradebookToolStripMenuItem
-            // 
-            this.gradebookToolStripMenuItem.Name = "gradebookToolStripMenuItem";
-            this.gradebookToolStripMenuItem.Size = new System.Drawing.Size(206, 26);
-            this.gradebookToolStripMenuItem.Text = "Gradebook";
             // 
             // helpToolStripMenuItem
             // 
@@ -156,7 +123,7 @@ namespace WindowsFormsApp1
             "Teacher Information ",
             "Will Appear Here"});
             this.lbxTeachers.Location = new System.Drawing.Point(21, 133);
-            this.lbxTeachers.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.lbxTeachers.Margin = new System.Windows.Forms.Padding(1);
             this.lbxTeachers.Name = "lbxTeachers";
             this.lbxTeachers.Size = new System.Drawing.Size(269, 400);
             this.lbxTeachers.TabIndex = 40;
@@ -165,8 +132,8 @@ namespace WindowsFormsApp1
             // 
             this.btnEdit.BackColor = System.Drawing.Color.White;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(10, 41);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnEdit.Location = new System.Drawing.Point(15, 41);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(1);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(86, 40);
             this.btnEdit.TabIndex = 41;
@@ -179,7 +146,7 @@ namespace WindowsFormsApp1
             this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(227, 41);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(1);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(86, 40);
             this.btnDelete.TabIndex = 42;
@@ -192,7 +159,7 @@ namespace WindowsFormsApp1
             this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(121, 41);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(1);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 40);
             this.btnAdd.TabIndex = 43;
@@ -204,8 +171,8 @@ namespace WindowsFormsApp1
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(227, 95);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnSave.Location = new System.Drawing.Point(121, 97);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(1);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(86, 40);
             this.btnSave.TabIndex = 45;
@@ -222,9 +189,9 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.Controls.Add(this.btnAdd);
             this.gbxMakeChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxMakeChanges.Location = new System.Drawing.Point(308, 133);
-            this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1);
             this.gbxMakeChanges.Name = "gbxMakeChanges";
-            this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1);
             this.gbxMakeChanges.Size = new System.Drawing.Size(323, 164);
             this.gbxMakeChanges.TabIndex = 46;
             this.gbxMakeChanges.TabStop = false;
@@ -234,8 +201,8 @@ namespace WindowsFormsApp1
             // 
             this.btnClear.BackColor = System.Drawing.Color.White;
             this.btnClear.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(121, 95);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btnClear.Location = new System.Drawing.Point(15, 97);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(1);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(86, 40);
             this.btnClear.TabIndex = 49;
@@ -250,12 +217,16 @@ namespace WindowsFormsApp1
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(652, 554);
+            this.ControlBox = false;
             this.Controls.Add(this.gbxMakeChanges);
             this.Controls.Add(this.lblTeacherInfo);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lbxTeachers);
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(652, 505);
             this.Name = "frmInfoTeachers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -276,10 +247,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem attendanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seatingChartToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gradebookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ListBox lbxTeachers;
         private System.Windows.Forms.Button btnEdit;
