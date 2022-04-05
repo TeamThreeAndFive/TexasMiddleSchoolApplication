@@ -20,8 +20,9 @@ namespace WindowsFormsApp1
         private void btnStudents_Click(object sender, EventArgs e)
         {
             // Opens Students Form
-            frmEditStudents fes = new frmEditStudents();
+            var fes = new frmInfoStudents();
             fes.Show();
+            
         }
 
         private void btnTeachers_Click(object sender, EventArgs e)

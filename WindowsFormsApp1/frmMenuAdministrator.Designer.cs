@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
             // 
             this.lblAdminMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminMenu.Location = new System.Drawing.Point(24, 36);
+            this.lblAdminMenu.Location = new System.Drawing.Point(62, 36);
             this.lblAdminMenu.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblAdminMenu.Name = "lblAdminMenu";
             this.lblAdminMenu.Size = new System.Drawing.Size(584, 37);
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(708, 458);
+            this.ClientSize = new System.Drawing.Size(708, 481);
             this.ControlBox = false;
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbxAcademicOfficers);
