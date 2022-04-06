@@ -31,6 +31,11 @@ namespace WindowsFormsApp1
         // current employee
         public static Employee currentEmployee;
 
+        public static DataTable UserTable
+        {
+            get { return _userTable; }
+        }
+
         
         /// <summary>
         /// Connect to inew2330sp22 database and open connection.
@@ -117,13 +122,14 @@ namespace WindowsFormsApp1
                     // If so, user is found and add it information to the currentUser.
 
                     // parse info
+                    string empID = _userTable.Rows[0]["EmployeeID"].ToString();
                     string fName = _userTable.Rows[0]["FirstName"].ToString();
                     string lName = _userTable.Rows[0]["LastName"].ToString();
                     string email = _userTable.Rows[0]["Email"].ToString();
                     string phone = _userTable.Rows[0]["Phone"].ToString();
                     string role = _userTable.Rows[0]["role"].ToString();
 
-                    currentEmployee = new Employee(fName, lName, email, phone, role);
+                    currentEmployee = new Employee(empID, fName, lName, email, phone, role);
 
                     return true;
                 } 

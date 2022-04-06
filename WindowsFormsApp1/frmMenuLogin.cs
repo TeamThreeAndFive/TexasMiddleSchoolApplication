@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
     {
 
         // Initialize new employee -- as current user
-        Employee currentUser;
+        public static Employee currentUser;
 
         public frmMenuLogin()
         {
@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
                     {
                         frmMenuTeacher teacherMenu = new frmMenuTeacher();
                         teacherMenu.Show();
+                        currentUser.getEmployeeID();
                         this.Hide();
                     }
                     else
@@ -83,11 +84,8 @@ namespace WindowsFormsApp1
                         frmMenuAdministrator adminMenu = new frmMenuAdministrator();
                         adminMenu.Show();
                         this.Hide();
-                    }
-                    
-
+                    } 
                 }
-
             }
         }
 

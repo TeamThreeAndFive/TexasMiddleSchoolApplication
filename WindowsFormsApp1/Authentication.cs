@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
         public static bool Authenticate(string email, string password)
         {
             // make a query to authenticate user
-            String query = "SELECT FirstName, LastName, Email, Phone, Role FROM group3fa212330.Employees " +
+            String query = "SELECT * FROM group3fa212330.Employees " +
                 "WHERE email = '" + email + "' " +
                 "AND " +
                 "password = '" + password + "'";

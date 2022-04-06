@@ -157,6 +157,7 @@
     <Compile Include="frmTeacherSeatingChart.Designer.cs">
       <DependentUpon>frmTeacherSeatingChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs" />
     <EmbeddedResource Include="frmEditAcademicOfficers.resx">
       <DependentUpon>frmEditAcademicOfficers.cs</DependentUpon>
     </EmbeddedResource>
