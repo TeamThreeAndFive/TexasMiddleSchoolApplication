@@ -41,7 +41,6 @@ namespace WindowsFormsApp1
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lblEditTeachers = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
             this.gbxTeacherInformation.SuspendLayout();
@@ -60,9 +59,11 @@ namespace WindowsFormsApp1
             this.gbxTeacherInformation.Controls.Add(this.lblLastName);
             this.gbxTeacherInformation.Controls.Add(this.lblFirstName);
             this.gbxTeacherInformation.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxTeacherInformation.Location = new System.Drawing.Point(386, 230);
+            this.gbxTeacherInformation.Location = new System.Drawing.Point(31, 95);
+            this.gbxTeacherInformation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.gbxTeacherInformation.Name = "gbxTeacherInformation";
-            this.gbxTeacherInformation.Size = new System.Drawing.Size(657, 472);
+            this.gbxTeacherInformation.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.gbxTeacherInformation.Size = new System.Drawing.Size(586, 299);
             this.gbxTeacherInformation.TabIndex = 78;
             this.gbxTeacherInformation.TabStop = false;
             this.gbxTeacherInformation.Text = "Teacher Information";
@@ -70,41 +71,46 @@ namespace WindowsFormsApp1
             // tbxEmail
             // 
             this.tbxEmail.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmail.Location = new System.Drawing.Point(322, 396);
+            this.tbxEmail.Location = new System.Drawing.Point(261, 209);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(280, 56);
+            this.tbxEmail.Size = new System.Drawing.Size(216, 29);
             this.tbxEmail.TabIndex = 73;
             // 
             // tbxPhone
             // 
             this.tbxPhone.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPhone.Location = new System.Drawing.Point(324, 308);
+            this.tbxPhone.Location = new System.Drawing.Point(262, 169);
+            this.tbxPhone.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbxPhone.Name = "tbxPhone";
-            this.tbxPhone.Size = new System.Drawing.Size(280, 56);
+            this.tbxPhone.Size = new System.Drawing.Size(216, 29);
             this.tbxPhone.TabIndex = 71;
             // 
             // tbxLastName
             // 
             this.tbxLastName.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxLastName.Location = new System.Drawing.Point(324, 224);
+            this.tbxLastName.Location = new System.Drawing.Point(262, 131);
+            this.tbxLastName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbxLastName.Name = "tbxLastName";
-            this.tbxLastName.Size = new System.Drawing.Size(280, 56);
+            this.tbxLastName.Size = new System.Drawing.Size(216, 29);
             this.tbxLastName.TabIndex = 70;
             // 
             // tbxFirstName
             // 
             this.tbxFirstName.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxFirstName.Location = new System.Drawing.Point(322, 141);
+            this.tbxFirstName.Location = new System.Drawing.Point(261, 94);
+            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbxFirstName.Name = "tbxFirstName";
-            this.tbxFirstName.Size = new System.Drawing.Size(282, 56);
+            this.tbxFirstName.Size = new System.Drawing.Size(217, 29);
             this.tbxFirstName.TabIndex = 69;
             // 
             // tbxEmployeeID
             // 
             this.tbxEmployeeID.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxEmployeeID.Location = new System.Drawing.Point(324, 65);
+            this.tbxEmployeeID.Location = new System.Drawing.Point(262, 60);
+            this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tbxEmployeeID.Name = "tbxEmployeeID";
-            this.tbxEmployeeID.Size = new System.Drawing.Size(280, 56);
+            this.tbxEmployeeID.Size = new System.Drawing.Size(216, 29);
             this.tbxEmployeeID.TabIndex = 67;
             // 
             // lblEmail
@@ -112,10 +118,10 @@ namespace WindowsFormsApp1
             this.lblEmail.AutoSize = true;
             this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(178, 405);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Location = new System.Drawing.Point(108, 209);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(139, 47);
+            this.lblEmail.Size = new System.Drawing.Size(62, 22);
             this.lblEmail.TabIndex = 66;
             this.lblEmail.Text = "Email:";
             // 
@@ -124,10 +130,10 @@ namespace WindowsFormsApp1
             this.lblPhone.AutoSize = true;
             this.lblPhone.BackColor = System.Drawing.Color.Transparent;
             this.lblPhone.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.Location = new System.Drawing.Point(167, 317);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhone.Location = new System.Drawing.Point(108, 169);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(152, 47);
+            this.lblPhone.Size = new System.Drawing.Size(70, 22);
             this.lblPhone.TabIndex = 64;
             this.lblPhone.Text = "Phone:";
             // 
@@ -136,10 +142,10 @@ namespace WindowsFormsApp1
             this.lblEmployeeID.AutoSize = true;
             this.lblEmployeeID.BackColor = System.Drawing.Color.Transparent;
             this.lblEmployeeID.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeID.Location = new System.Drawing.Point(46, 74);
-            this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmployeeID.Location = new System.Drawing.Point(108, 60);
+            this.lblEmployeeID.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(273, 47);
+            this.lblEmployeeID.Size = new System.Drawing.Size(126, 22);
             this.lblEmployeeID.TabIndex = 54;
             this.lblEmployeeID.Text = "Employee ID:";
             // 
@@ -148,10 +154,10 @@ namespace WindowsFormsApp1
             this.lblLastName.AutoSize = true;
             this.lblLastName.BackColor = System.Drawing.Color.Transparent;
             this.lblLastName.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastName.Location = new System.Drawing.Point(85, 233);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastName.Location = new System.Drawing.Point(108, 131);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(234, 47);
+            this.lblLastName.Size = new System.Drawing.Size(106, 22);
             this.lblLastName.TabIndex = 57;
             this.lblLastName.Text = "Last Name:";
             // 
@@ -160,10 +166,10 @@ namespace WindowsFormsApp1
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.BackColor = System.Drawing.Color.Transparent;
             this.lblFirstName.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(81, 150);
-            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstName.Location = new System.Drawing.Point(108, 94);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(238, 47);
+            this.lblFirstName.Size = new System.Drawing.Size(107, 22);
             this.lblFirstName.TabIndex = 55;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -171,35 +177,23 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(11, 781);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(31, 407);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(201, 89);
+            this.btnBack.Size = new System.Drawing.Size(86, 40);
             this.btnBack.TabIndex = 74;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // lblTitle
-            // 
-            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(11, 36);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(1450, 83);
-            this.lblTitle.TabIndex = 75;
-            this.lblTitle.Text = "Texas Middle School";
-            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // lblEditTeachers
             // 
             this.lblEditTeachers.BackColor = System.Drawing.Color.Transparent;
             this.lblEditTeachers.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditTeachers.Location = new System.Drawing.Point(7, 130);
-            this.lblEditTeachers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEditTeachers.Location = new System.Drawing.Point(10, 34);
+            this.lblEditTeachers.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblEditTeachers.Name = "lblEditTeachers";
-            this.lblEditTeachers.Size = new System.Drawing.Size(1454, 83);
+            this.lblEditTeachers.Size = new System.Drawing.Size(623, 37);
             this.lblEditTeachers.TabIndex = 76;
             this.lblEditTeachers.Text = "Edit Teacher Information";
             this.lblEditTeachers.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -208,10 +202,10 @@ namespace WindowsFormsApp1
             // 
             this.btnSaveChanges.BackColor = System.Drawing.Color.White;
             this.btnSaveChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveChanges.Location = new System.Drawing.Point(1089, 761);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveChanges.Location = new System.Drawing.Point(458, 407);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(372, 109);
+            this.btnSaveChanges.Size = new System.Drawing.Size(159, 49);
             this.btnSaveChanges.TabIndex = 82;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
@@ -219,17 +213,17 @@ namespace WindowsFormsApp1
             // 
             // frmEditTeachers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1472, 1021);
+            this.ClientSize = new System.Drawing.Size(636, 466);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxTeacherInformation);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblEditTeachers);
-            this.MinimumSize = new System.Drawing.Size(1500, 1100);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.MinimumSize = new System.Drawing.Size(652, 505);
             this.Name = "frmEditTeachers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Edit Teacher";
@@ -253,7 +247,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblEditTeachers;
         private System.Windows.Forms.Button btnSaveChanges;
     }

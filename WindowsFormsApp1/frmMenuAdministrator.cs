@@ -20,29 +20,37 @@ namespace WindowsFormsApp1
         private void btnStudents_Click(object sender, EventArgs e)
         {
             // Opens Students Form
-            frmEditStudents fes = new frmEditStudents();
-            fes.Show();
+            var frm = new frmInfoStudents();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnTeachers_Click(object sender, EventArgs e)
         {
             // Opens Teachers Form
-            frmEditTeachers fet = new frmEditTeachers();
-            fet.Show();
+            var frm = new frmInfoTeachers();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
             // Opens Courses Form
-            frmEditCourses fec = new frmEditCourses();
-            fec.Show();
+            var frm = new frmInfoCourses();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnAcademicOfficers_Click(object sender, EventArgs e)
         {
-            // Opens Academic Officer Form
-            frmEditAcademicOfficers feao = new frmEditAcademicOfficers();
-            feao.Show();
+            // Opens Academic officer Form
+            var frm = new frmInfoAcademicOfficers();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
 
         private void btnBack_Click(object sender, EventArgs e)

@@ -16,18 +16,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            // Test push
-
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             // Edit Button
+            var editStudentForm = new frmEditStudents();
+            editStudentForm.ShowDialog();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -50,9 +50,11 @@ namespace WindowsFormsApp1
             // Clear Button
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Save Button
+
         }
     }
 }

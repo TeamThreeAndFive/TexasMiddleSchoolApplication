@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             this.btnAcademicOfficers.Location = new System.Drawing.Point(519, 281);
             this.btnAcademicOfficers.Name = "btnAcademicOfficers";
             this.btnAcademicOfficers.Size = new System.Drawing.Size(143, 74);
-            this.btnAcademicOfficers.TabIndex = 55;
+            this.btnAcademicOfficers.TabIndex = 3;
             this.btnAcademicOfficers.Text = "Academic Officers";
             this.btnAcademicOfficers.UseVisualStyleBackColor = false;
             this.btnAcademicOfficers.Click += new System.EventHandler(this.btnAcademicOfficers_Click);
@@ -110,7 +110,7 @@ namespace WindowsFormsApp1
             this.btnTeachers.Location = new System.Drawing.Point(203, 281);
             this.btnTeachers.Name = "btnTeachers";
             this.btnTeachers.Size = new System.Drawing.Size(143, 74);
-            this.btnTeachers.TabIndex = 48;
+            this.btnTeachers.TabIndex = 1;
             this.btnTeachers.Text = "Teachers";
             this.btnTeachers.UseVisualStyleBackColor = false;
             this.btnTeachers.Click += new System.EventHandler(this.btnTeachers_Click);
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
             this.btnCourses.Location = new System.Drawing.Point(363, 281);
             this.btnCourses.Name = "btnCourses";
             this.btnCourses.Size = new System.Drawing.Size(143, 74);
-            this.btnCourses.TabIndex = 46;
+            this.btnCourses.TabIndex = 2;
             this.btnCourses.Text = "Courses";
             this.btnCourses.UseVisualStyleBackColor = false;
             this.btnCourses.Click += new System.EventHandler(this.btnCourses_Click);
@@ -132,11 +132,11 @@ namespace WindowsFormsApp1
             // 
             this.lblAdminMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminMenu.Location = new System.Drawing.Point(24, 36);
+            this.lblAdminMenu.Location = new System.Drawing.Point(62, 36);
             this.lblAdminMenu.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblAdminMenu.Name = "lblAdminMenu";
             this.lblAdminMenu.Size = new System.Drawing.Size(584, 37);
-            this.lblAdminMenu.TabIndex = 54;
+            this.lblAdminMenu.TabIndex = 0;
             this.lblAdminMenu.Text = "Administrator Menu";
             this.lblAdminMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -147,7 +147,7 @@ namespace WindowsFormsApp1
             this.btnStudents.Location = new System.Drawing.Point(45, 281);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Size = new System.Drawing.Size(143, 74);
-            this.btnStudents.TabIndex = 47;
+            this.btnStudents.TabIndex = 0;
             this.btnStudents.Text = "Students";
             this.btnStudents.UseVisualStyleBackColor = false;
             this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
             this.btnExit.Margin = new System.Windows.Forms.Padding(1);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(127, 38);
-            this.btnExit.TabIndex = 57;
+            this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(708, 458);
+            this.ClientSize = new System.Drawing.Size(708, 481);
             this.ControlBox = false;
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbxAcademicOfficers);
