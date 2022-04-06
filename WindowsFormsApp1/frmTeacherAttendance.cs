@@ -68,10 +68,8 @@ namespace WindowsFormsApp1
 
             try
             {
-
                 SqlCommand dbCommand = new SqlCommand("SELECT c.Name FROM group3fa212330.Courses AS c " +
-                    "JOIN group3fa212330.CoursesEmployees AS ce ON c.CourseID = ce.EmployeeID JOIN " +
-                    "group3fa212330.Employees AS e ON ce.EmployeeID = e.EmployeeID WHERE e.EmployeeID = " +
+                    "JOIN group3fa212330.CoursesEmployees AS ce ON c.CourseID = ce.CourseID WHERE ce.EmployeeID = " +
                 frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
                 SqlDataAdapter daCourses = new SqlDataAdapter();
 
