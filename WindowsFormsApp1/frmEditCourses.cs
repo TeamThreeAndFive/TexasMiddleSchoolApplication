@@ -31,5 +31,25 @@ namespace WindowsFormsApp1
         {
             // Save Changes Button
         }
+
+        private void frmEditCourses_Load(object sender, EventArgs e)
+        {
+            // check if user has selected anything
+            if (frmInfoCourses.selectedCourseID != -1)
+            {
+                // if selected Id is not -1, then user has selected something
+
+                int _id = frmInfoCourses.selectedCourseID;
+
+                // Show info about the course
+                tbxCourseID.Text = frmInfoCourses.courseList[_id].id.ToString();
+                tbxName.Text = frmInfoCourses.courseList[_id].name;
+                tbxRoom.Text = frmInfoCourses.courseList[_id].room;
+                tbxMeetingDays.Text = frmInfoCourses.courseList[_id].meetingDays;
+                tbxMeetingTime.Text = frmInfoCourses.courseList[_id].meetingTime;
+                startTimePicker.Value = DateTime.Parse(frmInfoCourses.courseList[_id].startDate);
+                endTimePicker.Value = DateTime.Parse(frmInfoCourses.courseList[_id].endDate);
+            }
+        }
     }
 }
