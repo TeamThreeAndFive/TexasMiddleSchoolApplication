@@ -30,10 +30,8 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfoAcademicOfficers));
-            this.btnClear = new System.Windows.Forms.Button();
             this.gbxMakeChanges = new System.Windows.Forms.GroupBox();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.lbxAcademicOfficers = new System.Windows.Forms.ListBox();
@@ -44,28 +42,14 @@ namespace WindowsFormsApp1
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblAcademicOfficerInfo = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.gbxMakeChanges.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.White;
-            this.btnClear.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(20, 97);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(1);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(86, 40);
-            this.btnClear.TabIndex = 49;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
             // gbxMakeChanges
             // 
-            this.gbxMakeChanges.Controls.Add(this.btnClear);
             this.gbxMakeChanges.Controls.Add(this.btnEdit);
-            this.gbxMakeChanges.Controls.Add(this.btnSave);
             this.gbxMakeChanges.Controls.Add(this.btnDelete);
             this.gbxMakeChanges.Controls.Add(this.btnAdd);
             this.gbxMakeChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +57,7 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1);
             this.gbxMakeChanges.Name = "gbxMakeChanges";
             this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1);
-            this.gbxMakeChanges.Size = new System.Drawing.Size(323, 167);
+            this.gbxMakeChanges.Size = new System.Drawing.Size(323, 107);
             this.gbxMakeChanges.TabIndex = 52;
             this.gbxMakeChanges.TabStop = false;
             this.gbxMakeChanges.Text = "Make Changes";
@@ -81,6 +65,7 @@ namespace WindowsFormsApp1
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.Enabled = false;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(20, 41);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(1);
@@ -91,22 +76,10 @@ namespace WindowsFormsApp1
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(121, 97);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(1);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 40);
-            this.btnSave.TabIndex = 45;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(227, 41);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(1);
@@ -141,8 +114,9 @@ namespace WindowsFormsApp1
             this.lbxAcademicOfficers.Location = new System.Drawing.Point(10, 130);
             this.lbxAcademicOfficers.Margin = new System.Windows.Forms.Padding(1);
             this.lbxAcademicOfficers.Name = "lbxAcademicOfficers";
-            this.lbxAcademicOfficers.Size = new System.Drawing.Size(269, 418);
+            this.lbxAcademicOfficers.Size = new System.Drawing.Size(269, 364);
             this.lbxAcademicOfficers.TabIndex = 51;
+            this.lbxAcademicOfficers.SelectedIndexChanged += new System.EventHandler(this.lbxAcademicOfficers_SelectedIndexChanged);
             // 
             // helpToolStripMenuItem
             // 
@@ -189,7 +163,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(294, 508);
+            this.btnBack.Location = new System.Drawing.Point(294, 454);
             this.btnBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 40);
@@ -210,13 +184,25 @@ namespace WindowsFormsApp1
             this.lblAcademicOfficerInfo.Text = "Academic Officer Information";
             this.lblAcademicOfficerInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblInfo
+            // 
+            this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfo.Location = new System.Drawing.Point(294, 254);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Padding = new System.Windows.Forms.Padding(5);
+            this.lblInfo.Size = new System.Drawing.Size(323, 159);
+            this.lblInfo.TabIndex = 54;
+            this.lblInfo.Text = resources.GetString("lblInfo.Text");
+            // 
             // frmInfoAcademicOfficers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(636, 579);
+            this.ClientSize = new System.Drawing.Size(636, 517);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.gbxMakeChanges);
             this.Controls.Add(this.lbxAcademicOfficers);
             this.Controls.Add(this.menuStrip);
@@ -227,6 +213,7 @@ namespace WindowsFormsApp1
             this.Name = "frmInfoAcademicOfficers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Academic Officers";
+            this.Load += new System.EventHandler(this.frmInfoAcademicOfficers_Load);
             this.gbxMakeChanges.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -236,11 +223,8 @@ namespace WindowsFormsApp1
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox gbxMakeChanges;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ListBox lbxAcademicOfficers;
@@ -251,5 +235,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblAcademicOfficerInfo;
+        private System.Windows.Forms.Label lblInfo;
     }
 }
