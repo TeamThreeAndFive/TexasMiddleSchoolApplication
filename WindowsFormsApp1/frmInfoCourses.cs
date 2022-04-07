@@ -27,9 +27,8 @@ namespace WindowsFormsApp1
         // List to see the course information
         public static List<Course> courseList = new List<Course>();
 
-        // this will help to show pre-filed Edit courses form
-        // -1 is default, that means user has not selected anything.
-        public static int selectedCourseID = -1;
+   
+        public static int selectedIndex = -1;
 
         private void btnBack_Click(object sender, EventArgs e)
         {
@@ -44,14 +43,14 @@ namespace WindowsFormsApp1
             frm.ShowDialog();
             this.Show();
             ShowCourses();
-            selectedCourseID = -1;
+            selectedIndex = -1;
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            selectedCourseID = -1;
+            selectedIndex = -1;
                 
             var frm = new frmEditCourses();
             this.Hide();
@@ -71,7 +70,7 @@ namespace WindowsFormsApp1
                 DeleteRow();
 
             ShowCourses();
-            selectedCourseID = -1;
+            selectedIndex = -1;
             btnDelete.Enabled = false; 
             btnEdit.Enabled = false;
 
@@ -199,7 +198,7 @@ namespace WindowsFormsApp1
             if (lbxCourses.SelectedIndex >= 0)
             {
                 // get selected course id and set the course id
-                selectedCourseID = Int32.Parse(lbxCourses.SelectedItem.ToString()[0].ToString()) - 1;
+                selectedIndex = lbxCourses.SelectedIndex;
             }
             else
             {

@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
 {
     public partial class frmEditCourses : Form
     {
-        int _id = frmInfoCourses.selectedCourseID;
+        int _id = frmInfoCourses.selectedIndex;
 
         public frmEditCourses()
         {
@@ -163,7 +163,7 @@ namespace WindowsFormsApp1
 
         private void frmEditCourses_Load(object sender, EventArgs e)
         {
-            _id = frmInfoCourses.selectedCourseID;
+            _id = frmInfoCourses.selectedIndex;
 
             // check if user has selected anything
             if (_id != -1)
