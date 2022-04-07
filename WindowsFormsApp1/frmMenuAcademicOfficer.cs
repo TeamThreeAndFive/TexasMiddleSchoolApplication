@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         private void btnCourses_Click(object sender, EventArgs e)
         {
-            var frm = new frmInfoCourses("OFFICER");
+            var frm = new frmInfoCourses();
             this.Hide();
             frm.ShowDialog();
             this.Show();

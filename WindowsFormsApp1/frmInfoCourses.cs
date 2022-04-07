@@ -16,15 +16,11 @@ namespace WindowsFormsApp1
     public partial class frmInfoCourses : Form
     {
 
-        // Last form means
-        // What form was before this form.
-        // This will help to display appropriate value's on to the screen
-        private string _lastForm;
 
-        public frmInfoCourses(string lastForm)
+
+        public frmInfoCourses()
         {
             InitializeComponent();
-            this._lastForm = lastForm;
         }
 
 
@@ -47,21 +43,67 @@ namespace WindowsFormsApp1
             this.Hide();
             frm.ShowDialog();
             this.Show();
+            ShowCourses();
+            selectedCourseID = -1;
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            // Add Button
+            selectedCourseID = -1;
+                
+            var frm = new frmEditCourses();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+            ShowCourses();
+
         }
+
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            // Delete Button
+            // Check if user is sure want to delete
+            if (MessageBox.Show("Are you sure you want to delete this?", "Updating Database..", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                DeleteRow();
+
+            ShowCourses();
+            selectedCourseID = -1;
+            btnDelete.Enabled = false; 
+            btnEdit.Enabled = false;
+
         }
 
-        private void btnUndo_Click(object sender, EventArgs e)
+        private void DeleteRow()
         {
-            // Undo Button
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("DELETE FROM group3fa212330.Courses " +
+                    "WHERE CourseID = @courseID", ProgOps.dbConnection);
+
+                cmd.Parameters.AddWithValue("courseID", courseList[lbxCourses.SelectedIndex].id);
+
+
+                if (cmd.ExecuteNonQuery() <= 0)
+                {
+                    MessageBox.Show("Error occur while inserting to the database.", "Inserting Database..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Course successfully deleted!", "Deleting Database..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                cmd.Dispose();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -78,7 +120,6 @@ namespace WindowsFormsApp1
         {
    
            ShowCourses();
-
         }
 
         public void ShowCourses()
@@ -91,21 +132,11 @@ namespace WindowsFormsApp1
 
                 SqlCommand cmd;
 
-                // check which form was the last form
-                if (_lastForm == "ADMIN")
-                {
-                    // if, it was ADMIN, show all data to admin
-                    cmd = new SqlCommand("SELECT * FROM group3fa212330.Courses ORDER BY CourseID", ProgOps.dbConnection);
-                }
-                else
-                {
-                    // show only data the use has access to
 
-                    // NEEDED WORK ON HERE -----------------------------------------------------------------------
-
-                    cmd = new SqlCommand("SELECT * FROM group3fa212330.Courses ORDER BY CourseID", ProgOps.dbConnection);
-                }
-
+              
+                // if, it was ADMIN, show all data to admin
+                cmd = new SqlCommand("SELECT * FROM group3fa212330.Courses ORDER BY CourseID", ProgOps.dbConnection);
+ 
                
                 SqlDataAdapter coursesAdapter = new SqlDataAdapter();
                 DataTable coursesTable = new DataTable();
@@ -160,9 +191,9 @@ namespace WindowsFormsApp1
         {
             // If user select any index we will enable exit button
             btnEdit.Enabled = true;
+            btnDelete.Enabled = true;
 
             // check id user actually selected anything
-            
             if (lbxCourses.SelectedIndex >= 0)
             {
                 // get selected course id and set the course id
@@ -171,6 +202,7 @@ namespace WindowsFormsApp1
             else
             {
                 btnEdit.Enabled = false;
+                btnDelete.Enabled = false;
             }
 
 
