@@ -11,14 +11,15 @@ namespace WindowsFormsApp1
     /// </summary>
     public class Employee
     {
-        private string employeeID;
-        private string frist_name;
-        private string last_name;
-        private string email;
-        private string phone;
-        private string role;
+        public string employeeID;
+        public string frist_name;
+        public string last_name;
+        public string email;
+        public string phone;
+        public string role;
 
-        
+        public Employee() { }
+
         /// <summary>
         /// constructor to build employee with parameters
         /// </summary>
@@ -42,6 +43,7 @@ namespace WindowsFormsApp1
 
         public string getEmployeeID()
         { return this.employeeID; }
+
         public string getFirstName()
         { return this.frist_name; }
 
