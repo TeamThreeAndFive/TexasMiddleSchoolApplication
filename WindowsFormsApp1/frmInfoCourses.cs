@@ -58,6 +58,8 @@ namespace WindowsFormsApp1
             frm.ShowDialog();
             this.Show();
             ShowCourses();
+            btnDelete.Enabled = false;
+            btnEdit.Enabled = false;
 
         }
 
