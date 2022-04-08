@@ -548,6 +548,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.gbxGuardianInformation);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblEditStudents);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

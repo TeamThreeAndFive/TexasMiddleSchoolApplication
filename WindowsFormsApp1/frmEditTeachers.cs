@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class frmEditTeachers : Form
     {
-        public static int editID; //variable to carry StudentID from Info form
+        public int editID; //variable to carry TeacherID from Info form
         const String _CONNECTION_STRING =
            "Server=cstnt.tstc.edu;" +
            "Database=inew2330sp22;" +
@@ -35,86 +35,131 @@ namespace WindowsFormsApp1
             this.Hide();
         }
 
-        private void btnSaveChanges_Click(object sender, EventArgs e)
+        private void addNewTeacher()
         {
-            // Save Changes Button
-            // Save Changes Button
-            try
+            query = "INSERT INTO group3fa212330.Employees(EmployeeID, FirstName, LastName, Email, Phone, Role, Password) " +
+            "VALUES(@EmployeeID, @FirstName, @LastName, @Email, @Phone, @Role, @Password);";
+            SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+            //inserting student information
+            dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+            dbCommand.Parameters.AddWithValue("@EmployeeID", tbxEmployeeID.Text);
+            dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
+            dbCommand.Parameters.AddWithValue("@LastName", tbxLastName.Text);
+            dbCommand.Parameters.AddWithValue("@Email", tbxEmail.Text);
+            dbCommand.Parameters.AddWithValue("@Phone", tbxPhone.Text);
+            dbCommand.Parameters.AddWithValue("@Role", "Teacher");
+            dbCommand.Parameters.AddWithValue("@Password", tbxPassword.Text);
+            SqlDataAdapter daTeacher = new SqlDataAdapter();
+            daTeacher = new SqlDataAdapter();
+            teachersTable = new DataTable();
+            daTeacher.SelectCommand = dbCommand;
+            daTeacher.Fill(teachersTable);
+
+            if (dbCommand.ExecuteNonQuery() <= 0)
             {
-
-                query = "SELECT * FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
-                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                SqlDataAdapter daStudent = new SqlDataAdapter();
-
-                teachersTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(teachersTable);
-
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
-                // update record in database
-                teachersTable.Rows[0]["FirstName"] = tbxFirstName.Text;
-                teachersTable.Rows[0]["LastName"] = tbxLastName.Text;
-                teachersTable.Rows[0]["Phone"] = tbxPhone.Text;
-                teachersTable.Rows[0]["Email"] = tbxEmail.Text;
-
-
-                MessageBox.Show("Update has been saved.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                //reload listbox
-                query = "SELECT * FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
-                dbCommand = new SqlCommand(query, dbConnection);
-                daStudent = new SqlDataAdapter();
-
-                teachersTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(teachersTable);
-
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
-
-                tbxEmployeeID.Text = teachersTable.Rows[0]["EmployeeID"].ToString();
-                tbxFirstName.Text = teachersTable.Rows[0]["FirstName"].ToString();
-                tbxLastName.Text = teachersTable.Rows[0]["LastName"].ToString();
-                tbxEmail.Text = teachersTable.Rows[0]["Email"].ToString();
-                tbxPhone.Text = teachersTable.Rows[0]["Phone"].ToString();
+                MessageBox.Show("Error trying to insert teacher to the database.", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error Updating Teacher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Teacher successfully added!", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                this.Visible = false;
             }
+
+            dbCommand.Dispose();
         }
+
+
 
         private void frmEditTeachers_Load(object sender, EventArgs e)
         {
             try
             {
                 editID = frmInfoTeachers.editID;
-                query = "SELECT * FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
-                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                SqlDataAdapter daStudent = new SqlDataAdapter();
+                if (editID == 0) //if no Teacher is selected, create new Teacher
+                {
+                    lblEditTeachers.Text = "New Teacher Information";
+                    query = "SELECT * FROM group3fa212330.Employees";
+                    SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                    SqlDataAdapter daTeacher = new SqlDataAdapter();
 
-                teachersTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(teachersTable);
+                    teachersTable = new DataTable();
+                    daTeacher.SelectCommand = dbCommand;
+                    daTeacher.Fill(teachersTable);
+                    editID = teachersTable.Rows.Count+1;
+                    tbxEmployeeID.Text = editID.ToString();
+                }
+                else
+                {
+                    editID = frmInfoTeachers.editID;
+                    query = "SELECT * FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
+                    SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                    SqlDataAdapter daTeacher = new SqlDataAdapter();
 
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
+                    teachersTable = new DataTable();
+                    daTeacher.SelectCommand = dbCommand;
+                    daTeacher.Fill(teachersTable);
 
-                tbxEmployeeID.Text = teachersTable.Rows[0]["EmployeeID"].ToString();
-                tbxFirstName.Text = teachersTable.Rows[0]["FirstName"].ToString();
-                tbxLastName.Text = teachersTable.Rows[0]["LastName"].ToString();
-                tbxEmail.Text = teachersTable.Rows[0]["Email"].ToString();
-                tbxPhone.Text = teachersTable.Rows[0]["Phone"].ToString();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daTeacher.Dispose();
+
+                    tbxEmployeeID.Text = teachersTable.Rows[0]["EmployeeID"].ToString();
+                    tbxFirstName.Text = teachersTable.Rows[0]["FirstName"].ToString();
+                    tbxLastName.Text = teachersTable.Rows[0]["LastName"].ToString();
+                    tbxEmail.Text = teachersTable.Rows[0]["Email"].ToString();
+                    tbxPhone.Text = teachersTable.Rows[0]["Phone"].ToString();
+                    tbxPassword.Text = teachersTable.Rows[0]["Password"].ToString();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
 
+        private void btnSaveChanges_Click(object sender, EventArgs e)
+        {
+
+            // Save Changes Button
+            // Save Changes Button
+            try
+            {
+                if (frmInfoTeachers.editID==0)
+                {
+                    addNewTeacher();
+                }
+                else
+                {
+                    query = "UPDATE group3fa212330.Employees SET FirstName=@FirstName, LastName=@LastName, Email=@Email, Phone=@Phone," +
+                    "Role='Teacher', Password=@Password WHERE EmployeeID=" + editID;
+                    SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
+                    dbCommand.Parameters.AddWithValue("@LastName", tbxLastName.Text);
+                    dbCommand.Parameters.AddWithValue("@Email", tbxEmail.Text);
+                    dbCommand.Parameters.AddWithValue("@Phone", tbxPhone.Text);
+                    dbCommand.Parameters.AddWithValue("@Password", tbxPassword.Text);
+                    SqlDataAdapter daTeacher = new SqlDataAdapter();
+
+                    teachersTable = new DataTable();
+                    daTeacher.SelectCommand = dbCommand;
+                    daTeacher.Fill(teachersTable);
+
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daTeacher.Dispose();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daTeacher.Dispose();
+
+                    this.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error Updating Teacher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }

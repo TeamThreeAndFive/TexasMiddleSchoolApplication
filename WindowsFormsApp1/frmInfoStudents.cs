@@ -20,8 +20,8 @@ namespace WindowsFormsApp1
             "password=3926456";
 
         // Database connection
-        public static SqlConnection dbConnection=new SqlConnection(_CONNECTION_STRING);
-
+        public static SqlConnection dbConnection = new SqlConnection(_CONNECTION_STRING);
+        public static int studentCount;
         // Data tables
         public static DataTable studentsTable;
         String query;
@@ -39,24 +39,27 @@ namespace WindowsFormsApp1
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            editID = lbxStudents.SelectedIndex + 1;
-            if(editID==0)
+            try
             {
-                MessageBox.Show("Please choose a student to edit.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // Edit Button
-                editID = lbxStudents.SelectedIndex;
+                editID = (int)studentsTable.Rows[lbxStudents.SelectedIndex]["StudentID"];
+                MessageBox.Show(editID.ToString());
                 var editStudentForm = new frmEditStudents();
                 editStudentForm.ShowDialog();
-                this.Hide();
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a student to edit.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            editID = 0;
             // Add Button
+            frmEditStudents edit = new frmEditStudents();
+            edit.ShowDialog();
+            this.Close();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -64,18 +67,29 @@ namespace WindowsFormsApp1
             // Delete Button
             try
             {
-               
                 //run query to delete student
-                editID = lbxStudents.SelectedIndex + 1;
-                if(editID==0)
+                editID = (int)studentsTable.Rows[lbxStudents.SelectedIndex]["StudentID"];
+                if (editID == 0)
                 {
                     MessageBox.Show("Please select a student to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    query = "DELETE FROM group3fa212330.Students WHERE StudentID=" + editID;
+                    query = "DELETE FROM group3fa212330.Attendance WHERE StudentID=" + editID;
                     SqlCommand dbCommand = new SqlCommand(query, dbConnection);
                     SqlDataAdapter daStudent = new SqlDataAdapter();
+
+                    // creating new user data table and filling the information
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
+
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
+                    query = "DELETE FROM group3fa212330.Students WHERE StudentID=" + editID;
+                    dbCommand = new SqlCommand(query, dbConnection);
+                    daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
                     studentsTable = new DataTable();
@@ -107,17 +121,17 @@ namespace WindowsFormsApp1
                         lbxStudents.Items.Add(studentsTable.Rows[i]["Student"].ToString());
                     }
                 }
-               
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error Deleting Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
 
+        }
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void frmInfoStudents_Load(object sender, EventArgs e)
@@ -141,14 +155,25 @@ namespace WindowsFormsApp1
                 dbCommand.Dispose();
                 daStudent.Dispose();
 
-                for(int i=0;i<studentsTable.Rows.Count;i++)
+                for (int i = 0; i < studentsTable.Rows.Count; i++)
                 {
                     lbxStudents.Items.Add(studentsTable.Rows[i]["Student"].ToString());
                 }
+                studentCount = lbxStudents.Items.Count;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(editID !=0)
+            {
+                MessageBox.Show("Changes have been successfully saved.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
     }

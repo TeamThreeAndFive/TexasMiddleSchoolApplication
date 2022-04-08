@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
 
         // Database connection
         public static SqlConnection dbConnection = new SqlConnection(_CONNECTION_STRING);
-
         // Data tables
         public static DataTable teachersTable;
         String query;
@@ -38,24 +37,26 @@ namespace WindowsFormsApp1
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            // Edit Button
-            editID = lbxTeachers.SelectedIndex + 1;
-            if (editID == 0)
+            try
             {
-                MessageBox.Show("Please choose a teacher to edit.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                // Edit Button
+                editID = (int)teachersTable.Rows[lbxTeachers.SelectedIndex]["EmployeeID"];
                 var editTeacherForm = new frmEditTeachers();
                 editTeacherForm.ShowDialog();
                 this.Hide();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please choose a teacher to edit.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Add Button
+            editID = 0;
+            frmEditTeachers edit = new frmEditTeachers();
+            edit.ShowDialog();
+            this.Hide();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace WindowsFormsApp1
             {
 
                 //run query to delete student
-                editID = lbxTeachers.SelectedIndex + 1;
+                editID = (int)teachersTable.Rows[lbxTeachers.SelectedIndex]["EmployeeID"];
                 if (editID == 0)
                 {
                     MessageBox.Show("Please select a teachers to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -88,7 +89,7 @@ namespace WindowsFormsApp1
                     //reload listbox
                     lbxTeachers.Items.Clear();
                     // EST command and data adapter
-                    query = "SELECT LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Teacher ORDER BY EmployeeID";
+                    query = "SELECT LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Employees WHERE Role='Teacher'";
                     dbCommand = new SqlCommand(query, dbConnection);
                     daStudent = new SqlDataAdapter();
 
@@ -100,20 +101,28 @@ namespace WindowsFormsApp1
                     dbCommand.Dispose();
                     daStudent.Dispose();
 
-                    for (int i = 0; i < teachersTable.Rows.Count; i++)
+                    for (int i = 0; i < teachersTable.Rows.Count-1; i++)
                     {
                         lbxTeachers.Items.Add(teachersTable.Rows[i]["Teacher"].ToString());
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error Deleting Teacher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select teacher you want to remove.", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             // Save Button
+            if(editID==0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Changes have been successfully saved.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void frmInfoTeachers_Load(object sender, EventArgs e)
@@ -136,7 +145,7 @@ namespace WindowsFormsApp1
                 dbCommand.Dispose();
                 daTeacher.Dispose();
 
-                for (int i = 0; i < teachersTable.Rows.Count; i++)
+                for (int i = 0; i < teachersTable.Rows.Count-1; i++)
                 {
                     lbxTeachers.Items.Add(teachersTable.Rows[i]["Teacher"].ToString());
                 }
@@ -145,6 +154,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message, "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
 
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
