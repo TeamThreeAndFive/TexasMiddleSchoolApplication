@@ -29,16 +29,67 @@ namespace WindowsFormsApp1
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             //Previous Button
+            if (lbxStudents.SelectedIndex > 0)
+            {
+                lbxStudents.SelectedIndex = lbxStudents.SelectedIndex - 1;
+            }
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             //Next Button
+            if (lbxStudents.SelectedIndex < lbxStudents.Items.Count - 1)
+            {
+                lbxStudents.SelectedIndex = lbxStudents.SelectedIndex + 1;
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
+        {   
+            
+            String fullName = lbxStudents.SelectedItem.ToString();
+            string[] names = fullName.Split(' ');
+            string firstName = names[1];
+            string lastName = names[0].Replace(",", ""); 
+            string query = "UPDATE group3fa212330.Attendance SET Attendance = @Attendance " +
+                "FROM group3fa212330.Attendance AS a JOIN group3fa212330.Students AS s " +
+                "ON a.StudentID = s.StudentID WHERE LastName = @LastName AND FirstName = @FirstName; ";
+            SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection) ;
+            dbCommand.Parameters.AddWithValue("@LastName", lastName);
+            dbCommand.Parameters.AddWithValue("@FirstName", firstName);
+
             //Save Button
+            if (rbPresent.Checked)
+            {
+                // Update query
+                dbCommand.Parameters.AddWithValue("@Attendance", "P");
+
+                // Code to save present 
+            }
+            else if(rbLate.Checked)
+            {
+                // Late
+                // Update query
+                dbCommand.Parameters.AddWithValue("@Attendance", "L");
+            }
+            else if(rbAbsent.Checked)
+            {
+                // Absent
+                // Update query
+                dbCommand.Parameters.AddWithValue("@Attendance", "A");
+            }
+            dbCommand.Parameters.AddWithValue("@SelectedItem", lbxStudents.SelectedItem.ToString());
+            if(dbCommand.ExecuteNonQuery() <= 0)
+            {
+                MessageBox.Show("Error occured while saving the selection,  ", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
+            }
+
+            dbCommand.Dispose();
+
         }
 
 
@@ -85,17 +136,12 @@ namespace WindowsFormsApp1
                 for (int i = 0; i < coursesTable.Rows.Count; i++)
                 {
                     cbxCourse.Items.Add((coursesTable.Rows[i]["Name"].ToString()));
-
-                    // Selected index for selection option -1 means null
-                    // lbx selected item toString() trim blank spaces 
                 }
             }
             catch
             {
 
             }
-           
-
         }
 
         private void cbxCourse_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,7 +195,7 @@ namespace WindowsFormsApp1
         {
                 try
                 {
-                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 1;", ProgOps.dbConnection);
+                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
                     SqlDataAdapter daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
@@ -165,9 +211,6 @@ namespace WindowsFormsApp1
                     {
                         // Displays Student's LastName , FirstName inside of lbxStudents
                         lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                        // Selected index for selection option -1 means null
-                        // lbx selected item toString() trim blank spaces 
                     }
                 }
                 catch
@@ -180,8 +223,8 @@ namespace WindowsFormsApp1
         {
                 try
                 {
-                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 2;", ProgOps.dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
+                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
+                SqlDataAdapter daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
                     DataTable studentsTable = new DataTable();
@@ -196,9 +239,6 @@ namespace WindowsFormsApp1
                     {
                         // Displays Student's LastName , FirstName inside of lbxStudents
                         lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                        // Selected index for selection option -1 means null
-                        // lbx selected item toString() trim blank spaces 
                     }
                 }
                 catch
@@ -211,8 +251,8 @@ namespace WindowsFormsApp1
         {
                 try
                 {
-                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 3;", ProgOps.dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
+                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
+                SqlDataAdapter daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
                     DataTable studentsTable = new DataTable();
@@ -227,9 +267,6 @@ namespace WindowsFormsApp1
                     {
                         // Displays Student's LastName , FirstName inside of lbxStudents
                         lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                        // Selected index for selection option -1 means null
-                        // lbx selected item toString() trim blank spaces 
                     }
                 }
                 catch
@@ -242,8 +279,8 @@ namespace WindowsFormsApp1
         {
                 try
                 {
-                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 4;", ProgOps.dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
+                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
+                SqlDataAdapter daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
                     DataTable studentsTable = new DataTable();
@@ -258,9 +295,6 @@ namespace WindowsFormsApp1
                     {
                         // Displays Student's LastName , FirstName inside of lbxStudents
                         lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                        // Selected index for selection option -1 means null
-                        // lbx selected item toString() trim blank spaces 
                     }
                 }
                 catch
@@ -273,8 +307,8 @@ namespace WindowsFormsApp1
         {
                 try
                 {
-                    SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 5;", ProgOps.dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
+                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
+                SqlDataAdapter daStudent = new SqlDataAdapter();
 
                     // creating new user data table and filling the information
                     DataTable studentsTable = new DataTable();
@@ -289,9 +323,6 @@ namespace WindowsFormsApp1
                     {
                         // Displays Student's LastName , FirstName inside of lbxStudents
                         lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                        // Selected index for selection option -1 means null
-                        // lbx selected item toString() trim blank spaces 
                     }
                 }
                 catch
@@ -304,7 +335,7 @@ namespace WindowsFormsApp1
         {
             try
             {
-                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students WHERE TeacherID = 6;", ProgOps.dbConnection);
+                SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " + frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
                 SqlDataAdapter daStudent = new SqlDataAdapter();
 
                 // creating new user data table and filling the information
@@ -320,9 +351,6 @@ namespace WindowsFormsApp1
                 {
                     // Displays Student's LastName , FirstName inside of lbxStudents
                     lbxStudents.Items.Add((studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString()));
-
-                    // Selected index for selection option -1 means null
-                    // lbx selected item toString() trim blank spaces 
                 }
             }
             catch

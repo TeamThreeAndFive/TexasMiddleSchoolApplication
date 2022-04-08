@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace WindowsFormsApp1
 {
@@ -56,5 +58,13 @@ namespace WindowsFormsApp1
             frmMenuTeacher menu = new frmMenuTeacher();
             menu.Show();
         }
+
+        private void frmTeacherSeatingChart_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
+
 }
+
