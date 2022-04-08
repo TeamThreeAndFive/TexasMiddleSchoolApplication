@@ -20,7 +20,6 @@ namespace WindowsFormsApp1
            "password=3926456";
 
         // Database connection
-        public static SqlConnection dbConnection = new SqlConnection(_CONNECTION_STRING);
 
         // Data tables
         public static DataTable studentsTable;
@@ -29,96 +28,159 @@ namespace WindowsFormsApp1
         public frmEditStudents()
         {
             InitializeComponent();
-            editID = frmInfoStudents.editID+1;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmInfoStudents info = new frmInfoStudents();
-            info.Show();
             // Back Button
             this.Close();
-            
+            this.Visible = false;
+
+        }
+        private void addNewStudent()
+        {
+            editID = frmInfoStudents.studentCount + 1;
+            //inserting student information
+            query = "INSERT INTO group3fa212330.Students(StudentID, FirstName, MiddleName, LastName, BirthDate, MailingAddress, StreetAddress, City, State, Zip, EmergencyPhone, Year, GuardianID, EmergencyContact) " +
+            "VALUES (@StudentID, @FirstName, @MiddleName, @LastName, @BirthDate, @MailingAddress, @StreetAddress, @City, @State, @Zip, @EmergencyPhone, @Year, @GuardianID, @EmergencyContact);";
+
+            SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+            dbCommand.Parameters.AddWithValue("@StudentID", tbxStudentID.Text);
+            dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
+            dbCommand.Parameters.AddWithValue("@MiddleName", tbxMiddleName.Text);
+            dbCommand.Parameters.AddWithValue("@LastName", tbxLastName.Text);
+            dbCommand.Parameters.AddWithValue("@BirthDate", dtpBirthdate.Text);
+            dbCommand.Parameters.AddWithValue("@Email", tbxEmail.Text);
+            dbCommand.Parameters.AddWithValue("@MailingAddress", tbxMailingAddress.Text);
+            dbCommand.Parameters.AddWithValue("@StreetAddress", tbxStreetAddress.Text);
+            dbCommand.Parameters.AddWithValue("@City", tbxCity.Text);
+            dbCommand.Parameters.AddWithValue("@State", tbxState.Text);
+            dbCommand.Parameters.AddWithValue("@Zip", tbxZip.Text);
+            dbCommand.Parameters.AddWithValue("@EmergencyPhone", tbxGuardianPhone.Text);
+            dbCommand.Parameters.AddWithValue("@Year", tbxYear.Text);
+            dbCommand.Parameters.AddWithValue("@GuardianID", tbxGuardianID.Text);
+            dbCommand.Parameters.AddWithValue("@EmergencyContact", tbxGuardianName.Text);
+
+            SqlDataAdapter daStudent = new SqlDataAdapter();
+            studentsTable = new DataTable();
+            daStudent.SelectCommand = dbCommand;
+            daStudent.Fill(studentsTable);
+
+            tbxGuardianID.Text = tbxStudentID.Text;
+
+            //inserting guardian information
+            query = "INSERT INTO group3fa212330.Guardians(GuardianID, Name, MobilePhone, WorkPhone, PlaceOfWork, StudentID) " +
+           "VALUES (@GuardianID, @Name, @MobilePhone, @WorkPhone, @PlaceOfWork, @StudentID);";
+            dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+            dbCommand.Parameters.AddWithValue("@GuardianID", tbxStudentID.Text);
+            dbCommand.Parameters.AddWithValue("@Name", tbxGuardianName.Text);
+            dbCommand.Parameters.AddWithValue("@MobilePhone", tbxGuardianPhone.Text);
+            dbCommand.Parameters.AddWithValue("@PlaceOfWork", tbxGuardianPlaceofWork.Text);
+            dbCommand.Parameters.AddWithValue("@WorkPhone", tbxGuardianWorkPhone.Text);
+            dbCommand.Parameters.AddWithValue("@StudentID", tbxStudentID.Text);
+            daStudent = new SqlDataAdapter();
+
+
+            if (dbCommand.ExecuteNonQuery() <= 0)
+            {
+                MessageBox.Show("Error occur while inserting to the database.", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Student successfully added!", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                this.Visible = false;
+            }
+
+            dbCommand.Dispose();
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
-            // Save Changes Button
             try
             {
+                MessageBox.Show(editID.ToString());
+                // Save Changes Button
+                if (frmInfoStudents.editID == 0)
+                {
+                    addNewStudent();
+                    return;
+                }
+                else
+                {
+                    query = "UPDATE group3fa212330.Students SET FirstName=@FirstName, MiddleName=@MiddleName, LastName=@LastName,BirthDate=@BirthDate, MailingAddress = @MailingAddress, StreetAddress = @StreetAddress, City = @City, State = @State, Zip = @Zip,Year=@Year, Email = @Email " +
+                    "WHERE StudentID=" + editID;
+                    SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
+                    dbCommand.Parameters.AddWithValue("@MiddleName", tbxMiddleName.Text);
+                    dbCommand.Parameters.AddWithValue("@LastName", tbxLastName.Text);
+                    dbCommand.Parameters.AddWithValue("@BirthDate", dtpBirthdate.Text);
+                    dbCommand.Parameters.AddWithValue("@Email", tbxEmail.Text);
+                    dbCommand.Parameters.AddWithValue("@Year", tbxYear.Text);
+                    dbCommand.Parameters.AddWithValue("@MailingAddress", tbxMailingAddress.Text);
+                    dbCommand.Parameters.AddWithValue("@StreetAddress", tbxStreetAddress.Text);
+                    dbCommand.Parameters.AddWithValue("@City", tbxCity.Text);
+                    dbCommand.Parameters.AddWithValue("@State", tbxState.Text);
+                    dbCommand.Parameters.AddWithValue("@Zip", tbxZip.Text);
+                    SqlDataAdapter daStudent = new SqlDataAdapter();
 
-                query = "SELECT * FROM group3fa212330.Students WHERE StudentID=" + editID;
-                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                SqlDataAdapter daStudent = new SqlDataAdapter();
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
 
-                studentsTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(studentsTable);
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
 
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
-               // update record in database
-                studentsTable.Rows[0]["FirstName"] = tbxFirstName.Text;
-                studentsTable.Rows[0]["MiddleName"] = tbxMiddleName.Text;
-                studentsTable.Rows[0]["LastName"]=tbxLastName.Text;
-                studentsTable.Rows[0]["BirthDate"] = dtpBirthdate.Value;
-                studentsTable.Rows[0]["Email"]=tbxEmail.Text;
-                studentsTable.Rows[0]["Year"]=tbxYear.Text;
-                studentsTable.Rows[0]["MailingAddress"]=tbxMailingAddress;
-                studentsTable.Rows[0]["StreetAddress"]=tbxStreetAddress;
-                studentsTable.Rows[0]["City"]=tbxCity.Text;
-                studentsTable.Rows[0]["State"]=tbxState.Text;
-                studentsTable.Rows[0]["Zip"]=tbxZip.Text;
+                    query = "UPDATE group3fa212330.Guardians SET Name=@Name, MobilePhone=@MobilePhone, WorkPhone=@WorkPhone, PlaceOfWork=@PlaceOfWork WHERE StudentID=" + editID;
+                    dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    dbCommand.Parameters.AddWithValue("@Name", tbxGuardianName.Text);
+                    dbCommand.Parameters.AddWithValue("@MobilePhone", tbxGuardianPhone.Text);
+                    dbCommand.Parameters.AddWithValue("@PlaceOfWork", tbxGuardianPlaceofWork.Text);
+                    dbCommand.Parameters.AddWithValue("@WorkPhone", tbxGuardianWorkPhone.Text);
+                    daStudent = new SqlDataAdapter();
 
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
 
-                query = "SELECT * FROM group3fa212330.Guardians WHERE StudentID=" + editID;
-                dbCommand = new SqlCommand(query, dbConnection);
-                daStudent = new SqlDataAdapter();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
 
-                studentsTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(studentsTable);
+                    MessageBox.Show("Update has been saved.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    query = "SELECT * FROM group3fa212330.Students WHERE StudentID=" + editID;
+                    dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    daStudent = new SqlDataAdapter();
 
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
-                studentsTable.Rows[0]["GuardianID"] = tbxGuardianID.Text;
-                studentsTable.Rows[0]["Name"]=tbxGuardianName.Text;
-                studentsTable.Rows[0]["MobilePhone"]=tbxGuardianPhone.Text;
-                studentsTable.Rows[0]["PlaceOfWork"]=tbxGuardianPlaceofWork.Text;
-                studentsTable.Rows[0]["WorkPhone"]=tbxGuardianWorkPhone.Text;
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
 
-                MessageBox.Show("Update has been saved.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                query = "SELECT * FROM group3fa212330.Students WHERE StudentID=" + editID;
-                dbCommand = new SqlCommand(query, dbConnection);
-                daStudent = new SqlDataAdapter();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
 
-                studentsTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(studentsTable);
-
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
-
-                tbxStudentID.Text = studentsTable.Rows[0]["StudentID"].ToString();
-                tbxFirstName.Text = studentsTable.Rows[0]["FirstName"].ToString();
-                tbxMiddleName.Text = studentsTable.Rows[0]["MiddleName"].ToString();
-                tbxLastName.Text = studentsTable.Rows[0]["LastName"].ToString();
-                dtpBirthdate.Value = (DateTime)studentsTable.Rows[0]["BirthDate"];
-                tbxEmail.Text = studentsTable.Rows[0]["Email"].ToString();
-                tbxYear.Text = studentsTable.Rows[0]["Year"].ToString();
-                tbxMailingAddress.Text = studentsTable.Rows[0]["MailingAddress"].ToString();
-                tbxStreetAddress.Text = studentsTable.Rows[0]["StreetAddress"].ToString();
-                tbxCity.Text = studentsTable.Rows[0]["City"].ToString();
-                tbxState.Text = studentsTable.Rows[0]["State"].ToString();
-                tbxZip.Text = studentsTable.Rows[0]["Zip"].ToString();
-                this.Close();
+                    //reload textboxes with new info
+                    tbxStudentID.Text = studentsTable.Rows[0]["StudentID"].ToString();
+                    tbxFirstName.Text = studentsTable.Rows[0]["FirstName"].ToString();
+                    tbxMiddleName.Text = studentsTable.Rows[0]["MiddleName"].ToString();
+                    tbxLastName.Text = studentsTable.Rows[0]["LastName"].ToString();
+                    dtpBirthdate.Value = (DateTime)studentsTable.Rows[0]["BirthDate"];
+                    tbxEmail.Text = studentsTable.Rows[0]["Email"].ToString();
+                    tbxYear.Text = studentsTable.Rows[0]["Year"].ToString();
+                    tbxMailingAddress.Text = studentsTable.Rows[0]["MailingAddress"].ToString();
+                    tbxStreetAddress.Text = studentsTable.Rows[0]["StreetAddress"].ToString();
+                    tbxCity.Text = studentsTable.Rows[0]["City"].ToString();
+                    tbxState.Text = studentsTable.Rows[0]["State"].ToString();
+                    tbxZip.Text = studentsTable.Rows[0]["Zip"].ToString();
+                    this.Close();
+                    this.Visible = false;
+                }
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show(ex.Message, "Error Updating Student", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error Updating Student.", "Unknown Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -126,49 +188,60 @@ namespace WindowsFormsApp1
         {
             try
             {
-                query = "SELECT * FROM group3fa212330.Students WHERE StudentID=" + editID;
-                SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                SqlDataAdapter daStudent = new SqlDataAdapter();
+                editID = frmInfoStudents.editID;
+                if (editID == 0) //if no student is selected, create new student
+                {
+                    tbxStudentID.Text = (frmInfoStudents.studentCount + 1).ToString();
+                    tbxGuardianID.Text = (frmInfoStudents.studentCount + 1).ToString();
+                    lblEditStudents.Text = "New Student Information";
+                }
+                else
+                {
+                    query = "SELECT * FROM group3fa212330.Students WHERE StudentID=" + editID;
+                    SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    SqlDataAdapter daStudent = new SqlDataAdapter();
 
-                studentsTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(studentsTable);
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
 
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
 
-                tbxStudentID.Text = studentsTable.Rows[0]["StudentID"].ToString();
-                tbxFirstName.Text = studentsTable.Rows[0]["FirstName"].ToString();
-                tbxMiddleName.Text = studentsTable.Rows[0]["MiddleName"].ToString();
-                tbxLastName.Text = studentsTable.Rows[0]["LastName"].ToString();
-                dtpBirthdate.Value = (DateTime)studentsTable.Rows[0]["BirthDate"];
-                tbxEmail.Text = studentsTable.Rows[0]["Email"].ToString();
-                tbxYear.Text = studentsTable.Rows[0]["Year"].ToString();
-                tbxMailingAddress.Text = studentsTable.Rows[0]["MailingAddress"].ToString();
-                tbxStreetAddress.Text = studentsTable.Rows[0]["StreetAddress"].ToString();
-                tbxCity.Text = studentsTable.Rows[0]["City"].ToString();
-                tbxState.Text = studentsTable.Rows[0]["State"].ToString();
-                tbxZip.Text = studentsTable.Rows[0]["Zip"].ToString();
+                    tbxStudentID.Text = studentsTable.Rows[0]["StudentID"].ToString();
+                    tbxFirstName.Text = studentsTable.Rows[0]["FirstName"].ToString();
+                    tbxMiddleName.Text = studentsTable.Rows[0]["MiddleName"].ToString();
+                    tbxLastName.Text = studentsTable.Rows[0]["LastName"].ToString();
+                    dtpBirthdate.Value = (DateTime)studentsTable.Rows[0]["BirthDate"];
+                    tbxEmail.Text = studentsTable.Rows[0]["Email"].ToString();
+                    tbxYear.Text = studentsTable.Rows[0]["Year"].ToString();
+                    tbxMailingAddress.Text = studentsTable.Rows[0]["MailingAddress"].ToString();
+                    tbxStreetAddress.Text = studentsTable.Rows[0]["StreetAddress"].ToString();
+                    tbxCity.Text = studentsTable.Rows[0]["City"].ToString();
+                    tbxState.Text = studentsTable.Rows[0]["State"].ToString();
+                    tbxZip.Text = studentsTable.Rows[0]["Zip"].ToString();
 
-                //load informmation into guardian list boxes
-                query = "SELECT * FROM group3fa212330.Guardians WHERE StudentID=" + editID;
-                dbCommand = new SqlCommand(query, dbConnection);
-                daStudent = new SqlDataAdapter();
+                    //load informmation into guardian list boxes
+                    query = "SELECT * FROM group3fa212330.Guardians WHERE StudentID=" + editID;
+                    dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    daStudent = new SqlDataAdapter();
 
-                studentsTable = new DataTable();
-                daStudent.SelectCommand = dbCommand;
-                daStudent.Fill(studentsTable);
+                    studentsTable = new DataTable();
+                    daStudent.SelectCommand = dbCommand;
+                    daStudent.Fill(studentsTable);
 
-                // Dispose unnecessary data
-                dbCommand.Dispose();
-                daStudent.Dispose();
+                    // Dispose unnecessary data
+                    dbCommand.Dispose();
+                    daStudent.Dispose();
 
-                tbxGuardianID.Text = studentsTable.Rows[0]["GuardianID"].ToString();
-                tbxGuardianName.Text = studentsTable.Rows[0]["Name"].ToString();
-                tbxGuardianPhone.Text = studentsTable.Rows[0]["MobilePhone"].ToString();
-                tbxGuardianPlaceofWork.Text = studentsTable.Rows[0]["PlaceOfWork"].ToString();
-                tbxGuardianWorkPhone.Text = studentsTable.Rows[0]["WorkPhone"].ToString();
+                    tbxGuardianID.Text = studentsTable.Rows[0]["GuardianID"].ToString();
+                    tbxGuardianName.Text = studentsTable.Rows[0]["Name"].ToString();
+                    tbxGuardianPhone.Text = studentsTable.Rows[0]["MobilePhone"].ToString();
+                    tbxGuardianPlaceofWork.Text = studentsTable.Rows[0]["PlaceOfWork"].ToString();
+                    tbxGuardianWorkPhone.Text = studentsTable.Rows[0]["WorkPhone"].ToString();
+                }
+
             }
             catch (Exception ex)
             {

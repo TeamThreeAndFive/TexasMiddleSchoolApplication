@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(156, 34);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // fileToolStripMenuItem
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(156, 34);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -90,7 +90,7 @@ namespace WindowsFormsApp1
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(920, 35);
+            this.menuStrip.Size = new System.Drawing.Size(936, 35);
             this.menuStrip.TabIndex = 53;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -180,6 +180,7 @@ namespace WindowsFormsApp1
             this.btnSave.TabIndex = 50;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmInfoStudents
             // 
@@ -187,7 +188,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(920, 693);
+            this.ClientSize = new System.Drawing.Size(936, 738);
             this.ControlBox = false;
             this.Controls.Add(this.lblStudentInfo);
             this.Controls.Add(this.menuStrip);
