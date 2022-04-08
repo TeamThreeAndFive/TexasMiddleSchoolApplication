@@ -42,6 +42,7 @@ namespace WindowsFormsApp1
             this.btnAdd = new System.Windows.Forms.Button();
             this.gbxMakeChanges = new System.Windows.Forms.GroupBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.gbxMakeChanges.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +79,6 @@ namespace WindowsFormsApp1
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(156, 34);
             this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -182,6 +182,19 @@ namespace WindowsFormsApp1
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(439, 605);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(115, 49);
+            this.btnBack.TabIndex = 51;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmInfoStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +203,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 738);
             this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblStudentInfo);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lbxStudents);
@@ -224,5 +238,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.GroupBox gbxMakeChanges;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnBack;
     }
 }

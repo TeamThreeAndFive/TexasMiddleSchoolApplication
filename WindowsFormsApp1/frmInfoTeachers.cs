@@ -29,12 +29,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            // Back Button
-            this.Hide();
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             try
@@ -160,6 +154,11 @@ namespace WindowsFormsApp1
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

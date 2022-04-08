@@ -33,7 +33,6 @@ namespace WindowsFormsApp1
             this.lblTeacherInfo = new System.Windows.Forms.Label();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbxTeachers = new System.Windows.Forms.ListBox();
@@ -42,6 +41,7 @@ namespace WindowsFormsApp1
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.gbxMakeChanges = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.gbxMakeChanges.SuspendLayout();
             this.SuspendLayout();
@@ -61,8 +61,7 @@ namespace WindowsFormsApp1
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.backToolStripMenuItem});
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 33);
             this.fileToolStripMenuItem.Text = "File";
@@ -70,15 +69,8 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.closeToolStripMenuItem.Text = "Print";
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -182,6 +174,19 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.TabStop = false;
             this.gbxMakeChanges.Text = "Make Changes";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.White;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(411, 602);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(115, 49);
+            this.btnBack.TabIndex = 46;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmInfoTeachers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +195,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(869, 682);
             this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gbxMakeChanges);
             this.Controls.Add(this.lblTeacherInfo);
             this.Controls.Add(this.menuStrip);
@@ -216,7 +222,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblTeacherInfo;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ListBox lbxTeachers;
@@ -225,5 +230,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox gbxMakeChanges;
+        private System.Windows.Forms.Button btnBack;
     }
 }
