@@ -32,10 +32,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -129,10 +126,7 @@ namespace WindowsFormsApp1
             }
 
         }
-        private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void frmInfoStudents_Load(object sender, EventArgs e)
         {
@@ -175,6 +169,11 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Changes have been successfully saved.", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
