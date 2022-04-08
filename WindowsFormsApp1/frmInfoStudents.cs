@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             try
             {
                 editID = (int)studentsTable.Rows[lbxStudents.SelectedIndex]["StudentID"];
-                MessageBox.Show(editID.ToString());
                 var editStudentForm = new frmEditStudents();
                 editStudentForm.ShowDialog();
                 this.Close();
