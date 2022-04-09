@@ -45,7 +45,6 @@ namespace WindowsFormsApp1
             this.lblSeating = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.gbxSeating = new System.Windows.Forms.GroupBox();
-            this.btnSave = new System.Windows.Forms.Button();
             this.gbxStudents = new System.Windows.Forms.GroupBox();
             this.menuStrip.SuspendLayout();
             this.gbxSeating.SuspendLayout();
@@ -74,7 +73,7 @@ namespace WindowsFormsApp1
             // 
             this.btnShuffle.BackColor = System.Drawing.Color.White;
             this.btnShuffle.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnShuffle.Location = new System.Drawing.Point(56, 344);
+            this.btnShuffle.Location = new System.Drawing.Point(198, 271);
             this.btnShuffle.Margin = new System.Windows.Forms.Padding(2);
             this.btnShuffle.Name = "btnShuffle";
             this.btnShuffle.Size = new System.Drawing.Size(425, 138);
@@ -94,17 +93,12 @@ namespace WindowsFormsApp1
             // 
             this.cbxCourse.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxCourse.FormattingEnabled = true;
-            this.cbxCourse.Items.AddRange(new object[] {
-            "Math",
-            "Science",
-            "English",
-            "Spanish",
-            "Physical Education"});
             this.cbxCourse.Location = new System.Drawing.Point(294, 147);
             this.cbxCourse.Margin = new System.Windows.Forms.Padding(7);
             this.cbxCourse.Name = "cbxCourse";
             this.cbxCourse.Size = new System.Drawing.Size(452, 57);
             this.cbxCourse.TabIndex = 0;
+            this.cbxCourse.SelectedIndexChanged += new System.EventHandler(this.cbxCourse_SelectedIndexChanged);
             // 
             // lbxStudents
             // 
@@ -197,7 +191,6 @@ namespace WindowsFormsApp1
             // gbxSeating
             // 
             this.gbxSeating.BackColor = System.Drawing.SystemColors.Control;
-            this.gbxSeating.Controls.Add(this.btnSave);
             this.gbxSeating.Controls.Add(this.lblCourse);
             this.gbxSeating.Controls.Add(this.cbxCourse);
             this.gbxSeating.Controls.Add(this.btnShuffle);
@@ -210,19 +203,6 @@ namespace WindowsFormsApp1
             this.gbxSeating.TabIndex = 35;
             this.gbxSeating.TabStop = false;
             this.gbxSeating.Text = "Shuffle Seating";
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.White;
-            this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(540, 344);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(219, 138);
-            this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // gbxStudents
             // 
@@ -241,7 +221,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1680, 897);
+            this.ClientSize = new System.Drawing.Size(1680, 974);
             this.ControlBox = false;
             this.Controls.Add(this.gbxStudents);
             this.Controls.Add(this.gbxSeating);
@@ -281,7 +261,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblSeating;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.GroupBox gbxSeating;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradebookToolStripMenuItem;
