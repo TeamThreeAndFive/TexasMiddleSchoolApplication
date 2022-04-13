@@ -37,10 +37,24 @@ namespace WindowsFormsApp1
 
         private void addNewTeacher()
         {
-            query = "INSERT INTO group3fa212330.Employees(EmployeeID, FirstName, LastName, Email, Phone, Role, Password) " +
-            "VALUES(@EmployeeID, @FirstName, @LastName, @Email, @Phone, @Role, @Password);";
-            SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+            query = "SELECT * FROM group3fa212330.Employees";
+            SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+            SqlDataAdapter daTeacher = new SqlDataAdapter();
+            teachersTable = new DataTable();
+            daTeacher.SelectCommand = dbCommand;
+            daTeacher.Fill(teachersTable);
+
+            for (int i = 0; i < teachersTable.Rows.Count; i++)
+            {
+                if (tbxEmployeeID.Text == teachersTable.Rows[i]["EmployeeID"].ToString())
+                {
+                    MessageBox.Show("EmployeeID is taken. Please enter a different ID number.", "EmployeeID Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             //inserting student information
+            query = "INSERT INTO group3fa212330.Employees(EmployeeID, FirstName, LastName, Email, Phone, Role, Password) " +
+                    "VALUES (@EmployeeID, @FirstName, @LastName, @Email, @Phone, @Role, @Password);";
             dbCommand = new SqlCommand(query, ProgOps.dbConnection);
             dbCommand.Parameters.AddWithValue("@EmployeeID", tbxEmployeeID.Text);
             dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
@@ -49,26 +63,11 @@ namespace WindowsFormsApp1
             dbCommand.Parameters.AddWithValue("@Phone", tbxPhone.Text);
             dbCommand.Parameters.AddWithValue("@Role", "Teacher");
             dbCommand.Parameters.AddWithValue("@Password", tbxPassword.Text);
-            SqlDataAdapter daTeacher = new SqlDataAdapter();
             daTeacher = new SqlDataAdapter();
             teachersTable = new DataTable();
             daTeacher.SelectCommand = dbCommand;
             daTeacher.Fill(teachersTable);
-
-            if (dbCommand.ExecuteNonQuery() <= 0)
-            {
-                MessageBox.Show("Error trying to insert teacher to the database.", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("Teacher successfully added!", "Updating Database..", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-                this.Visible = false;
-            }
-
-            dbCommand.Dispose();
         }
-
 
 
         private void frmEditTeachers_Load(object sender, EventArgs e)
@@ -79,15 +78,7 @@ namespace WindowsFormsApp1
                 if (editID == 0) //if no Teacher is selected, create new Teacher
                 {
                     lblEditTeachers.Text = "New Teacher Information";
-                    query = "SELECT * FROM group3fa212330.Employees";
-                    SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                    SqlDataAdapter daTeacher = new SqlDataAdapter();
-
-                    teachersTable = new DataTable();
-                    daTeacher.SelectCommand = dbCommand;
-                    daTeacher.Fill(teachersTable);
-                    editID = teachersTable.Rows.Count+1;
-                    tbxEmployeeID.Text = editID.ToString();
+                    tbxEmployeeID.ReadOnly = false;
                 }
                 else
                 {
@@ -122,7 +113,6 @@ namespace WindowsFormsApp1
         {
 
             // Save Changes Button
-            // Save Changes Button
             try
             {
                 if (frmInfoTeachers.editID==0)
@@ -152,8 +142,9 @@ namespace WindowsFormsApp1
                     dbCommand.Dispose();
                     daTeacher.Dispose();
 
-                    this.Close();
                 }
+                MessageBox.Show("Teacher has been updated.", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
 
             }
             catch (Exception ex)

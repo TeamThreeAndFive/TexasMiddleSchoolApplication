@@ -204,7 +204,7 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(863, 611);
+            this.MinimumSize = new System.Drawing.Size(887, 729);
             this.Name = "frmInfoTeachers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Teachers";

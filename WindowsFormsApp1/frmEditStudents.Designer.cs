@@ -515,7 +515,7 @@ namespace WindowsFormsApp1
             // tbxStudentID
             // 
             this.tbxStudentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxStudentID.Location = new System.Drawing.Point(157, 39);
+            this.tbxStudentID.Location = new System.Drawing.Point(157, 40);
             this.tbxStudentID.Margin = new System.Windows.Forms.Padding(1);
             this.tbxStudentID.Name = "tbxStudentID";
             this.tbxStudentID.ReadOnly = true;
@@ -541,7 +541,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1465, 572);
+            this.ClientSize = new System.Drawing.Size(1465, 582);
             this.ControlBox = false;
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxStudentInformation);
