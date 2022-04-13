@@ -21,7 +21,6 @@ namespace WindowsFormsApp1
 
         // Database connection
         public static SqlConnection dbConnection = new SqlConnection(_CONNECTION_STRING);
-        public static int studentCount;
         // Data tables
         public static DataTable studentsTable;
         String query;
@@ -63,61 +62,77 @@ namespace WindowsFormsApp1
             // Delete Button
             try
             {
-                //run query to delete student
                 editID = (int)studentsTable.Rows[lbxStudents.SelectedIndex]["StudentID"];
-                if (editID == 0)
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this student?", "Delete Student", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Please select a student to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    if (editID == 0)
+                    {
+                        MessageBox.Show("Please select a student to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        query = "SELECT * FROM group3fa212330.Attendance WHERE StudentID=" + editID;
+                        SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                        SqlDataAdapter daStudent = new SqlDataAdapter();
+
+                        studentsTable = new DataTable();
+                        daStudent.SelectCommand = dbCommand;
+                        daStudent.Fill(studentsTable);
+                        if (studentsTable.Rows.Count >= 1)
+                        {
+                            query = "DELETE FROM group3fa212330.Attendance WHERE StudentID=" + editID;
+                            dbCommand = new SqlCommand(query, dbConnection);
+                            daStudent = new SqlDataAdapter();
+
+                            studentsTable = new DataTable();
+                            daStudent.SelectCommand = dbCommand;
+                            daStudent.Fill(studentsTable);
+                        }
+
+                        // Dispose unnecessary data
+                        dbCommand.Dispose();
+                        daStudent.Dispose();
+                        query = "DELETE FROM group3fa212330.Students WHERE StudentID=" + editID;
+                        dbCommand = new SqlCommand(query, dbConnection);
+                        daStudent = new SqlDataAdapter();
+
+                        // creating new user data table and filling the information
+                        studentsTable = new DataTable();
+                        daStudent.SelectCommand = dbCommand;
+                        daStudent.Fill(studentsTable);
+
+                        // Dispose unnecessary data
+                        dbCommand.Dispose();
+                        daStudent.Dispose();
+
+                        //reload listbox
+                        lbxStudents.Items.Clear();
+                        // EST command and data adapter
+                        query = "SELECT LastName+', '+FirstName AS 'Student' FROM group3fa212330.Students ORDER BY LastName";
+                        dbCommand = new SqlCommand(query, dbConnection);
+                        daStudent = new SqlDataAdapter();
+
+                        // creating new user data table and filling the information
+                        studentsTable = new DataTable();
+                        daStudent.SelectCommand = dbCommand;
+                        daStudent.Fill(studentsTable);
+
+                        // Dispose unnecessary data
+                        dbCommand.Dispose();
+                        daStudent.Dispose();
+
+                        for (int i = 0; i < studentsTable.Rows.Count; i++)
+                        {
+                            lbxStudents.Items.Add(studentsTable.Rows[i]["Student"].ToString());
+                        }
+                    }
                 }
                 else
                 {
-                    query = "DELETE FROM group3fa212330.Attendance WHERE StudentID=" + editID;
-                    SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
-
-                    // creating new user data table and filling the information
-                    studentsTable = new DataTable();
-                    daStudent.SelectCommand = dbCommand;
-                    daStudent.Fill(studentsTable);
-
-                    // Dispose unnecessary data
-                    dbCommand.Dispose();
-                    daStudent.Dispose();
-                    query = "DELETE FROM group3fa212330.Students WHERE StudentID=" + editID;
-                    dbCommand = new SqlCommand(query, dbConnection);
-                    daStudent = new SqlDataAdapter();
-
-                    // creating new user data table and filling the information
-                    studentsTable = new DataTable();
-                    daStudent.SelectCommand = dbCommand;
-                    daStudent.Fill(studentsTable);
-
-                    // Dispose unnecessary data
-                    dbCommand.Dispose();
-                    daStudent.Dispose();
-
-                    //reload listbox
-                    lbxStudents.Items.Clear();
-                    // EST command and data adapter
-                    query = "SELECT LastName+', '+FirstName AS 'Student' FROM group3fa212330.Students ORDER BY LastName";
-                    dbCommand = new SqlCommand(query, dbConnection);
-                    daStudent = new SqlDataAdapter();
-
-                    // creating new user data table and filling the information
-                    studentsTable = new DataTable();
-                    daStudent.SelectCommand = dbCommand;
-                    daStudent.Fill(studentsTable);
-
-                    // Dispose unnecessary data
-                    dbCommand.Dispose();
-                    daStudent.Dispose();
-
-                    for (int i = 0; i < studentsTable.Rows.Count; i++)
-                    {
-                        lbxStudents.Items.Add(studentsTable.Rows[i]["Student"].ToString());
-                    }
+                    return;
                 }
-
             }
             catch (Exception ex)
             {
@@ -135,7 +150,7 @@ namespace WindowsFormsApp1
                 //clear lbx
                 lbxStudents.Items.Clear();
                 // EST command and data adapter
-                query = "SELECT StudentID, LastName+', '+FirstName AS 'Student' FROM group3fa212330.Students ORDER BY StudentID";
+                query = "SELECT StudentID, LastName+', '+FirstName AS 'Student' FROM group3fa212330.Students ORDER BY LastName";
                 SqlCommand dbCommand = new SqlCommand(query, dbConnection);
                 SqlDataAdapter daStudent = new SqlDataAdapter();
 
@@ -152,7 +167,6 @@ namespace WindowsFormsApp1
                 {
                     lbxStudents.Items.Add(studentsTable.Rows[i]["Student"].ToString());
                 }
-                studentCount = lbxStudents.Items.Count;
             }
             catch (Exception ex)
             {
@@ -169,7 +183,6 @@ namespace WindowsFormsApp1
 
             }
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();

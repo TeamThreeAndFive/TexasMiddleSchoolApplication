@@ -58,46 +58,49 @@ namespace WindowsFormsApp1
             // Delete Button
             try
             {
-
-                //run query to delete student
                 editID = (int)teachersTable.Rows[lbxTeachers.SelectedIndex]["EmployeeID"];
-                if (editID == 0)
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this teacher?", "Delete Teacher", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    MessageBox.Show("Please select a teachers to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    query = "DELETE FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
-                    SqlCommand dbCommand = new SqlCommand(query, dbConnection);
-                    SqlDataAdapter daStudent = new SqlDataAdapter();
-
-                    // creating new user data table and filling the information
-                    teachersTable = new DataTable();
-                    daStudent.SelectCommand = dbCommand;
-                    daStudent.Fill(teachersTable);
-
-                    // Dispose unnecessary data
-                    dbCommand.Dispose();
-                    daStudent.Dispose();
-
-                    //reload listbox
-                    lbxTeachers.Items.Clear();
-                    // EST command and data adapter
-                    query = "SELECT LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Employees WHERE Role='Teacher'";
-                    dbCommand = new SqlCommand(query, dbConnection);
-                    daStudent = new SqlDataAdapter();
-
-                    teachersTable = new DataTable();
-                    daStudent.SelectCommand = dbCommand;
-                    daStudent.Fill(teachersTable);
-
-                    // Dispose unnecessary data
-                    dbCommand.Dispose();
-                    daStudent.Dispose();
-
-                    for (int i = 0; i < teachersTable.Rows.Count-1; i++)
+                    //run query to delete student
+                    if (editID == 0)
                     {
-                        lbxTeachers.Items.Add(teachersTable.Rows[i]["Teacher"].ToString());
+                        MessageBox.Show("Please select a teachers to delete", "Invalid Selection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        query = "DELETE FROM group3fa212330.Employees WHERE EmployeeID=" + editID;
+                        SqlCommand dbCommand = new SqlCommand(query, dbConnection);
+                        SqlDataAdapter daStudent = new SqlDataAdapter();
+
+                        // creating new user data table and filling the information
+                        teachersTable = new DataTable();
+                        daStudent.SelectCommand = dbCommand;
+                        daStudent.Fill(teachersTable);
+
+                        // Dispose unnecessary data
+                        dbCommand.Dispose();
+                        daStudent.Dispose();
+
+                        //reload listbox
+                        lbxTeachers.Items.Clear();
+                        // EST command and data adapter
+                        query = "SELECT LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Employees WHERE Role='Teacher' ORDER BY LastName";
+                        dbCommand = new SqlCommand(query, dbConnection);
+                        daStudent = new SqlDataAdapter();
+
+                        teachersTable = new DataTable();
+                        daStudent.SelectCommand = dbCommand;
+                        daStudent.Fill(teachersTable);
+
+                        // Dispose unnecessary data
+                        dbCommand.Dispose();
+                        daStudent.Dispose();
+
+                        for (int i = 0; i < teachersTable.Rows.Count; i++)
+                        {
+                            lbxTeachers.Items.Add(teachersTable.Rows[i]["Teacher"].ToString());
+                        }
                     }
                 }
             }
@@ -126,7 +129,7 @@ namespace WindowsFormsApp1
                 //clear lbx
                 lbxTeachers.Items.Clear();
                 // EST command and data adapter
-                query = "SELECT EmployeeID, LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Employees WHERE Role='Teacher'";
+                query = "SELECT EmployeeID, LastName+', '+FirstName AS 'Teacher' FROM group3fa212330.Employees WHERE Role='Teacher' ORDER BY LastName";
                 SqlCommand dbCommand = new SqlCommand(query, dbConnection);
                 SqlDataAdapter daTeacher = new SqlDataAdapter();
 
@@ -139,7 +142,7 @@ namespace WindowsFormsApp1
                 dbCommand.Dispose();
                 daTeacher.Dispose();
 
-                for (int i = 0; i < teachersTable.Rows.Count-1; i++)
+                for (int i = 0; i < teachersTable.Rows.Count; i++)
                 {
                     lbxTeachers.Items.Add(teachersTable.Rows[i]["Teacher"].ToString());
                 }
