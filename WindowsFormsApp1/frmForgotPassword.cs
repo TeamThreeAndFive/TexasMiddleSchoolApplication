@@ -42,6 +42,8 @@ namespace WindowsFormsApp1
                 // set the recovery code
                 _recoveryCode = Authentication.GenerateRecoveryCode(tbxEmail.Text);
                 _attemptsCount = 0;
+
+                tbxEmail.ReadOnly = true;
                 
             }
             else

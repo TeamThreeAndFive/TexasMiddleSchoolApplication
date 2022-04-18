@@ -30,6 +30,10 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.gbxCourseInformation = new System.Windows.Forms.GroupBox();
+            this.tbxMeetingDays = new System.Windows.Forms.TextBox();
+            this.lblMeetingDays = new System.Windows.Forms.Label();
+            this.endTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.lblEndDate = new System.Windows.Forms.Label();
             this.tbxMeetingTime = new System.Windows.Forms.TextBox();
             this.startTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tbxRoom = new System.Windows.Forms.TextBox();
@@ -43,10 +47,7 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblEditCourse = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
-            this.endTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.lblEndDate = new System.Windows.Forms.Label();
-            this.tbxMeetingDays = new System.Windows.Forms.TextBox();
-            this.lblMeetingDays = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.gbxCourseInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +76,49 @@ namespace WindowsFormsApp1
             this.gbxCourseInformation.TabIndex = 0;
             this.gbxCourseInformation.TabStop = false;
             this.gbxCourseInformation.Text = "Course Information";
+            // 
+            // tbxMeetingDays
+            // 
+            this.tbxMeetingDays.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxMeetingDays.Location = new System.Drawing.Point(236, 245);
+            this.tbxMeetingDays.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxMeetingDays.Name = "tbxMeetingDays";
+            this.tbxMeetingDays.Size = new System.Drawing.Size(279, 29);
+            this.tbxMeetingDays.TabIndex = 5;
+            // 
+            // lblMeetingDays
+            // 
+            this.lblMeetingDays.AutoSize = true;
+            this.lblMeetingDays.BackColor = System.Drawing.Color.Transparent;
+            this.lblMeetingDays.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMeetingDays.Location = new System.Drawing.Point(60, 245);
+            this.lblMeetingDays.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblMeetingDays.Name = "lblMeetingDays";
+            this.lblMeetingDays.Size = new System.Drawing.Size(134, 22);
+            this.lblMeetingDays.TabIndex = 87;
+            this.lblMeetingDays.Text = "Meeting Day\'s:";
+            // 
+            // endTimePicker
+            // 
+            this.endTimePicker.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.endTimePicker.Location = new System.Drawing.Point(236, 209);
+            this.endTimePicker.Margin = new System.Windows.Forms.Padding(10);
+            this.endTimePicker.Name = "endTimePicker";
+            this.endTimePicker.Size = new System.Drawing.Size(278, 29);
+            this.endTimePicker.TabIndex = 4;
+            // 
+            // lblEndDate
+            // 
+            this.lblEndDate.AutoSize = true;
+            this.lblEndDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndDate.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndDate.Location = new System.Drawing.Point(60, 209);
+            this.lblEndDate.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblEndDate.Name = "lblEndDate";
+            this.lblEndDate.Size = new System.Drawing.Size(94, 22);
+            this.lblEndDate.TabIndex = 85;
+            this.lblEndDate.Text = "End Date:";
             // 
             // tbxMeetingTime
             // 
@@ -223,48 +267,18 @@ namespace WindowsFormsApp1
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // endTimePicker
+            // button1
             // 
-            this.endTimePicker.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endTimePicker.Location = new System.Drawing.Point(236, 209);
-            this.endTimePicker.Margin = new System.Windows.Forms.Padding(10);
-            this.endTimePicker.Name = "endTimePicker";
-            this.endTimePicker.Size = new System.Drawing.Size(278, 29);
-            this.endTimePicker.TabIndex = 4;
-            // 
-            // lblEndDate
-            // 
-            this.lblEndDate.AutoSize = true;
-            this.lblEndDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblEndDate.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDate.Location = new System.Drawing.Point(60, 209);
-            this.lblEndDate.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(94, 22);
-            this.lblEndDate.TabIndex = 85;
-            this.lblEndDate.Text = "End Date:";
-            // 
-            // tbxMeetingDays
-            // 
-            this.tbxMeetingDays.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxMeetingDays.Location = new System.Drawing.Point(236, 245);
-            this.tbxMeetingDays.Margin = new System.Windows.Forms.Padding(10);
-            this.tbxMeetingDays.Name = "tbxMeetingDays";
-            this.tbxMeetingDays.Size = new System.Drawing.Size(279, 29);
-            this.tbxMeetingDays.TabIndex = 5;
-            // 
-            // lblMeetingDays
-            // 
-            this.lblMeetingDays.AutoSize = true;
-            this.lblMeetingDays.BackColor = System.Drawing.Color.Transparent;
-            this.lblMeetingDays.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMeetingDays.Location = new System.Drawing.Point(60, 245);
-            this.lblMeetingDays.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.lblMeetingDays.Name = "lblMeetingDays";
-            this.lblMeetingDays.Size = new System.Drawing.Size(134, 22);
-            this.lblMeetingDays.TabIndex = 87;
-            this.lblMeetingDays.Text = "Meeting Day\'s:";
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(252, 470);
+            this.button1.Margin = new System.Windows.Forms.Padding(1);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 49);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "Assign teacher";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
             // 
             // frmEditCourses
             // 
@@ -272,8 +286,9 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(636, 529);
+            this.ClientSize = new System.Drawing.Size(650, 529);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.lblEditCourse);
             this.Controls.Add(this.btnBack);
@@ -313,5 +328,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.TextBox tbxMeetingDays;
         private System.Windows.Forms.Label lblMeetingDays;
+        private System.Windows.Forms.Button button1;
     }
 }

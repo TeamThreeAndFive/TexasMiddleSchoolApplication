@@ -53,33 +53,9 @@ namespace WindowsFormsApp1
             {
                 string qery =
                     "INSERT INTO group3fa212330.Employees " +
-                    "VALUES (@firstName, @lastName, @email, @phone, @role, @Password, @EmployeeID)";
+                    "VALUES (@firstName, @lastName, @email, @phone, @role, @Password)";
 
                 SqlCommand cmd = new SqlCommand(qery, ProgOps.dbConnection);
-
-
-
-                // get the all employee and check it has the same id as the tbx
-
-                SqlCommand temp = new SqlCommand("SELECT EmployeeID From group3fa212330.Employees", ProgOps.dbConnection);
-                SqlDataAdapter tempAdapter = new SqlDataAdapter();
-                DataTable EmployeeIDsTable = new DataTable();
-
-                tempAdapter.SelectCommand = temp;
-                tempAdapter.Fill(EmployeeIDsTable);
-
-                temp.Dispose();
-                tempAdapter.Dispose();
-
-                for (int x = 0; x < EmployeeIDsTable.Rows.Count; x++)
-                {
-                    if (EmployeeIDsTable.Rows[x]["EmployeeID"].ToString() == tbxEmployeeID.Text)
-                    {
-                        MessageBox.Show("Employee ID is occupied, please enter different Employee ID.", "Room Exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tbxEmployeeID.Focus();
-                        return;
-                    }
-                }
                     
 
                 // see if room number is already exists
@@ -101,7 +77,6 @@ namespace WindowsFormsApp1
                 cmd.Parameters.AddWithValue("@phone", tbxPhone.Text);
                 cmd.Parameters.AddWithValue("@role", "Academic Officer");
                 cmd.Parameters.AddWithValue("@Password", tbxPassword.Text);
-                cmd.Parameters.AddWithValue("@employeeID", tbxEmployeeID.Text);
 
                 // check if any row affected
 
@@ -187,10 +162,10 @@ namespace WindowsFormsApp1
                 tbxEmployeeID.ReadOnly = true;
                 tbxPassword.ReadOnly = true;
 
-                // Show prefiled data
+                // Show prefixed data
                 tbxEmployeeID.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].employeeID;
                 tbxEmail.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].email;
-                tbxFirstName.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].getFirstName();
+                tbxFirstName.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].frist_name;
                 tbxLastName.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].last_name;
                 tbxPhone.Text = frmInfoAcademicOfficers.academicOfficersList[selectedIndex].phone;
                 tbxPassword.Text = "**********";
@@ -199,9 +174,9 @@ namespace WindowsFormsApp1
             }
             else
             {
-                tbxEmployeeID.ReadOnly = false;
+                tbxEmployeeID.ReadOnly = true;
                 tbxPassword.ReadOnly = false;
-
+                lblAcademicOfficerInfo.Text = "Add New Academic Officer";
             }
         }
     }

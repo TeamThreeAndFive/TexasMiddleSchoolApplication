@@ -169,7 +169,7 @@ namespace WindowsFormsApp1
             if (_id != -1)
             {
                 // if selected Id is not -1, then user has selected something
-                tbxCourseID.ReadOnly = false;
+                tbxCourseID.ReadOnly = true;
 
                 // Show info about the course
                 tbxCourseID.Text = frmInfoCourses.courseList[_id].id.ToString();
@@ -183,6 +183,7 @@ namespace WindowsFormsApp1
             else
             {
                 tbxCourseID.ReadOnly = false;
+                lblEditCourse.Text = "Add New Course";
             }
         }
     }
