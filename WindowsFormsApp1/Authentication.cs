@@ -17,7 +17,7 @@ namespace WindowsFormsApp1
     {
 
         private static string fromEmail = "teammiddleschooltstc@gmail.com";
-        private static string emailPassword = "yycpdqbqhxumoaap";
+        private static string _key = "yycpdqbqhxumoaap";
 
         /// <summary>
         /// Login the user, if exists
@@ -72,21 +72,21 @@ namespace WindowsFormsApp1
                     Credentials = new NetworkCredential()
                     {
                         UserName = fromEmail,
-                        Password = emailPassword
+                        Password = _key
                     }
                 };
 
                 // Set from, to and body.
                 MailAddress from = new MailAddress(fromEmail, "Texas Middle School");
                 MailAddress to = new MailAddress(email);
-                string body = "This message contains a password reset code/recovery code. This recovery code can be used to recover your account. We found that someone is trying to reset your password. If this is not you trying to recover your account, please discard this email and you do not need to take any further action." +
+                string body = "This message contains a Verification code. This code can be used to recover your account. We found forgot password activity in your account, If this is not you trying to recover your account please discard this email." +
                     "\n\n" +
                     "NOTE: PLEASE KEEP THIS CODE PRIVATE" +
                     "\n\n" +
-                    "Recovery Code: " + recoveryCode + 
+                    "Verification code: " + recoveryCode + 
                     "\n\n" +
                     "Thank you," +
-                    "\n\n" +
+                    "\n" +
                     "Texas Middle School";
 
                 MailMessage message = new MailMessage()
