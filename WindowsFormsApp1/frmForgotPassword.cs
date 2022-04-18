@@ -70,6 +70,7 @@ namespace WindowsFormsApp1
                 {
                     // if so, we change the password
                     Authentication.ChangePassword(tbxNewPassword.Text, tbxConfirmPassword.Text, tbxRecoveryCode.Text, _email, _recoveryCode);
+                    this.Close();
                 }
                 else
                 {
