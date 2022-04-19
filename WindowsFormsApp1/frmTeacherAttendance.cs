@@ -119,7 +119,7 @@ namespace WindowsFormsApp1
 
             try
             {
-                SqlCommand dbCommand = new SqlCommand("SELECT c.Name FROM group3fa212330.Courses AS c " +
+                SqlCommand dbCommand = new SqlCommand("SELECT c.Name, c.CourseID FROM group3fa212330.Courses AS c " +
                     "JOIN group3fa212330.CoursesEmployees AS ce ON c.CourseID = ce.CourseID WHERE ce.EmployeeID = " +
                 frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
                 SqlDataAdapter daCourses = new SqlDataAdapter();
@@ -133,9 +133,17 @@ namespace WindowsFormsApp1
                 dbCommand.Dispose();
                 daCourses.Dispose();
 
-                for (int i = 0; i < coursesTable.Rows.Count; i++)
+                //for (int i = 0; i < coursesTable.Rows.Count; i++)
+                //{
+                //    cbxCourse.Items.Add((coursesTable.Rows[i]["Name"].ToString()));
+                //}
+
+                if (coursesTable != null)
                 {
-                    cbxCourse.Items.Add((coursesTable.Rows[i]["Name"].ToString()));
+                    cbxCourse.DataSource = coursesTable;
+                    cbxCourse.DisplayMember = "Name";//((CoursesTable.Rows[i]["Name"].ToString()));
+                    cbxCourse.ValueMember = "CourseID";//((CoursesTable.Rows[i]["CourseID"].ToString()));
+                    cbxCourse.Refresh();
                 }
             }
             catch
@@ -146,51 +154,55 @@ namespace WindowsFormsApp1
 
         private void cbxCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // English I
-            if (cbxCourse.Text == "English I")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method
-                EnglishI();
-            }
-            // Algebra 
-            else if (cbxCourse.Text == "Algebra I")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method
-                AlgebraI();
-            }
-            // General Science
-            else if (cbxCourse.Text == "General Science")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method
-                GeneralScience();
-            }
-            // Geometry
-            else if (cbxCourse.Text == "Geometry")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method
-                Geometry();
-            }
-            // Social Studies
-            else if (cbxCourse.Text == "Social Studies")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method 
-                SocialStudies();
-            }
-            // Physical Education
-            else if (cbxCourse.Text == "Physical Education")
-            {
-                lbxStudents.Items.Clear();
-                // Call Method 
-                PhysicalEducation();
-            }
+            // Displays all students related to the course selected 
+            //OnCourseChange(cbxCourse.);
+            ComboBox cb = (ComboBox)sender;
 
+            // Doing this because SelectedValue changes from datarowview to string after first click
+            if (cb.SelectedValue != null)
+            {
+                string courseID = "0";
+
+                if (cb.SelectedValue.GetType() == typeof(DataRowView))
+                    courseID = ((DataRowView)cb.SelectedValue).Row["CourseID"].ToString();
+                else if (cb.SelectedValue.GetType() == typeof(string))
+                    courseID = cb.SelectedValue.ToString();
+
+                OnCourseChange(courseID);
+            }
         }
+        public void OnCourseChange(string courseID)
+        {
+            lbxStudents.Items.Clear();
+            // Displays all students related to the course selected 
+            // Display Students In Current Teacher's Class
+            SqlCommand dbCommand = new SqlCommand("SELECT a.SeatNumber, s.FirstName, s.LastName " +
+                "FROM group3fa212330.Students AS s " +
+                "JOIN group3fa212330.Attendance AS a " +
+                "ON s.StudentID = a.StudentID " +
+                //"JOIN group3fa212330.Courses AS c " +
+                //"ON a.CourseID = c.CourseID " +
+                //"JOIN group3fa212330.CoursesEmployees AS ce " +
+                //"ON a.CourseID = ce.CourseID " +
+                "WHERE a.CourseID = " + courseID //+
+                //" AND ce.EmployeeID = " +
+            /*frmMenuLogin.currentUser.getEmployeeID()*/, ProgOps.dbConnection);
+            SqlDataAdapter daStudents = new SqlDataAdapter();
 
+            // creating new user data table and filling the information
+            DataTable studentsTable = new DataTable();
+            daStudents.SelectCommand = dbCommand;
+            daStudents.Fill(studentsTable);
+
+            // Dispose unnecessary data
+            dbCommand.Dispose();
+            daStudents.Dispose();
+
+            for (int i = 0; i < studentsTable.Rows.Count; i++)
+            {
+                lbxStudents.Items.Add(studentsTable.Rows[i]["SeatNumber"].ToString() + " " + studentsTable.Rows[i]["LastName"].ToString() + ", " + studentsTable.Rows[i]["FirstName"].ToString());
+            }
+        }
         public void EnglishI()
         {
                 try

@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             this.btnSeating = new System.Windows.Forms.Button();
             this.btnGradebook = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnReturnToLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSeating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGrades)).BeginInit();
@@ -47,10 +47,10 @@ namespace WindowsFormsApp1
             // 
             this.lblTeacherMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblTeacherMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTeacherMenu.Location = new System.Drawing.Point(8, 45);
-            this.lblTeacherMenu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTeacherMenu.Location = new System.Drawing.Point(19, 100);
+            this.lblTeacherMenu.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTeacherMenu.Name = "lblTeacherMenu";
-            this.lblTeacherMenu.Size = new System.Drawing.Size(620, 37);
+            this.lblTeacherMenu.Size = new System.Drawing.Size(1447, 83);
             this.lblTeacherMenu.TabIndex = 33;
             this.lblTeacherMenu.Text = "Teacher Menu";
             this.lblTeacherMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -59,9 +59,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxAttendance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxAttendance.Image = ((System.Drawing.Image)(resources.GetObject("pbxAttendance.Image")));
-            this.pbxAttendance.Location = new System.Drawing.Point(428, 119);
+            this.pbxAttendance.Location = new System.Drawing.Point(999, 265);
+            this.pbxAttendance.Margin = new System.Windows.Forms.Padding(7);
             this.pbxAttendance.Name = "pbxAttendance";
-            this.pbxAttendance.Size = new System.Drawing.Size(143, 143);
+            this.pbxAttendance.Size = new System.Drawing.Size(331, 317);
             this.pbxAttendance.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAttendance.TabIndex = 29;
             this.pbxAttendance.TabStop = false;
@@ -70,9 +71,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxSeating.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxSeating.Image = ((System.Drawing.Image)(resources.GetObject("pbxSeating.Image")));
-            this.pbxSeating.Location = new System.Drawing.Point(245, 119);
+            this.pbxSeating.Location = new System.Drawing.Point(572, 265);
+            this.pbxSeating.Margin = new System.Windows.Forms.Padding(7);
             this.pbxSeating.Name = "pbxSeating";
-            this.pbxSeating.Size = new System.Drawing.Size(143, 143);
+            this.pbxSeating.Size = new System.Drawing.Size(331, 317);
             this.pbxSeating.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxSeating.TabIndex = 28;
             this.pbxSeating.TabStop = false;
@@ -81,9 +83,10 @@ namespace WindowsFormsApp1
             // 
             this.pbxGrades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxGrades.Image = ((System.Drawing.Image)(resources.GetObject("pbxGrades.Image")));
-            this.pbxGrades.Location = new System.Drawing.Point(68, 119);
+            this.pbxGrades.Location = new System.Drawing.Point(159, 265);
+            this.pbxGrades.Margin = new System.Windows.Forms.Padding(7);
             this.pbxGrades.Name = "pbxGrades";
-            this.pbxGrades.Size = new System.Drawing.Size(143, 143);
+            this.pbxGrades.Size = new System.Drawing.Size(331, 317);
             this.pbxGrades.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxGrades.TabIndex = 27;
             this.pbxGrades.TabStop = false;
@@ -92,9 +95,10 @@ namespace WindowsFormsApp1
             // 
             this.btnSeating.BackColor = System.Drawing.Color.White;
             this.btnSeating.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeating.Location = new System.Drawing.Point(244, 288);
+            this.btnSeating.Location = new System.Drawing.Point(569, 642);
+            this.btnSeating.Margin = new System.Windows.Forms.Padding(7);
             this.btnSeating.Name = "btnSeating";
-            this.btnSeating.Size = new System.Drawing.Size(143, 74);
+            this.btnSeating.Size = new System.Drawing.Size(334, 165);
             this.btnSeating.TabIndex = 1;
             this.btnSeating.Text = "Seating Arrangement";
             this.btnSeating.UseVisualStyleBackColor = false;
@@ -104,9 +108,10 @@ namespace WindowsFormsApp1
             // 
             this.btnGradebook.BackColor = System.Drawing.Color.White;
             this.btnGradebook.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGradebook.Location = new System.Drawing.Point(66, 288);
+            this.btnGradebook.Location = new System.Drawing.Point(154, 642);
+            this.btnGradebook.Margin = new System.Windows.Forms.Padding(7);
             this.btnGradebook.Name = "btnGradebook";
-            this.btnGradebook.Size = new System.Drawing.Size(143, 74);
+            this.btnGradebook.Size = new System.Drawing.Size(334, 165);
             this.btnGradebook.TabIndex = 0;
             this.btnGradebook.Text = "Gradebook";
             this.btnGradebook.UseVisualStyleBackColor = false;
@@ -117,38 +122,36 @@ namespace WindowsFormsApp1
             this.btnAttendance.BackColor = System.Drawing.Color.White;
             this.btnAttendance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAttendance.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAttendance.Location = new System.Drawing.Point(426, 288);
+            this.btnAttendance.Location = new System.Drawing.Point(994, 642);
+            this.btnAttendance.Margin = new System.Windows.Forms.Padding(7);
             this.btnAttendance.Name = "btnAttendance";
-            this.btnAttendance.Size = new System.Drawing.Size(143, 74);
+            this.btnAttendance.Size = new System.Drawing.Size(334, 165);
             this.btnAttendance.TabIndex = 2;
             this.btnAttendance.Text = "Attendance";
             this.btnAttendance.UseVisualStyleBackColor = false;
             this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
-            // btnExit
+            // btnReturnToLogin
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(66, 399);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 38);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnReturnToLogin.BackColor = System.Drawing.Color.White;
+            this.btnReturnToLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturnToLogin.Location = new System.Drawing.Point(31, 866);
+            this.btnReturnToLogin.Name = "btnReturnToLogin";
+            this.btnReturnToLogin.Size = new System.Drawing.Size(250, 88);
+            this.btnReturnToLogin.TabIndex = 34;
+            this.btnReturnToLogin.Text = "Back ";
+            this.btnReturnToLogin.UseVisualStyleBackColor = false;
+            this.btnReturnToLogin.Click += new System.EventHandler(this.btnReturnToLogin_Click);
             // 
             // frmMenuTeacher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(637, 457);
+            this.ClientSize = new System.Drawing.Size(1519, 1069);
             this.ControlBox = false;
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnReturnToLogin);
             this.Controls.Add(this.lblTeacherMenu);
             this.Controls.Add(this.pbxAttendance);
             this.Controls.Add(this.pbxSeating);
@@ -157,10 +160,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnGradebook);
             this.Controls.Add(this.btnAttendance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(653, 481);
+            this.MinimumSize = new System.Drawing.Size(1486, 976);
             this.Name = "frmMenuTeacher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Teacher Menu";
@@ -180,6 +183,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnSeating;
         private System.Windows.Forms.Button btnGradebook;
         private System.Windows.Forms.Button btnAttendance;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnReturnToLogin;
     }
 }

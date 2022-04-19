@@ -64,6 +64,8 @@ namespace WindowsFormsApp1
             }
 
             dbCommand.Dispose();
+            tbxChangeGrade.Clear();
+            tbxGrade.Clear();
 
         }
 
