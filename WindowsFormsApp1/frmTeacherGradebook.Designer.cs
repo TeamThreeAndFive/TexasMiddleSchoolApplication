@@ -135,7 +135,7 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // fileToolStripMenuItem
@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
             this.backToolStripMenuItem.Text = "Back";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click_1);
             // 
@@ -199,6 +199,7 @@ namespace WindowsFormsApp1
             this.tbxGrade.Location = new System.Drawing.Point(27, 64);
             this.tbxGrade.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tbxGrade.Name = "tbxGrade";
+            this.tbxGrade.ReadOnly = true;
             this.tbxGrade.Size = new System.Drawing.Size(238, 56);
             this.tbxGrade.TabIndex = 28;
             // 
@@ -256,7 +257,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1729, 946);
+            this.ClientSize = new System.Drawing.Size(1729, 1023);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

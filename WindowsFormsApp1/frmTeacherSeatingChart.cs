@@ -28,13 +28,21 @@ namespace WindowsFormsApp1
 
         private void btnShuffle_Click(object sender, EventArgs e)
         {
-
-
             string courseName = cbxCourse.Text.ToString();
+            string courseID = cbxCourse.ValueMember.ToString();
             //Shuffle Seating Arrangement 
-            string query = "UPDATE group3fa212330.Attendance SET SeatNumber = ABS(CHECKSUM(NewId())) % 20 FROM group3fa212330.Attendance as a JOIN group3fa212330.Courses AS c ON c.CourseID = a.CourseID WHERE c.Name = @courseName";
+            string query = "UPDATE a                                                           " +
+            "SET SeatNumber = x.SeatNum                                         " +
+            "FROM group3fa212330.Attendance as a                                " +
+            "JOIN                                                               " +
+            "(                                                                  " +
+            "	SELECT StudentID, ROW_NUMBER() OVER(ORDER BY NEWID()) SeatNum   " +
+            "	FROM group3fa212330.Attendance                                  " +
+            "	WHERE CourseID = @courseID                                      " +
+            ") x ON a.StudentID = x.StudentID                                   " +
+            " WHERE a.CourseID = @courseID                                       ";
             SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
-            dbCommand.Parameters.AddWithValue("@CourseName", courseName);
+            dbCommand.Parameters.AddWithValue("@courseID", courseID);
             // Code to save present 
             if (dbCommand.ExecuteNonQuery() <= 0)
             {
@@ -44,17 +52,13 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
             }
-
             dbCommand.Dispose();
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             //Save Seating Arrangement
         }
-
-
 
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -80,7 +84,6 @@ namespace WindowsFormsApp1
         private void frmTeacherSeatingChart_Load(object sender, EventArgs e)
         {
             // Display Courses
-
             string employeeID = frmMenuLogin.currentUser.getEmployeeID();
             SqlCommand dbCmd = new SqlCommand("SELECT * FROM group3fa212330.Courses AS c " +
                 "JOIN group3fa212330.CoursesEmployees AS ce " +
@@ -96,21 +99,30 @@ namespace WindowsFormsApp1
             dbCmd.Dispose();
             daCourses.Dispose();
 
-            for (int i = 0; i < CoursesTable.Rows.Count; i++)
+            if (CoursesTable != null)
             {
-                cbxCourse.Text = ((CoursesTable.Rows[i]["Name"].ToString()));
+                cbxCourse.DataSource = CoursesTable;
+                cbxCourse.DisplayMember = "Name";
+                cbxCourse.ValueMember = "CourseID";
+                cbxCourse.Refresh();
             }
-            OnCourseChange();
-
         }
-        public void OnCourseChange()
+
+        public void OnCourseChange(string courseID)
         {
+            lbxStudents.Items.Clear();
             // Displays all students related to the course selected 
             // Display Students In Current Teacher's Class
-            SqlCommand dbCommand = new SqlCommand("SELECT * FROM group3fa212330.Students AS s " +
-                "JOIN group3fa212330.Attendance AS a ON s.StudentID = a.StudentID " +
-                "JOIN group3fa212330.Courses AS c ON a.CourseID = c.CourseID " +
-                "JOIN group3fa212330.CoursesEmployees AS ce ON a.CourseID = ce.CourseID WHERE ce.EmployeeID = " +
+            SqlCommand dbCommand = new SqlCommand("SELECT a.SeatNumber, s.FirstName, s.LastName " +
+                "FROM group3fa212330.Students AS s " +
+                "JOIN group3fa212330.Attendance AS a " +
+                "ON s.StudentID = a.StudentID " +
+                "JOIN group3fa212330.Courses AS c " +
+                "ON a.CourseID = c.CourseID " +
+                "JOIN group3fa212330.CoursesEmployees AS ce " +
+                "ON a.CourseID = ce.CourseID " +
+                "WHERE c.CourseID = " + courseID +
+                " AND ce.EmployeeID = " +
             frmMenuLogin.currentUser.getEmployeeID(), ProgOps.dbConnection);
             SqlDataAdapter daStudents = new SqlDataAdapter();
 
@@ -132,9 +144,20 @@ namespace WindowsFormsApp1
         private void cbxCourse_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Displays all students related to the course selected 
-            OnCourseChange();
-        }
+            ComboBox cb = (ComboBox)sender;
 
+            if(cb.SelectedValue != null)
+            {
+                string courseID = "0";
+
+                if (cb.SelectedValue.GetType() == typeof(DataRowView))
+                    courseID = ((DataRowView)cb.SelectedValue).Row["CourseID"].ToString();
+                else if (cb.SelectedValue.GetType() == typeof(string))
+                    courseID = cb.SelectedValue.ToString();
+
+                OnCourseChange(courseID);
+            }
+        }
     }
 }
 
