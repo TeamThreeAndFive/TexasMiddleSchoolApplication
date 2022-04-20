@@ -106,7 +106,15 @@ namespace WindowsFormsApp1
                 // Show userName and password
                 tbxUsername.Text = Properties.Settings.Default.UserName;
                 tbxPassword.Text = Properties.Settings.Default.Password;
+
+                cbxKeepLoggedIn.Checked = true;
+
             }
+            else
+            {
+                cbxKeepLoggedIn.Checked = false;
+            }
+           
             
         }
 
