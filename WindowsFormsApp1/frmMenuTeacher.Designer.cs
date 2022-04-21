@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
             this.lblTeacherMenu.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblTeacherMenu.Name = "lblTeacherMenu";
             this.lblTeacherMenu.Size = new System.Drawing.Size(1447, 83);
-            this.lblTeacherMenu.TabIndex = 33;
+            this.lblTeacherMenu.TabIndex = 0;
             this.lblTeacherMenu.Text = "Teacher Menu";
             this.lblTeacherMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
             this.btnSeating.Margin = new System.Windows.Forms.Padding(7);
             this.btnSeating.Name = "btnSeating";
             this.btnSeating.Size = new System.Drawing.Size(334, 165);
-            this.btnSeating.TabIndex = 1;
+            this.btnSeating.TabIndex = 2;
             this.btnSeating.Text = "Seating Arrangement";
             this.btnSeating.UseVisualStyleBackColor = false;
             this.btnSeating.Click += new System.EventHandler(this.btnSeating_Click);
@@ -112,7 +112,7 @@ namespace WindowsFormsApp1
             this.btnGradebook.Margin = new System.Windows.Forms.Padding(7);
             this.btnGradebook.Name = "btnGradebook";
             this.btnGradebook.Size = new System.Drawing.Size(334, 165);
-            this.btnGradebook.TabIndex = 0;
+            this.btnGradebook.TabIndex = 1;
             this.btnGradebook.Text = "Gradebook";
             this.btnGradebook.UseVisualStyleBackColor = false;
             this.btnGradebook.Click += new System.EventHandler(this.btnGradebook_Click);
@@ -126,7 +126,7 @@ namespace WindowsFormsApp1
             this.btnAttendance.Margin = new System.Windows.Forms.Padding(7);
             this.btnAttendance.Name = "btnAttendance";
             this.btnAttendance.Size = new System.Drawing.Size(334, 165);
-            this.btnAttendance.TabIndex = 2;
+            this.btnAttendance.TabIndex = 3;
             this.btnAttendance.Text = "Attendance";
             this.btnAttendance.UseVisualStyleBackColor = false;
             this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
@@ -135,10 +135,10 @@ namespace WindowsFormsApp1
             // 
             this.btnReturnToLogin.BackColor = System.Drawing.Color.White;
             this.btnReturnToLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnToLogin.Location = new System.Drawing.Point(31, 866);
+            this.btnReturnToLogin.Location = new System.Drawing.Point(31, 829);
             this.btnReturnToLogin.Name = "btnReturnToLogin";
             this.btnReturnToLogin.Size = new System.Drawing.Size(250, 88);
-            this.btnReturnToLogin.TabIndex = 34;
+            this.btnReturnToLogin.TabIndex = 4;
             this.btnReturnToLogin.Text = "Back ";
             this.btnReturnToLogin.UseVisualStyleBackColor = false;
             this.btnReturnToLogin.Click += new System.EventHandler(this.btnReturnToLogin_Click);

@@ -43,7 +43,6 @@ namespace WindowsFormsApp1
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seatingChartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +50,7 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblAttendance = new System.Windows.Forms.Label();
             this.gbxStudents = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbxTakeRoll.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.gbxStudents.SuspendLayout();
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1
             this.lblCourse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(165, 47);
-            this.lblCourse.TabIndex = 26;
+            this.lblCourse.TabIndex = 0;
             this.lblCourse.Text = "Course:";
             // 
             // btnPrevious
@@ -76,7 +76,7 @@ namespace WindowsFormsApp1
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(245, 89);
-            this.btnPrevious.TabIndex = 5;
+            this.btnPrevious.TabIndex = 3;
             this.btnPrevious.Text = "Previous";
             this.btnPrevious.UseVisualStyleBackColor = false;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
@@ -109,7 +109,7 @@ namespace WindowsFormsApp1
             this.gbxTakeRoll.Name = "gbxTakeRoll";
             this.gbxTakeRoll.Padding = new System.Windows.Forms.Padding(2);
             this.gbxTakeRoll.Size = new System.Drawing.Size(849, 622);
-            this.gbxTakeRoll.TabIndex = 24;
+            this.gbxTakeRoll.TabIndex = 4;
             this.gbxTakeRoll.TabStop = false;
             this.gbxTakeRoll.Text = "Take Roll";
             // 
@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
             this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(219, 89);
-            this.btnSave.TabIndex = 3;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -173,7 +173,7 @@ namespace WindowsFormsApp1
             this.cbxCourse.Margin = new System.Windows.Forms.Padding(7);
             this.cbxCourse.Name = "cbxCourse";
             this.cbxCourse.Size = new System.Drawing.Size(443, 57);
-            this.cbxCourse.TabIndex = 0;
+            this.cbxCourse.TabIndex = 1;
             this.cbxCourse.SelectedIndexChanged += new System.EventHandler(this.cbxCourse_SelectedIndexChanged);
             // 
             // lbxStudents
@@ -181,11 +181,11 @@ namespace WindowsFormsApp1
             this.lbxStudents.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxStudents.FormattingEnabled = true;
             this.lbxStudents.ItemHeight = 41;
-            this.lbxStudents.Location = new System.Drawing.Point(32, 175);
+            this.lbxStudents.Location = new System.Drawing.Point(32, 227);
             this.lbxStudents.Margin = new System.Windows.Forms.Padding(2);
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(622, 414);
-            this.lbxStudents.TabIndex = 1;
+            this.lbxStudents.TabIndex = 2;
             // 
             // menuStrip
             // 
@@ -200,14 +200,13 @@ namespace WindowsFormsApp1
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(1673, 57);
-            this.menuStrip.TabIndex = 19;
+            this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.backToolStripMenuItem});
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 53);
             this.fileToolStripMenuItem.Text = "File";
@@ -215,15 +214,8 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
             this.closeToolStripMenuItem.Text = "Print";
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
-            this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // menuToolStripMenuItem
             // 
@@ -253,6 +245,7 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // btnBack
             // 
@@ -262,7 +255,7 @@ namespace WindowsFormsApp1
             this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(201, 89);
-            this.btnBack.TabIndex = 2;
+            this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -275,22 +268,33 @@ namespace WindowsFormsApp1
             this.lblAttendance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAttendance.Name = "lblAttendance";
             this.lblAttendance.Size = new System.Drawing.Size(1363, 83);
-            this.lblAttendance.TabIndex = 22;
+            this.lblAttendance.TabIndex = 2;
             this.lblAttendance.Text = "Attendance";
             this.lblAttendance.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // gbxStudents
             // 
+            this.gbxStudents.Controls.Add(this.label1);
             this.gbxStudents.Controls.Add(this.cbxCourse);
             this.gbxStudents.Controls.Add(this.lblCourse);
             this.gbxStudents.Controls.Add(this.lbxStudents);
             this.gbxStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxStudents.Location = new System.Drawing.Point(32, 274);
             this.gbxStudents.Name = "gbxStudents";
-            this.gbxStudents.Size = new System.Drawing.Size(692, 622);
-            this.gbxStudents.TabIndex = 27;
+            this.gbxStudents.Size = new System.Drawing.Size(692, 655);
+            this.gbxStudents.TabIndex = 3;
             this.gbxStudents.TabStop = false;
             this.gbxStudents.Text = "Student Information:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(25, 173);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(483, 41);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ID # | Last Name, First Name";
             // 
             // frmTeacherAttendance
             // 
@@ -298,7 +302,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1673, 956);
+            this.ClientSize = new System.Drawing.Size(1673, 1023);
             this.ControlBox = false;
             this.Controls.Add(this.gbxStudents);
             this.Controls.Add(this.gbxTakeRoll);
@@ -340,7 +344,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seatingChartToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradebookToolStripMenuItem;
@@ -348,5 +351,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblAttendance;
         private System.Windows.Forms.GroupBox gbxStudents;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -148,6 +148,12 @@
     <Compile Include="frmInfoTeachers.Designer.cs">
       <DependentUpon>frmInfoTeachers.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTeacherHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeacherHelp.Designer.cs">
+      <DependentUpon>frmTeacherHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProgOps.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuLogin.resx">
       <DependentUpon>frmMenuLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeacherHelp.resx">
+      <DependentUpon>frmTeacherHelp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTeacherSeatingChart.resx">
       <DependentUpon>frmTeacherSeatingChart.cs</DependentUpon>

@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
                 // Opens Login Form
                 frmMenuLogin fl = new frmMenuLogin();
                 fl.Show();
-                this.Hide();
+                this.Close();
             }
         }
 
