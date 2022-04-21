@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
             // 
             // pbxShowNoShowPassword
             // 
-            this.pbxShowNoShowPassword.Image = global::WindowsFormsApp1.Properties.Resources.showNoShow;
+            //this.pbxShowNoShowPassword.Image = global::WindowsFormsApp1.Properties.Resources.showNoShow;
             this.pbxShowNoShowPassword.Location = new System.Drawing.Point(443, 112);
             this.pbxShowNoShowPassword.Name = "pbxShowNoShowPassword";
             this.pbxShowNoShowPassword.Size = new System.Drawing.Size(34, 26);
@@ -248,7 +248,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
+            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.ClientSize = new System.Drawing.Size(886, 534);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBackToLogIn);

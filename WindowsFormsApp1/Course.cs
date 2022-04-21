@@ -26,5 +26,11 @@ namespace WindowsFormsApp1
             this.room = room;
         }
 
+        public Course(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+
     }
 }

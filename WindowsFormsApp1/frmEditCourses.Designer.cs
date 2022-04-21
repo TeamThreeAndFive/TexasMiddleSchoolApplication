@@ -47,7 +47,6 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblEditCourse = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbxCourseInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -258,37 +257,23 @@ namespace WindowsFormsApp1
             // 
             this.btnSaveChanges.BackColor = System.Drawing.Color.White;
             this.btnSaveChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveChanges.Location = new System.Drawing.Point(456, 470);
+            this.btnSaveChanges.Location = new System.Drawing.Point(452, 479);
             this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(1);
             this.btnSaveChanges.Name = "btnSaveChanges";
-            this.btnSaveChanges.Size = new System.Drawing.Size(159, 49);
+            this.btnSaveChanges.Size = new System.Drawing.Size(159, 40);
             this.btnSaveChanges.TabIndex = 1;
             this.btnSaveChanges.Text = "Save Changes";
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(252, 470);
-            this.button1.Margin = new System.Windows.Forms.Padding(1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 49);
-            this.button1.TabIndex = 84;
-            this.button1.Text = "Assign teacher";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Visible = false;
-            // 
             // frmEditCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
+            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(650, 529);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.lblEditCourse);
             this.Controls.Add(this.btnBack);
@@ -328,6 +313,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.TextBox tbxMeetingDays;
         private System.Windows.Forms.Label lblMeetingDays;
-        private System.Windows.Forms.Button button1;
     }
 }

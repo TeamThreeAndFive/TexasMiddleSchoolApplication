@@ -40,10 +40,13 @@ namespace WindowsFormsApp1
             this.lblAdminMenu = new System.Windows.Forms.Label();
             this.btnStudents = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnAssginCourses = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAcademicOfficers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeachers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudents)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pbxAcademicOfficers
@@ -132,7 +135,7 @@ namespace WindowsFormsApp1
             // 
             this.lblAdminMenu.BackColor = System.Drawing.Color.Transparent;
             this.lblAdminMenu.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdminMenu.Location = new System.Drawing.Point(62, 36);
+            this.lblAdminMenu.Location = new System.Drawing.Point(136, 36);
             this.lblAdminMenu.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblAdminMenu.Name = "lblAdminMenu";
             this.lblAdminMenu.Size = new System.Drawing.Size(584, 37);
@@ -167,14 +170,40 @@ namespace WindowsFormsApp1
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(678, 113);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(143, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 58;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnAssginCourses
+            // 
+            this.btnAssginCourses.BackColor = System.Drawing.Color.White;
+            this.btnAssginCourses.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAssginCourses.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssginCourses.Location = new System.Drawing.Point(677, 281);
+            this.btnAssginCourses.Name = "btnAssginCourses";
+            this.btnAssginCourses.Size = new System.Drawing.Size(143, 74);
+            this.btnAssginCourses.TabIndex = 57;
+            this.btnAssginCourses.Text = "Assign Courses";
+            this.btnAssginCourses.UseVisualStyleBackColor = false;
+            this.btnAssginCourses.Click += new System.EventHandler(this.btnAssginCourses_Click);
+            // 
             // frmMenuAdministrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(708, 481);
+            this.ClientSize = new System.Drawing.Size(857, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnAssginCourses);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbxAcademicOfficers);
             this.Controls.Add(this.btnAcademicOfficers);
@@ -197,6 +226,7 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pbxCourses)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeachers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudents)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,5 +243,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblAdminMenu;
         private System.Windows.Forms.Button btnStudents;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAssginCourses;
     }
 }

@@ -58,6 +58,12 @@
     <Compile Include="Authentication.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Employee.cs" />
+    <Compile Include="frmCourseAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCourseAssign.Designer.cs">
+      <DependentUpon>frmCourseAssign.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditAcademicOfficers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,7 +163,15 @@
     <Compile Include="frmTeacherSeatingChart.Designer.cs">
       <DependentUpon>frmTeacherSeatingChart.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Student.cs" />
+    <EmbeddedResource Include="frmCourseAssign.resx">
+      <DependentUpon>frmCourseAssign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditAcademicOfficers.resx">
       <DependentUpon>frmEditAcademicOfficers.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,14 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -237,6 +246,11 @@
     <None Include="Resources\wp3340065.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\subtract.png" />
+    <None Include="Resources\RightArrow.png" />
+    <None Include="Resources\LeftArrow.png" />
+    <None Include="Resources\Plus.png" />
+    <None Include="Resources\plusNew.png" />
     <Content Include="Resources\showNoShow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

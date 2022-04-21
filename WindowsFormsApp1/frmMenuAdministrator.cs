@@ -67,5 +67,13 @@ namespace WindowsFormsApp1
                 Application.Exit();
             }
         }
+
+        private void btnAssginCourses_Click(object sender, EventArgs e)
+        {
+            var frm = new frmCourseAssign();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -241,7 +241,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
+            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 574);
             this.Controls.Add(this.btnSaveChanges);

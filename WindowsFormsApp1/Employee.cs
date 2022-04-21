@@ -39,6 +39,13 @@ namespace WindowsFormsApp1
             this.role = role;
         }
 
+         public Employee(string empID, string fName, string lName)
+        {
+            this.employeeID = empID;
+            this.frist_name = fName;
+            this.last_name = lName;
+        }
+
         // getter to get information
 
         public string getEmployeeID()
