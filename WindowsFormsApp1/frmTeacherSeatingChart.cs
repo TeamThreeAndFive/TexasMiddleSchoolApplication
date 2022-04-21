@@ -20,9 +20,7 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmMenuTeacher menu = new frmMenuTeacher();
-            menu.Show();
+            this.Close();
         }
 
         private void btnShuffle_Click(object sender, EventArgs e)
@@ -58,15 +56,17 @@ namespace WindowsFormsApp1
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTeacherAttendance attendance = new frmTeacherAttendance();
-            attendance.Show();
             this.Hide();
+            attendance.ShowDialog();
+            this.Show();
         }
 
         private void gradebookToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmTeacherGradebook gb = new frmTeacherGradebook();
-            gb.Show();
             this.Hide();
+            gb.ShowDialog();
+            this.Show();
         }
 
         private void frmTeacherSeatingChart_Load(object sender, EventArgs e)
@@ -156,15 +156,17 @@ namespace WindowsFormsApp1
         private void attendanceToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmTeacherAttendance att = new frmTeacherAttendance();
-            att.Show();
             this.Hide();
+            att.ShowDialog();
+            this.Show();
         }
 
         private void gradebookToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmTeacherGradebook gb = new frmTeacherGradebook();
-            gb.Show();
             this.Hide();
+            gb.ShowDialog();
+            this.Show();
         }
     }
 }

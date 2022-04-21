@@ -69,21 +69,25 @@ namespace WindowsFormsApp1
                     if (currentUser.getRole() == "Academic Officer")
                     {
                         frmMenuAcademicOfficer academicOfficerMenu = new frmMenuAcademicOfficer();
-                        academicOfficerMenu.Show();
                         this.Hide();
+                        academicOfficerMenu.ShowDialog();
+                        this.Show();
                     }
                     else if (currentUser.getRole() == "Teacher")
                     {
                         frmMenuTeacher teacherMenu = new frmMenuTeacher();
-                        teacherMenu.Show();
-                        currentUser.getEmployeeID();
+                        
                         this.Hide();
+                        teacherMenu.ShowDialog();
+                        currentUser.getEmployeeID();
+                        this.Show();
                     }
                     else
                     {
                         frmMenuAdministrator adminMenu = new frmMenuAdministrator();
-                        adminMenu.Show();
                         this.Hide();
+                        adminMenu.ShowDialog();
+                        this.Show();
                     } 
                 }
             }

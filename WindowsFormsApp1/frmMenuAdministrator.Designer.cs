@@ -166,7 +166,7 @@ namespace WindowsFormsApp1
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(127, 38);
             this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Log-out";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
