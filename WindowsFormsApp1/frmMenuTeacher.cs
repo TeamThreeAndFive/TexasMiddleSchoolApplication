@@ -19,41 +19,47 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            // Back Button
-            this.Hide();
+            if (MessageBox.Show("Are you sure you want to return to login?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void btnGradebook_Click(object sender, EventArgs e)
         {
             // Opens Gradebook Form
             frmTeacherGradebook fg = new frmTeacherGradebook();
-            fg.Show();
             this.Hide();
+            fg.ShowDialog();
+            this.Show();
+            
         }
 
         private void btnSeating_Click(object sender, EventArgs e)
         {
             // Opens Seating Arrangement Form
             frmTeacherSeatingChart fs = new frmTeacherSeatingChart();
-            fs.Show();
+            
             this.Hide();
+            fs.ShowDialog();
+            this.Show();
+
         }
 
         private void btnAttendance_Click(object sender, EventArgs e)
         {
             // Opens Attendance Form
             frmTeacherAttendance fa = new frmTeacherAttendance();
-            fa.Show();
+           
             this.Hide();
+            fa.ShowDialog();
+            this.Show();
         }
 
         private void btnReturnToLogin_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to return to login?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                // Opens Login Form
-                frmMenuLogin fl = new frmMenuLogin();
-                fl.Show();
                 this.Close();
             }
         }

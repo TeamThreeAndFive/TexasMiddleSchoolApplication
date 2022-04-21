@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(127, 38);
             this.btnExit.TabIndex = 44;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Text = "Log-out";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -146,7 +146,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(636, 458);
+            this.ClientSize = new System.Drawing.Size(650, 481);
             this.ControlBox = false;
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbxCourses);
@@ -157,7 +157,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblAcademicOfficerMenu);
             this.Controls.Add(this.btnStudents);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(652, 483);
