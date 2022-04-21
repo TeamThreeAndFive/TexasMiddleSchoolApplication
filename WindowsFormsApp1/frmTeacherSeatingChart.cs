@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         private void btnShuffle_Click(object sender, EventArgs e)
         {
             string courseName = cbxCourse.Text.ToString();
+            // Course ID not a number it's a string "CourseID"
             string courseID = cbxCourse.ValueMember.ToString();
             //Shuffle Seating Arrangement 
             string query = "UPDATE a                                                           " +
@@ -46,18 +47,13 @@ namespace WindowsFormsApp1
             // Code to save present 
             if (dbCommand.ExecuteNonQuery() <= 0)
             {
-                MessageBox.Show("Error occured while saving the selection.", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error occured while saving the selection.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
             }
             dbCommand.Dispose();
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            //Save Seating Arrangement
         }
 
         private void attendanceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,13 +68,6 @@ namespace WindowsFormsApp1
             frmTeacherGradebook gb = new frmTeacherGradebook();
             gb.Show();
             this.Hide();
-        }
-
-        private void backToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMenuTeacher menu = new frmMenuTeacher();
-            menu.Show();
         }
 
         private void frmTeacherSeatingChart_Load(object sender, EventArgs e)
@@ -108,11 +97,29 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void cbxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Displays all students related to the course selected 
+            ComboBox cb = (ComboBox)sender;
+
+            if(cb.SelectedValue != null)
+            {
+                string courseID = "0";
+
+                if (cb.SelectedValue.GetType() == typeof(DataRowView))
+                    courseID = ((DataRowView)cb.SelectedValue).Row["CourseID"].ToString();
+                else if (cb.SelectedValue.GetType() == typeof(string))
+                    courseID = cb.SelectedValue.ToString();
+
+                OnCourseChange(courseID);
+            }
+        }
+
         public void OnCourseChange(string courseID)
         {
-            lbxStudents.Items.Clear();
             // Displays all students related to the course selected 
             // Display Students In Current Teacher's Class
+            lbxStudents.Items.Clear();
             SqlCommand dbCommand = new SqlCommand("SELECT a.SeatNumber, s.FirstName, s.LastName " +
                 "FROM group3fa212330.Students AS s " +
                 "JOIN group3fa212330.Attendance AS a " +
@@ -141,22 +148,24 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void cbxCourse_SelectedIndexChanged(object sender, EventArgs e)
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Displays all students related to the course selected 
-            ComboBox cb = (ComboBox)sender;
+            frmTeacherHelp help = new frmTeacherHelp();
+            help.Show();
+        }
 
-            if(cb.SelectedValue != null)
-            {
-                string courseID = "0";
+        private void attendanceToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmTeacherAttendance att = new frmTeacherAttendance();
+            att.Show();
+            this.Hide();
+        }
 
-                if (cb.SelectedValue.GetType() == typeof(DataRowView))
-                    courseID = ((DataRowView)cb.SelectedValue).Row["CourseID"].ToString();
-                else if (cb.SelectedValue.GetType() == typeof(string))
-                    courseID = cb.SelectedValue.ToString();
-
-                OnCourseChange(courseID);
-            }
+        private void gradebookToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmTeacherGradebook gb = new frmTeacherGradebook();
+            gb.Show();
+            this.Hide();
         }
     }
 }

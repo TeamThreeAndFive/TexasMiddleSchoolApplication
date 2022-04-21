@@ -126,14 +126,6 @@ namespace WindowsFormsApp1
             }
         }
 
-
-        private void backToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Hide();
-            frmMenuTeacher menu = new frmMenuTeacher();
-            menu.Show();
-        }
-
         private void lbxStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbxAssignments.Items.Clear();
@@ -206,6 +198,12 @@ namespace WindowsFormsApp1
         private void lbxGrades_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTeacherHelp help = new frmTeacherHelp();
+            help.Show();
         }
     }
 }

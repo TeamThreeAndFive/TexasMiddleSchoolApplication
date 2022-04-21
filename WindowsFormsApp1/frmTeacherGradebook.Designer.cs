@@ -39,7 +39,6 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,7 +47,9 @@ namespace WindowsFormsApp1
             this.lblChangeGrade = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblAssignments = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblStudents = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -63,7 +64,7 @@ namespace WindowsFormsApp1
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(205, 81);
-            this.btnSubmit.TabIndex = 24;
+            this.btnSubmit.TabIndex = 3;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -75,7 +76,7 @@ namespace WindowsFormsApp1
             this.tbxChangeGrade.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.tbxChangeGrade.Name = "tbxChangeGrade";
             this.tbxChangeGrade.Size = new System.Drawing.Size(205, 56);
-            this.tbxChangeGrade.TabIndex = 22;
+            this.tbxChangeGrade.TabIndex = 2;
             // 
             // lbxStudents
             // 
@@ -86,7 +87,7 @@ namespace WindowsFormsApp1
             this.lbxStudents.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lbxStudents.Name = "lbxStudents";
             this.lbxStudents.Size = new System.Drawing.Size(490, 496);
-            this.lbxStudents.TabIndex = 16;
+            this.lbxStudents.TabIndex = 0;
             this.lbxStudents.SelectedIndexChanged += new System.EventHandler(this.lbxStudents_SelectedIndexChanged);
             // 
             // lbxAssignments
@@ -98,7 +99,7 @@ namespace WindowsFormsApp1
             this.lbxAssignments.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.lbxAssignments.Name = "lbxAssignments";
             this.lbxAssignments.Size = new System.Drawing.Size(493, 496);
-            this.lbxAssignments.TabIndex = 17;
+            this.lbxAssignments.TabIndex = 0;
             this.lbxAssignments.SelectedIndexChanged += new System.EventHandler(this.lbxAssignments_SelectedIndexChanged);
             // 
             // lblGradebook
@@ -109,7 +110,7 @@ namespace WindowsFormsApp1
             this.lblGradebook.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblGradebook.Name = "lblGradebook";
             this.lblGradebook.Size = new System.Drawing.Size(1269, 83);
-            this.lblGradebook.TabIndex = 21;
+            this.lblGradebook.TabIndex = 2;
             this.lblGradebook.Text = "Gradebook";
             this.lblGradebook.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -121,7 +122,7 @@ namespace WindowsFormsApp1
             this.btnBack.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(201, 89);
-            this.btnBack.TabIndex = 19;
+            this.btnBack.TabIndex = 1;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -131,28 +132,21 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(273, 58);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem,
-            this.backToolStripMenuItem});
+            this.closeToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 53);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(276, 58);
-            this.backToolStripMenuItem.Text = "Back";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click_1);
             // 
             // menuStrip
             // 
@@ -167,7 +161,7 @@ namespace WindowsFormsApp1
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
             this.menuStrip.Size = new System.Drawing.Size(1729, 57);
-            this.menuStrip.TabIndex = 18;
+            this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip1";
             // 
             // menuToolStripMenuItem
@@ -201,7 +195,7 @@ namespace WindowsFormsApp1
             this.tbxGrade.Name = "tbxGrade";
             this.tbxGrade.ReadOnly = true;
             this.tbxGrade.Size = new System.Drawing.Size(238, 56);
-            this.tbxGrade.TabIndex = 28;
+            this.tbxGrade.TabIndex = 0;
             // 
             // lblChangeGrade
             // 
@@ -212,7 +206,7 @@ namespace WindowsFormsApp1
             this.lblChangeGrade.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblChangeGrade.Name = "lblChangeGrade";
             this.lblChangeGrade.Size = new System.Drawing.Size(316, 49);
-            this.lblChangeGrade.TabIndex = 29;
+            this.lblChangeGrade.TabIndex = 1;
             this.lblChangeGrade.Text = "Change Grade:";
             // 
             // groupBox1
@@ -225,31 +219,53 @@ namespace WindowsFormsApp1
             this.groupBox1.Location = new System.Drawing.Point(1133, 280);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(564, 337);
-            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Assignment Grade:";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblAssignments);
             this.groupBox2.Controls.Add(this.lbxAssignments);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(564, 280);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(538, 614);
-            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Assignments List:";
             // 
+            // lblAssignments
+            // 
+            this.lblAssignments.AutoSize = true;
+            this.lblAssignments.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAssignments.Location = new System.Drawing.Point(15, 51);
+            this.lblAssignments.Name = "lblAssignments";
+            this.lblAssignments.Size = new System.Drawing.Size(402, 41);
+            this.lblAssignments.TabIndex = 3;
+            this.lblAssignments.Text = "ID # | Assignment Name";
+            // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblStudents);
             this.groupBox3.Controls.Add(this.lbxStudents);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(12, 280);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(546, 614);
-            this.groupBox3.TabIndex = 32;
+            this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Students List:";
+            // 
+            // lblStudents
+            // 
+            this.lblStudents.AutoSize = true;
+            this.lblStudents.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStudents.Location = new System.Drawing.Point(20, 51);
+            this.lblStudents.Name = "lblStudents";
+            this.lblStudents.Size = new System.Drawing.Size(389, 41);
+            this.lblStudents.TabIndex = 2;
+            this.lblStudents.Text = "Last Name, First Name";
             // 
             // frmTeacherGradebook
             // 
@@ -278,7 +294,9 @@ namespace WindowsFormsApp1
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,7 +314,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem attendanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seatingChartToolStripMenuItem;
@@ -305,5 +322,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblStudents;
+        private System.Windows.Forms.Label lblAssignments;
     }
 }
