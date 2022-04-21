@@ -136,7 +136,7 @@ namespace WindowsFormsApp1
 
               
                 // if, it was ADMIN, show all data to admin
-                cmd = new SqlCommand("SELECT * FROM group3fa212330.Courses ORDER BY CourseID", ProgOps.dbConnection);
+                cmd = new SqlCommand("SELECT * FROM group3fa212330.Courses ORDER BY CAST(CourseID AS INT)", ProgOps.dbConnection);
  
                
                 SqlDataAdapter coursesAdapter = new SqlDataAdapter();

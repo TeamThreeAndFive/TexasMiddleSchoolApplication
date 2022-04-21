@@ -83,13 +83,13 @@ namespace WindowsFormsApp1
                 }
 
                 // If room number is not occupied, insert new row
-                cmd.Parameters.AddWithValue("@courseID", tbxCourseID.Text);
+                cmd.Parameters.AddWithValue("@courseID", Int32.Parse(tbxCourseID.Text));
                 cmd.Parameters.AddWithValue("@name", tbxName.Text);
                 cmd.Parameters.AddWithValue("@startDate", startTimePicker.Text);
                 cmd.Parameters.AddWithValue("@endDate", endTimePicker.Text);
                 cmd.Parameters.AddWithValue("@meetingDays", tbxMeetingDays.Text);
                 cmd.Parameters.AddWithValue("@meetingTime", tbxMeetingTime.Text);
-                cmd.Parameters.AddWithValue("@room", tbxRoom.Text);
+                cmd.Parameters.AddWithValue("@room", Int32.Parse(tbxRoom.Text));
 
                 // check if any row affected
 
@@ -179,9 +179,12 @@ namespace WindowsFormsApp1
                 tbxMeetingTime.Text = frmInfoCourses.courseList[_id].meetingTime;
                 startTimePicker.Value = DateTime.Parse(frmInfoCourses.courseList[_id].startDate);
                 endTimePicker.Value = DateTime.Parse(frmInfoCourses.courseList[_id].endDate);
+
+                //btnAssgnTeacher.Visible = true;
             }
             else
             {
+                //btnAssgnTeacher.Visible = false;
                 tbxCourseID.ReadOnly = false;
                 lblEditCourse.Text = "Add New Course";
             }
