@@ -188,5 +188,11 @@ namespace WindowsFormsApp1
             selectedIndex = -1;
             ShowAcademicOfficers();
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmHelp("AcademicInfo");
+            frm.ShowDialog();
+        }
     }
 }

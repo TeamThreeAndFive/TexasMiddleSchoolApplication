@@ -47,7 +47,10 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblEditCourse = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxCourseInformation.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxCourseInformation
@@ -68,9 +71,9 @@ namespace WindowsFormsApp1
             this.gbxCourseInformation.Controls.Add(this.lblCourseDate);
             this.gbxCourseInformation.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxCourseInformation.Location = new System.Drawing.Point(41, 100);
-            this.gbxCourseInformation.Margin = new System.Windows.Forms.Padding(1);
+            this.gbxCourseInformation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.gbxCourseInformation.Name = "gbxCourseInformation";
-            this.gbxCourseInformation.Padding = new System.Windows.Forms.Padding(1);
+            this.gbxCourseInformation.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.gbxCourseInformation.Size = new System.Drawing.Size(574, 357);
             this.gbxCourseInformation.TabIndex = 0;
             this.gbxCourseInformation.TabStop = false;
@@ -80,7 +83,7 @@ namespace WindowsFormsApp1
             // 
             this.tbxMeetingDays.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxMeetingDays.Location = new System.Drawing.Point(236, 245);
-            this.tbxMeetingDays.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxMeetingDays.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.tbxMeetingDays.Name = "tbxMeetingDays";
             this.tbxMeetingDays.Size = new System.Drawing.Size(279, 29);
             this.tbxMeetingDays.TabIndex = 5;
@@ -102,7 +105,7 @@ namespace WindowsFormsApp1
             this.endTimePicker.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.endTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.endTimePicker.Location = new System.Drawing.Point(236, 209);
-            this.endTimePicker.Margin = new System.Windows.Forms.Padding(10);
+            this.endTimePicker.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.endTimePicker.Name = "endTimePicker";
             this.endTimePicker.Size = new System.Drawing.Size(278, 29);
             this.endTimePicker.TabIndex = 4;
@@ -123,7 +126,7 @@ namespace WindowsFormsApp1
             // 
             this.tbxMeetingTime.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxMeetingTime.Location = new System.Drawing.Point(236, 281);
-            this.tbxMeetingTime.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxMeetingTime.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.tbxMeetingTime.Name = "tbxMeetingTime";
             this.tbxMeetingTime.Size = new System.Drawing.Size(279, 29);
             this.tbxMeetingTime.TabIndex = 6;
@@ -133,7 +136,7 @@ namespace WindowsFormsApp1
             this.startTimePicker.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.startTimePicker.Location = new System.Drawing.Point(236, 173);
-            this.startTimePicker.Margin = new System.Windows.Forms.Padding(10);
+            this.startTimePicker.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.startTimePicker.Name = "startTimePicker";
             this.startTimePicker.Size = new System.Drawing.Size(278, 29);
             this.startTimePicker.TabIndex = 3;
@@ -142,7 +145,7 @@ namespace WindowsFormsApp1
             // 
             this.tbxRoom.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxRoom.Location = new System.Drawing.Point(236, 137);
-            this.tbxRoom.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxRoom.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.tbxRoom.Name = "tbxRoom";
             this.tbxRoom.Size = new System.Drawing.Size(278, 29);
             this.tbxRoom.TabIndex = 2;
@@ -153,7 +156,7 @@ namespace WindowsFormsApp1
             this.tbxCourseID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.tbxCourseID.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxCourseID.Location = new System.Drawing.Point(236, 65);
-            this.tbxCourseID.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxCourseID.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.tbxCourseID.Name = "tbxCourseID";
             this.tbxCourseID.ReadOnly = true;
             this.tbxCourseID.Size = new System.Drawing.Size(279, 29);
@@ -163,7 +166,7 @@ namespace WindowsFormsApp1
             // 
             this.tbxName.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxName.Location = new System.Drawing.Point(236, 101);
-            this.tbxName.Margin = new System.Windows.Forms.Padding(10);
+            this.tbxName.Margin = new System.Windows.Forms.Padding(10, 10, 10, 10);
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(278, 29);
             this.tbxName.TabIndex = 1;
@@ -233,7 +236,7 @@ namespace WindowsFormsApp1
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.Location = new System.Drawing.Point(41, 479);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 40);
             this.btnBack.TabIndex = 2;
@@ -258,7 +261,7 @@ namespace WindowsFormsApp1
             this.btnSaveChanges.BackColor = System.Drawing.Color.White;
             this.btnSaveChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveChanges.Location = new System.Drawing.Point(452, 479);
-            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(1);
+            this.btnSaveChanges.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnSaveChanges.Name = "btnSaveChanges";
             this.btnSaveChanges.Size = new System.Drawing.Size(159, 40);
             this.btnSaveChanges.TabIndex = 1;
@@ -266,11 +269,29 @@ namespace WindowsFormsApp1
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(650, 33);
+            this.menuStrip1.TabIndex = 84;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(63, 29);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
             // frmEditCourses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(650, 529);
             this.ControlBox = false;
@@ -278,8 +299,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblEditCourse);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gbxCourseInformation);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(652, 505);
@@ -289,7 +312,10 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.frmEditCourses_Load);
             this.gbxCourseInformation.ResumeLayout(false);
             this.gbxCourseInformation.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -313,5 +339,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.TextBox tbxMeetingDays;
         private System.Windows.Forms.Label lblMeetingDays;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }

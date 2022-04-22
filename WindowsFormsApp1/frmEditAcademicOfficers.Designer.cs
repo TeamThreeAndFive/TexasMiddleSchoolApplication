@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblAcademicOfficerInfo = new System.Windows.Forms.Label();
             this.gbxAcademicOfficerInformation = new System.Windows.Forms.GroupBox();
+            this.tbxPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbxRole = new System.Windows.Forms.TextBox();
             this.lblRole = new System.Windows.Forms.Label();
@@ -46,8 +47,10 @@ namespace WindowsFormsApp1
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.btnSaveChanges = new System.Windows.Forms.Button();
-            this.tbxPassword = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxAcademicOfficerInformation.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBack
@@ -100,6 +103,15 @@ namespace WindowsFormsApp1
             this.gbxAcademicOfficerInformation.TabIndex = 0;
             this.gbxAcademicOfficerInformation.TabStop = false;
             this.gbxAcademicOfficerInformation.Text = "Academic Officer Information";
+            // 
+            // tbxPassword
+            // 
+            this.tbxPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxPassword.Location = new System.Drawing.Point(237, 230);
+            this.tbxPassword.Margin = new System.Windows.Forms.Padding(1);
+            this.tbxPassword.Name = "tbxPassword";
+            this.tbxPassword.Size = new System.Drawing.Size(222, 29);
+            this.tbxPassword.TabIndex = 88;
             // 
             // label1
             // 
@@ -172,6 +184,7 @@ namespace WindowsFormsApp1
             this.tbxEmployeeID.Location = new System.Drawing.Point(238, 40);
             this.tbxEmployeeID.Margin = new System.Windows.Forms.Padding(1);
             this.tbxEmployeeID.Name = "tbxEmployeeID";
+            this.tbxEmployeeID.ReadOnly = true;
             this.tbxEmployeeID.Size = new System.Drawing.Size(223, 29);
             this.tbxEmployeeID.TabIndex = 0;
             // 
@@ -257,26 +270,38 @@ namespace WindowsFormsApp1
             this.btnSaveChanges.UseVisualStyleBackColor = false;
             this.btnSaveChanges.Click += new System.EventHandler(this.btnSaveChanges_Click);
             // 
-            // tbxPassword
+            // menuStrip1
             // 
-            this.tbxPassword.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxPassword.Location = new System.Drawing.Point(237, 230);
-            this.tbxPassword.Margin = new System.Windows.Forms.Padding(1);
-            this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(222, 29);
-            this.tbxPassword.TabIndex = 88;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(636, 33);
+            this.menuStrip1.TabIndex = 54;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(63, 29);
+            this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // frmEditAcademicOfficers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
+            this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(636, 531);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxAcademicOfficerInformation);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblAcademicOfficerInfo);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MinimumSize = new System.Drawing.Size(652, 505);
             this.Name = "frmEditAcademicOfficers";
@@ -285,7 +310,10 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.frmEditAcademicOfficers_Load);
             this.gbxAcademicOfficerInformation.ResumeLayout(false);
             this.gbxAcademicOfficerInformation.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -309,5 +337,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbxPassword;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
