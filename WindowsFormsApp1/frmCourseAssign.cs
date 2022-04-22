@@ -357,5 +357,11 @@ namespace WindowsFormsApp1
             pictureRemoveButton.BackColor = Color.Tomato;
 
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmHelp("AssignCourse");
+            frm.ShowDialog();
+        }
     }
 }

@@ -94,6 +94,12 @@
     <Compile Include="frmForgotPassword.Designer.cs">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHelp.Designer.cs">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuAcademicOfficer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
     <EmbeddedResource Include="frmForgotPassword.resx">
       <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHelp.resx">
+      <DependentUpon>frmHelp.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuAcademicOfficer.resx">
       <DependentUpon>frmMenuAcademicOfficer.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,9 +257,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Recources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\wp3340065.png" />
   </ItemGroup>
@@ -260,6 +267,14 @@
     <None Include="Resources\LeftArrow.png" />
     <None Include="Resources\Plus.png" />
     <None Include="Resources\plusNew.png" />
+    <None Include="Recources\CourseInformationHelp.jpg" />
+    <None Include="Recources\AcademicOfficerInformation.jpg" />
+    <None Include="Recources\AddNewAcademicOfficer.jpg" />
+    <None Include="Recources\addNewCourse.jpg" />
+    <None Include="Recources\EditAcademicOfficer.jpg" />
+    <None Include="Recources\EditCourseInfo.jpg" />
+    <None Include="Recources\AssignCourses.jpg" />
+    <None Include="Recources\NewAssignCourseHelp.jpg" />
     <Content Include="Resources\showNoShow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

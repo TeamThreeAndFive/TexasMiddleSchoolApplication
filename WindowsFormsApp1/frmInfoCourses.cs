@@ -209,5 +209,11 @@ namespace WindowsFormsApp1
 
 
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var frm = new frmHelp("CourseInfo");
+            frm.ShowDialog();
+        }
     }
 }

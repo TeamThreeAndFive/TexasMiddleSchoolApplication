@@ -43,8 +43,10 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblAcademicOfficerInfo = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.gbxAcademicOfficers = new System.Windows.Forms.GroupBox();
             this.gbxMakeChanges.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.gbxAcademicOfficers.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxMakeChanges
@@ -53,7 +55,7 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.Controls.Add(this.btnDelete);
             this.gbxMakeChanges.Controls.Add(this.btnAdd);
             this.gbxMakeChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxMakeChanges.Location = new System.Drawing.Point(294, 130);
+            this.gbxMakeChanges.Location = new System.Drawing.Point(342, 130);
             this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1);
             this.gbxMakeChanges.Name = "gbxMakeChanges";
             this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1);
@@ -111,7 +113,7 @@ namespace WindowsFormsApp1
             this.lbxAcademicOfficers.Items.AddRange(new object[] {
             "Academic Officer Information ",
             "Will Appear Here"});
-            this.lbxAcademicOfficers.Location = new System.Drawing.Point(10, 130);
+            this.lbxAcademicOfficers.Location = new System.Drawing.Point(16, 41);
             this.lbxAcademicOfficers.Margin = new System.Windows.Forms.Padding(1);
             this.lbxAcademicOfficers.Name = "lbxAcademicOfficers";
             this.lbxAcademicOfficers.Size = new System.Drawing.Size(269, 364);
@@ -123,6 +125,7 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -134,7 +137,7 @@ namespace WindowsFormsApp1
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(636, 28);
+            this.menuStrip.Size = new System.Drawing.Size(709, 28);
             this.menuStrip.TabIndex = 47;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -163,7 +166,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(294, 454);
+            this.btnBack.Location = new System.Drawing.Point(345, 509);
             this.btnBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 40);
@@ -188,12 +191,23 @@ namespace WindowsFormsApp1
             // 
             this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(294, 254);
+            this.lblInfo.Location = new System.Drawing.Point(342, 265);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Padding = new System.Windows.Forms.Padding(5);
             this.lblInfo.Size = new System.Drawing.Size(323, 159);
             this.lblInfo.TabIndex = 54;
             this.lblInfo.Text = resources.GetString("lblInfo.Text");
+            // 
+            // gbxAcademicOfficers
+            // 
+            this.gbxAcademicOfficers.Controls.Add(this.lbxAcademicOfficers);
+            this.gbxAcademicOfficers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.gbxAcademicOfficers.Location = new System.Drawing.Point(13, 130);
+            this.gbxAcademicOfficers.Name = "gbxAcademicOfficers";
+            this.gbxAcademicOfficers.Size = new System.Drawing.Size(309, 419);
+            this.gbxAcademicOfficers.TabIndex = 55;
+            this.gbxAcademicOfficers.TabStop = false;
+            this.gbxAcademicOfficers.Text = "Academic Officers";
             // 
             // frmInfoAcademicOfficers
             // 
@@ -201,14 +215,16 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(636, 517);
+            this.ClientSize = new System.Drawing.Size(709, 566);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.gbxMakeChanges);
-            this.Controls.Add(this.lbxAcademicOfficers);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblAcademicOfficerInfo);
+            this.Controls.Add(this.gbxAcademicOfficers);
             this.Margin = new System.Windows.Forms.Padding(1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(652, 505);
             this.Name = "frmInfoAcademicOfficers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -217,6 +233,7 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.gbxAcademicOfficers.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +253,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblAcademicOfficerInfo;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.GroupBox gbxAcademicOfficers;
     }
 }

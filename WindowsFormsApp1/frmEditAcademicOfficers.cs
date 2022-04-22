@@ -179,5 +179,25 @@ namespace WindowsFormsApp1
                 lblAcademicOfficerInfo.Text = "Add New Academic Officer";
             }
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            selectedIndex = frmInfoAcademicOfficers.selectedIndex;
+
+            // check if user has selected anything
+            if (frmInfoAcademicOfficers.selectedIndex != -1)
+            {
+                var frm = new frmHelp("EditAcademic");
+                frm.ShowDialog();
+            }
+            else
+            {
+                var frm = new frmHelp("NewAcademic");
+                frm.ShowDialog();
+
+            }
+
+
+        }
     }
 }

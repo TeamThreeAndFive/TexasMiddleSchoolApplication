@@ -42,8 +42,10 @@ namespace WindowsFormsApp1
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCourseInfo = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.gbxCourseList = new System.Windows.Forms.GroupBox();
             this.gbxMakeChanges.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.gbxCourseList.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxMakeChanges
@@ -52,7 +54,7 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.Controls.Add(this.btnDelete);
             this.gbxMakeChanges.Controls.Add(this.btnAdd);
             this.gbxMakeChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxMakeChanges.Location = new System.Drawing.Point(327, 135);
+            this.gbxMakeChanges.Location = new System.Drawing.Point(352, 121);
             this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1);
             this.gbxMakeChanges.Name = "gbxMakeChanges";
             this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1);
@@ -109,7 +111,7 @@ namespace WindowsFormsApp1
             this.lbxCourses.ItemHeight = 24;
             this.lbxCourses.Items.AddRange(new object[] {
             "Courses will apear here.."});
-            this.lbxCourses.Location = new System.Drawing.Point(27, 135);
+            this.lbxCourses.Location = new System.Drawing.Point(18, 39);
             this.lbxCourses.Margin = new System.Windows.Forms.Padding(1);
             this.lbxCourses.Name = "lbxCourses";
             this.lbxCourses.Size = new System.Drawing.Size(269, 364);
@@ -122,6 +124,7 @@ namespace WindowsFormsApp1
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(63, 26);
             this.helpToolStripMenuItem.Text = "Help";
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // menuStrip
             // 
@@ -133,7 +136,7 @@ namespace WindowsFormsApp1
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(674, 28);
+            this.menuStrip.Size = new System.Drawing.Size(696, 28);
             this.menuStrip.TabIndex = 47;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -155,7 +158,7 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(327, 459);
+            this.btnBack.Location = new System.Drawing.Point(352, 503);
             this.btnBack.Margin = new System.Windows.Forms.Padding(1);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(86, 40);
@@ -168,7 +171,7 @@ namespace WindowsFormsApp1
             // 
             this.lblCourseInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblCourseInfo.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCourseInfo.Location = new System.Drawing.Point(45, 56);
+            this.lblCourseInfo.Location = new System.Drawing.Point(56, 56);
             this.lblCourseInfo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblCourseInfo.Name = "lblCourseInfo";
             this.lblCourseInfo.Size = new System.Drawing.Size(584, 37);
@@ -180,12 +183,23 @@ namespace WindowsFormsApp1
             // 
             this.lblInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfo.Location = new System.Drawing.Point(324, 263);
+            this.lblInfo.Location = new System.Drawing.Point(352, 249);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Padding = new System.Windows.Forms.Padding(5);
-            this.lblInfo.Size = new System.Drawing.Size(323, 140);
+            this.lblInfo.Size = new System.Drawing.Size(320, 140);
             this.lblInfo.TabIndex = 53;
             this.lblInfo.Text = resources.GetString("lblInfo.Text");
+            // 
+            // gbxCourseList
+            // 
+            this.gbxCourseList.Controls.Add(this.lbxCourses);
+            this.gbxCourseList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxCourseList.Location = new System.Drawing.Point(24, 121);
+            this.gbxCourseList.Name = "gbxCourseList";
+            this.gbxCourseList.Size = new System.Drawing.Size(306, 422);
+            this.gbxCourseList.TabIndex = 54;
+            this.gbxCourseList.TabStop = false;
+            this.gbxCourseList.Text = "Course List";
             // 
             // frmInfoCourses
             // 
@@ -193,13 +207,13 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(674, 520);
+            this.ClientSize = new System.Drawing.Size(696, 564);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.gbxMakeChanges);
-            this.Controls.Add(this.lbxCourses);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCourseInfo);
+            this.Controls.Add(this.gbxCourseList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
@@ -212,6 +226,7 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.ResumeLayout(false);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.gbxCourseList.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,5 +245,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCourseInfo;
         private System.Windows.Forms.Label lblInfo;
+        private System.Windows.Forms.GroupBox gbxCourseList;
     }
 }

@@ -189,5 +189,21 @@ namespace WindowsFormsApp1
                 lblEditCourse.Text = "Add New Course";
             }
         }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _id = frmInfoCourses.selectedIndex;
+
+            // check if user has selected anything
+            if (_id != -1)
+            {
+                var frm = new frmHelp("EditCourse");
+                frm.ShowDialog();
+            } else
+            {
+                var frm = new frmHelp("NewCourse");
+                frm.ShowDialog();
+            }
+        }
     }
 }
