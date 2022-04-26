@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using CrystalDecisions.CrystalReports.Engine;
 
 namespace WindowsFormsApp1
 {
@@ -207,6 +207,25 @@ namespace WindowsFormsApp1
         {
             frmTeacherHelp help = new frmTeacherHelp();
             help.Show();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            cprtStudentGrades studentGradeReport = new cprtStudentGrades();
+
+            // database logon
+            studentGradeReport.SetDatabaseLogon("group3fa212330", "3926456");
+
+            frmCrystalReportViiew frmViewer = new frmCrystalReportViiew();
+
+            // clearing view
+            frmViewer.crystalReportView.ReportSource = null;
+
+            frmViewer.crystalReportView.ReportSource = studentGradeReport;
+
+            frmViewer.Show();
+
         }
     }
 }
