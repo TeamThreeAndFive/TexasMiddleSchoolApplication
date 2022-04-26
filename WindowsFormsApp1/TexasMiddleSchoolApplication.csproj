@@ -33,6 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FluentEmail.Core, Version=3.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentEmail.Core.3.0.2\lib\netstandard2.0\FluentEmail.Core.dll</HintPath>
     </Reference>
@@ -44,6 +49,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,12 +64,24 @@
   <ItemGroup>
     <Compile Include="Authentication.cs" />
     <Compile Include="Course.cs" />
+    <Compile Include="cprtStudentGrades.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cprtStudentGrades.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="frmCourseAssign.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCourseAssign.Designer.cs">
       <DependentUpon>frmCourseAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCrystalReportViiew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCrystalReportViiew.Designer.cs">
+      <DependentUpon>frmCrystalReportViiew.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEditAcademicOfficers.cs">
       <SubType>Form</SubType>
@@ -181,8 +200,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <EmbeddedResource Include="cprtStudentGrades.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cprtStudentGrades.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCourseAssign.resx">
       <DependentUpon>frmCourseAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCrystalReportViiew.resx">
+      <DependentUpon>frmCrystalReportViiew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditAcademicOfficers.resx">
       <DependentUpon>frmEditAcademicOfficers.cs</DependentUpon>
@@ -257,7 +283,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wp3340065.png" />
   </ItemGroup>
