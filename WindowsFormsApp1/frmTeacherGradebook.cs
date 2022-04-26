@@ -208,10 +208,5 @@ namespace WindowsFormsApp1
             frmTeacherHelp help = new frmTeacherHelp();
             help.Show();
         }
-
-        private void printToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-    
-        }
     }
 }
