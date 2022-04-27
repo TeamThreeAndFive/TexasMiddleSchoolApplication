@@ -39,9 +39,9 @@ namespace WindowsFormsApp1
             this.btnCourses = new System.Windows.Forms.Button();
             this.lblAdminMenu = new System.Windows.Forms.Label();
             this.btnStudents = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnAssginCourses = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAcademicOfficers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeachers)).BeginInit();
@@ -155,21 +155,6 @@ namespace WindowsFormsApp1
             this.btnStudents.UseVisualStyleBackColor = false;
             this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(45, 394);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 38);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Log-out";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -194,6 +179,19 @@ namespace WindowsFormsApp1
             this.btnAssginCourses.UseVisualStyleBackColor = false;
             this.btnAssginCourses.Click += new System.EventHandler(this.btnAssginCourses_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(45, 396);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(127, 38);
+            this.btnBack.TabIndex = 59;
+            this.btnBack.Text = "Log-out";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmMenuAdministrator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,9 +200,9 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 481);
             this.ControlBox = false;
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAssginCourses);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.pbxAcademicOfficers);
             this.Controls.Add(this.btnAcademicOfficers);
             this.Controls.Add(this.pbxCourses);
@@ -242,8 +240,8 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Label lblAdminMenu;
         private System.Windows.Forms.Button btnStudents;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAssginCourses;
+        private System.Windows.Forms.Button btnBack;
     }
 }

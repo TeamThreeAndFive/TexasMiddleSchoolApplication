@@ -19,10 +19,7 @@ namespace WindowsFormsApp1
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to return to login?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                this.Close();
-            }
+
         }
 
         private void btnGradebook_Click(object sender, EventArgs e)
@@ -56,7 +53,10 @@ namespace WindowsFormsApp1
             this.Show();
         }
 
-        private void btnReturnToLogin_Click(object sender, EventArgs e)
+
+            
+
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to return to login?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
