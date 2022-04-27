@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             this.btnCourses = new System.Windows.Forms.Button();
             this.lblAcademicOfficerMenu = new System.Windows.Forms.Label();
             this.btnStudents = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCourses)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxTeachers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxStudents)).BeginInit();
@@ -125,20 +125,18 @@ namespace WindowsFormsApp1
             this.btnStudents.UseVisualStyleBackColor = false;
             this.btnStudents.Click += new System.EventHandler(this.btnStudents_Click);
             // 
-            // btnExit
+            // btnBack
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(28, 397);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(127, 38);
-            this.btnExit.TabIndex = 44;
-            this.btnExit.Text = "Log-out";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(28, 410);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(127, 38);
+            this.btnBack.TabIndex = 60;
+            this.btnBack.Text = "Log-out";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmMenuAcademicOfficer
             // 
@@ -148,7 +146,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(650, 481);
             this.ControlBox = false;
-            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.pbxCourses);
             this.Controls.Add(this.pbxTeachers);
             this.Controls.Add(this.pbxStudents);
@@ -179,6 +177,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnCourses;
         private System.Windows.Forms.Label lblAcademicOfficerMenu;
         private System.Windows.Forms.Button btnStudents;
-        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnBack;
     }
 }
