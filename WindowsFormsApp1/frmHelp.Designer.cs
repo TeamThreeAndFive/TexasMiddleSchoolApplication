@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHelp));
             this.pbxHelpImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbxHelpImage)).BeginInit();
             this.SuspendLayout();
@@ -37,24 +38,27 @@ namespace WindowsFormsApp1
             // 
             this.pbxHelpImage.BackColor = System.Drawing.Color.White;
             this.pbxHelpImage.Image = global::WindowsFormsApp1.Properties.Resources.NewAssignCourseHelp;
-            this.pbxHelpImage.Location = new System.Drawing.Point(12, 12);
+            this.pbxHelpImage.Location = new System.Drawing.Point(16, 15);
+            this.pbxHelpImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxHelpImage.Name = "pbxHelpImage";
-            this.pbxHelpImage.Size = new System.Drawing.Size(955, 702);
+            this.pbxHelpImage.Size = new System.Drawing.Size(1273, 864);
             this.pbxHelpImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbxHelpImage.TabIndex = 0;
             this.pbxHelpImage.TabStop = false;
             // 
             // frmHelp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(979, 726);
+            this.ClientSize = new System.Drawing.Size(1305, 894);
             this.Controls.Add(this.pbxHelpImage);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmHelp";

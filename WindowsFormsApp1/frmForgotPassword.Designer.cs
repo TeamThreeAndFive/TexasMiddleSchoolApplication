@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmForgotPassword));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblRecovery = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace WindowsFormsApp1
             this.lblTitle.Font = new System.Drawing.Font("Arial", 30F);
             this.lblTitle.Location = new System.Drawing.Point(287, 21);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(313, 45);
+            this.lblTitle.Size = new System.Drawing.Size(399, 57);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Forgot password";
             // 
@@ -68,7 +69,7 @@ namespace WindowsFormsApp1
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(37, 101);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(62, 22);
+            this.lblEmail.Size = new System.Drawing.Size(79, 27);
             this.lblEmail.TabIndex = 1;
             this.lblEmail.Text = "Email:";
             // 
@@ -77,7 +78,7 @@ namespace WindowsFormsApp1
             this.lblRecovery.AutoSize = true;
             this.lblRecovery.Location = new System.Drawing.Point(529, 112);
             this.lblRecovery.Name = "lblRecovery";
-            this.lblRecovery.Size = new System.Drawing.Size(144, 22);
+            this.lblRecovery.Size = new System.Drawing.Size(177, 27);
             this.lblRecovery.TabIndex = 2;
             this.lblRecovery.Text = "Recovery code:";
             // 
@@ -112,7 +113,7 @@ namespace WindowsFormsApp1
             this.tbxEmail.BackColor = System.Drawing.SystemColors.Info;
             this.tbxEmail.Location = new System.Drawing.Point(102, 98);
             this.tbxEmail.Name = "tbxEmail";
-            this.tbxEmail.Size = new System.Drawing.Size(274, 29);
+            this.tbxEmail.Size = new System.Drawing.Size(274, 35);
             this.tbxEmail.TabIndex = 0;
             // 
             // lblStep11Info
@@ -122,7 +123,7 @@ namespace WindowsFormsApp1
             this.lblStep11Info.ForeColor = System.Drawing.Color.Black;
             this.lblStep11Info.Location = new System.Drawing.Point(37, 51);
             this.lblStep11Info.Name = "lblStep11Info";
-            this.lblStep11Info.Size = new System.Drawing.Size(488, 19);
+            this.lblStep11Info.Size = new System.Drawing.Size(623, 24);
             this.lblStep11Info.TabIndex = 2;
             this.lblStep11Info.Text = "To get the recovery code, please enter your email then click send.";
             // 
@@ -146,7 +147,6 @@ namespace WindowsFormsApp1
             // 
             // pbxShowNoShowPassword
             // 
-            //this.pbxShowNoShowPassword.Image = global::WindowsFormsApp1.Properties.Resources.showNoShow;
             this.pbxShowNoShowPassword.Location = new System.Drawing.Point(443, 112);
             this.pbxShowNoShowPassword.Name = "pbxShowNoShowPassword";
             this.pbxShowNoShowPassword.Size = new System.Drawing.Size(34, 26);
@@ -172,7 +172,7 @@ namespace WindowsFormsApp1
             this.tbxRecoveryCode.BackColor = System.Drawing.SystemColors.Info;
             this.tbxRecoveryCode.Location = new System.Drawing.Point(679, 109);
             this.tbxRecoveryCode.Name = "tbxRecoveryCode";
-            this.tbxRecoveryCode.Size = new System.Drawing.Size(121, 29);
+            this.tbxRecoveryCode.Size = new System.Drawing.Size(121, 35);
             this.tbxRecoveryCode.TabIndex = 2;
             // 
             // tbxNewPassword
@@ -180,7 +180,7 @@ namespace WindowsFormsApp1
             this.tbxNewPassword.BackColor = System.Drawing.SystemColors.Info;
             this.tbxNewPassword.Location = new System.Drawing.Point(211, 112);
             this.tbxNewPassword.Name = "tbxNewPassword";
-            this.tbxNewPassword.Size = new System.Drawing.Size(217, 29);
+            this.tbxNewPassword.Size = new System.Drawing.Size(217, 35);
             this.tbxNewPassword.TabIndex = 0;
             // 
             // tbxConfirmPassword
@@ -188,7 +188,7 @@ namespace WindowsFormsApp1
             this.tbxConfirmPassword.BackColor = System.Drawing.SystemColors.Info;
             this.tbxConfirmPassword.Location = new System.Drawing.Point(211, 151);
             this.tbxConfirmPassword.Name = "tbxConfirmPassword";
-            this.tbxConfirmPassword.Size = new System.Drawing.Size(217, 29);
+            this.tbxConfirmPassword.Size = new System.Drawing.Size(217, 35);
             this.tbxConfirmPassword.TabIndex = 1;
             // 
             // lblConfirmPassword
@@ -196,7 +196,7 @@ namespace WindowsFormsApp1
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Location = new System.Drawing.Point(34, 153);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(169, 22);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(213, 27);
             this.lblConfirmPassword.TabIndex = 5;
             this.lblConfirmPassword.Text = "Confirm password:";
             // 
@@ -205,7 +205,7 @@ namespace WindowsFormsApp1
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Location = new System.Drawing.Point(34, 114);
             this.lblNewPassword.Name = "lblNewPassword";
-            this.lblNewPassword.Size = new System.Drawing.Size(139, 22);
+            this.lblNewPassword.Size = new System.Drawing.Size(176, 27);
             this.lblNewPassword.TabIndex = 4;
             this.lblNewPassword.Text = "New password:";
             // 
@@ -246,9 +246,8 @@ namespace WindowsFormsApp1
             // 
             // frmForgotPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.ClientSize = new System.Drawing.Size(886, 534);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBackToLogIn);
@@ -257,6 +256,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lblTitle);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
