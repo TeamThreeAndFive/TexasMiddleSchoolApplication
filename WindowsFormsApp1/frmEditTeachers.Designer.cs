@@ -244,6 +244,7 @@ namespace WindowsFormsApp1
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(848, 574);
+            this.ControlBox = false;
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.gbxTeacherInformation);
             this.Controls.Add(this.btnBack);

@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(869, 35);
+            this.menuStrip.Size = new System.Drawing.Size(885, 35);
             this.menuStrip.TabIndex = 36;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -193,7 +193,7 @@ namespace WindowsFormsApp1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(869, 682);
+            this.ClientSize = new System.Drawing.Size(885, 727);
             this.ControlBox = false;
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.gbxMakeChanges);
@@ -201,6 +201,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.lbxTeachers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

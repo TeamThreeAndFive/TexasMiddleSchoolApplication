@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(155, 34);
             this.closeToolStripMenuItem.Text = "Print";
             // 
             // fileToolStripMenuItem
@@ -201,6 +201,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lbxStudents);
             this.Controls.Add(this.gbxMakeChanges);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
