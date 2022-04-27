@@ -303,6 +303,7 @@
     <None Include="Recources\EditCourseInfo.jpg" />
     <None Include="Recources\AssignCourses.jpg" />
     <None Include="Recources\NewAssignCourseHelp.jpg" />
+    <None Include="Recources\courseAssign .jpg" />
     <Content Include="Resources\showNoShow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
