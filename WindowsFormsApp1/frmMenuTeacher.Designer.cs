@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             this.btnSeating = new System.Windows.Forms.Button();
             this.btnGradebook = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
-            this.btnReturnToLogin = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAttendance)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSeating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxGrades)).BeginInit();
@@ -125,19 +125,18 @@ namespace WindowsFormsApp1
             this.btnAttendance.UseVisualStyleBackColor = false;
             this.btnAttendance.Click += new System.EventHandler(this.btnAttendance_Click);
             // 
-            // btnReturnToLogin
+            // btnBack
             // 
-            this.btnReturnToLogin.BackColor = System.Drawing.Color.Red;
-            this.btnReturnToLogin.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReturnToLogin.ForeColor = System.Drawing.Color.White;
-            this.btnReturnToLogin.Location = new System.Drawing.Point(14, 397);
-            this.btnReturnToLogin.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.btnReturnToLogin.Name = "btnReturnToLogin";
-            this.btnReturnToLogin.Size = new System.Drawing.Size(107, 39);
-            this.btnReturnToLogin.TabIndex = 4;
-            this.btnReturnToLogin.Text = "Logout";
-            this.btnReturnToLogin.UseVisualStyleBackColor = false;
-            this.btnReturnToLogin.Click += new System.EventHandler(this.btnReturnToLogin_Click);
+            this.btnBack.BackColor = System.Drawing.Color.Red;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(68, 403);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(127, 38);
+            this.btnBack.TabIndex = 61;
+            this.btnBack.Text = "Log-out";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // frmMenuTeacher
             // 
@@ -147,7 +146,7 @@ namespace WindowsFormsApp1
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 476);
             this.ControlBox = false;
-            this.Controls.Add(this.btnReturnToLogin);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTeacherMenu);
             this.Controls.Add(this.pbxAttendance);
             this.Controls.Add(this.pbxSeating);
@@ -156,7 +155,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.btnGradebook);
             this.Controls.Add(this.btnAttendance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(646, 459);
@@ -179,6 +178,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button btnSeating;
         private System.Windows.Forms.Button btnGradebook;
         private System.Windows.Forms.Button btnAttendance;
-        private System.Windows.Forms.Button btnReturnToLogin;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -40,7 +40,6 @@ namespace WindowsFormsApp1
             this.lbxAssignedCourses = new System.Windows.Forms.ListBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxSelectCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAddButton)).BeginInit();
@@ -172,19 +171,12 @@ namespace WindowsFormsApp1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1132, 29);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 25);
-            this.fileToolStripMenuItem.Text = "File";
             // 
             // helpToolStripMenuItem
             // 
@@ -241,7 +233,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureRemoveButton;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
     }
 }
