@@ -70,6 +70,12 @@
       <DependentUpon>cprtStudentGrades.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="crptMidtermReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crptMidTermReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="frmCourseAssign.cs">
       <SubType>Form</SubType>
@@ -209,6 +215,10 @@
     <EmbeddedResource Include="cprtStudentGrades.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>cprtStudentGrades.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crptMidTermReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crptMidTermReport.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCourseAssign.resx">
       <DependentUpon>frmCourseAssign.cs</DependentUpon>
