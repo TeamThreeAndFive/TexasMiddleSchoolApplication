@@ -43,49 +43,57 @@ namespace WindowsFormsApp1
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // CourseID is just displaying "CourseID" as its
-            // value instead of the actual ID number
-            String fullName = lbxStudents.SelectedItem.ToString();
-            string[] names = fullName.Split(' ');
-            string firstName = names[2];
-            string lastName = names[1].Replace(",", "");
-            string query = "UPDATE group3fa212330.Attendance SET Attendance = @Attendance " +
-                "FROM group3fa212330.Attendance AS a JOIN group3fa212330.Students AS s " +
-                "ON a.StudentID = s.StudentID WHERE LastName = @LastName AND FirstName = @FirstName; ";
-            SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection) ;
-            dbCommand.Parameters.AddWithValue("@LastName", lastName);
-            dbCommand.Parameters.AddWithValue("@FirstName", firstName);
 
-            //Save Button
-            if (rbPresent.Checked)
-            {               
-                // Code to save present 
-                dbCommand.Parameters.AddWithValue("@Attendance", "P");
+            try
+            {
+                // CourseID is just displaying "CourseID" as its
+                // value instead of the actual ID number
+                String fullName = lbxStudents.SelectedItem.ToString();
+                string[] names = fullName.Split(' ');
+                string firstName = names[2];
+                string lastName = names[1].Replace(",", "");
+                string query = "UPDATE group3fa212330.Attendance SET Attendance = @Attendance " +
+                    "FROM group3fa212330.Attendance AS a JOIN group3fa212330.Students AS s " +
+                    "ON a.StudentID = s.StudentID WHERE LastName = @LastName AND FirstName = @FirstName; ";
+                SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection) ;
+                dbCommand.Parameters.AddWithValue("@LastName", lastName);
+                dbCommand.Parameters.AddWithValue("@FirstName", firstName);
+
+                //Save Button
+                if (rbPresent.Checked)
+                {               
+                    // Code to save present 
+                    dbCommand.Parameters.AddWithValue("@Attendance", "P");
 
 
-            }
-            else if(rbLate.Checked)
-            {
-                // Late
-                dbCommand.Parameters.AddWithValue("@Attendance", "L");
-            }
-            else if(rbAbsent.Checked)
-            {
-                // Absent
-                dbCommand.Parameters.AddWithValue("@Attendance", "A");
-            }
-            //dbCommand.Parameters.AddWithValue("@CourseID", lbxStudents.SelectedItem.ToString());
-            if(dbCommand.ExecuteNonQuery() <= 0)
-            {
-                MessageBox.Show("Error occured while saving the selection.  ", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
-            }
+                }
+                else if(rbLate.Checked)
+                {
+                    // Late
+                    dbCommand.Parameters.AddWithValue("@Attendance", "L");
+                }
+                else if(rbAbsent.Checked)
+                {
+                    // Absent
+                    dbCommand.Parameters.AddWithValue("@Attendance", "A");
+                }
+                //dbCommand.Parameters.AddWithValue("@CourseID", lbxStudents.SelectedItem.ToString());
+                if(dbCommand.ExecuteNonQuery() <= 0)
+                {
+                    MessageBox.Show("Error occured while saving the selection.  ", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
+                }
             
-            dbCommand.Dispose();
-            //OnCourseChange(cbxCourse.ValueMember.ToString());
+                dbCommand.Dispose();
+                //OnCourseChange(cbxCourse.ValueMember.ToString());
+            } catch
+            {
+                MessageBox.Show("Please Select a Student and check an attendance check box to save the changes.", "Process Failed...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
         }
 
@@ -135,7 +143,6 @@ namespace WindowsFormsApp1
             }
             catch
             {
-
             }
         }
 
