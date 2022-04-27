@@ -26,45 +26,51 @@ namespace WindowsFormsApp1
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            // Submit Grade Changes Button
-            // Update Selected Assignment's Grade
-            string[] assignment = lbxAssignments.SelectedItem.ToString().Split(' ');
-            string assignmentID = assignment[0];
-            string assignmentName = assignment[1];
-            String fullName = lbxStudents.SelectedItem.ToString();
-            string[] names = fullName.Split(' ');
-            string firstName = names[1];
-            string lastName = names[0].Replace(",", "");
-            string grade = tbxChangeGrade.Text.ToString();
-            string employeeID = frmMenuLogin.currentUser.getEmployeeID();
-            string query = "UPDATE group3fa212330.Grades  " +
-                "SET Grade = @Grade FROM group3fa212330.Grades as g " +
-                "JOIN group3fa212330.Students as s " +
-                "ON g.StudentID = s.StudentID " +
-                "WHERE g.AssignmentID = @AssignmentID " +
-                "AND s.FirstName = @FirstName AND s.LastName = @LastName";
-            SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
-            dbCommand.Parameters.AddWithValue("@AssignmentID", assignmentID);
-            dbCommand.Parameters.AddWithValue("@LastName", lastName);
-            dbCommand.Parameters.AddWithValue("@FirstName", firstName);
-
-            // Update query
-            dbCommand.Parameters.AddWithValue("@Grade", tbxChangeGrade.Text.ToString()); 
-
-            // Code to save present 
-            if (dbCommand.ExecuteNonQuery() <= 0)
+            try
             {
-                MessageBox.Show("Error occured while saving the selection.", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Submit Grade Changes Button
+                // Update Selected Assignment's Grade
+                string[] assignment = lbxAssignments.SelectedItem.ToString().Split(' ');
+                string assignmentID = assignment[0];
+                string assignmentName = assignment[1];
+                String fullName = lbxStudents.SelectedItem.ToString();
+                string[] names = fullName.Split(' ');
+                string firstName = names[1];
+                string lastName = names[0].Replace(",", "");
+                string grade = tbxChangeGrade.Text.ToString();
+                string employeeID = frmMenuLogin.currentUser.getEmployeeID();
+                string query = "UPDATE group3fa212330.Grades  " +
+                    "SET Grade = @Grade FROM group3fa212330.Grades as g " +
+                    "JOIN group3fa212330.Students as s " +
+                    "ON g.StudentID = s.StudentID " +
+                    "WHERE g.AssignmentID = @AssignmentID " +
+                    "AND s.FirstName = @FirstName AND s.LastName = @LastName";
+                SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                dbCommand.Parameters.AddWithValue("@AssignmentID", assignmentID);
+                dbCommand.Parameters.AddWithValue("@LastName", lastName);
+                dbCommand.Parameters.AddWithValue("@FirstName", firstName);
+
+                // Update query
+                dbCommand.Parameters.AddWithValue("@Grade", tbxChangeGrade.Text.ToString());
+
+                // Code to save present 
+                if (dbCommand.ExecuteNonQuery() <= 0)
+                {
+                    MessageBox.Show("Error occured while saving the selection.", "Saving to database...", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
+                }
+
+                dbCommand.Dispose();
+                tbxChangeGrade.Clear();
+                tbxGrade.Clear();
             }
-            else
+            catch
             {
-                MessageBox.Show("Selection Saved.", "Saving to database...", MessageBoxButtons.OK);
+                MessageBox.Show("Please Select a Student and an Assignment to Change Grade.","Process Failed...", MessageBoxButtons.OK);
             }
-
-            dbCommand.Dispose();
-            tbxChangeGrade.Clear();
-            tbxGrade.Clear();
-
         }
 
 

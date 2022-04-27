@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             string courseName = cbxCourse.Text.ToString();
             // Course ID not a number it's a string "CourseID"
-            string courseID = cbxCourse.ValueMember.ToString();
+            string courseID = cbxCourse.SelectedValue.ToString();
             //Shuffle Seating Arrangement 
             string query = "UPDATE a                                                           " +
             "SET SeatNumber = x.SeatNum                                         " +
