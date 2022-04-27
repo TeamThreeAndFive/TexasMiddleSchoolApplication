@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCourseAssign));
             this.gbxSelectCourses = new System.Windows.Forms.GroupBox();
             this.pbxAddButton = new System.Windows.Forms.PictureBox();
             this.lbxCourses = new System.Windows.Forms.ListBox();
@@ -80,10 +81,10 @@ namespace WindowsFormsApp1
             // lbxCourses
             // 
             this.lbxCourses.FormattingEnabled = true;
-            this.lbxCourses.ItemHeight = 24;
+            this.lbxCourses.ItemHeight = 29;
             this.lbxCourses.Location = new System.Drawing.Point(21, 56);
             this.lbxCourses.Name = "lbxCourses";
-            this.lbxCourses.Size = new System.Drawing.Size(283, 460);
+            this.lbxCourses.Size = new System.Drawing.Size(283, 439);
             this.lbxCourses.TabIndex = 0;
             // 
             // lblAdminMenu
@@ -113,10 +114,10 @@ namespace WindowsFormsApp1
             // lbxTeachers
             // 
             this.lbxTeachers.FormattingEnabled = true;
-            this.lbxTeachers.ItemHeight = 24;
+            this.lbxTeachers.ItemHeight = 29;
             this.lbxTeachers.Location = new System.Drawing.Point(21, 56);
             this.lbxTeachers.Name = "lbxTeachers";
-            this.lbxTeachers.Size = new System.Drawing.Size(283, 460);
+            this.lbxTeachers.Size = new System.Drawing.Size(283, 439);
             this.lbxTeachers.TabIndex = 0;
             this.lbxTeachers.SelectedIndexChanged += new System.EventHandler(this.lbxTeachers_SelectedIndexChanged);
             // 
@@ -151,10 +152,10 @@ namespace WindowsFormsApp1
             // lbxAssignedCourses
             // 
             this.lbxAssignedCourses.FormattingEnabled = true;
-            this.lbxAssignedCourses.ItemHeight = 24;
+            this.lbxAssignedCourses.ItemHeight = 29;
             this.lbxAssignedCourses.Location = new System.Drawing.Point(21, 56);
             this.lbxAssignedCourses.Name = "lbxAssignedCourses";
-            this.lbxAssignedCourses.Size = new System.Drawing.Size(283, 460);
+            this.lbxAssignedCourses.Size = new System.Drawing.Size(283, 439);
             this.lbxAssignedCourses.TabIndex = 0;
             // 
             // btnBack
@@ -170,24 +171,25 @@ namespace WindowsFormsApp1
             // menuStrip1
             // 
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1132, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1132, 36);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(54, 25);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(67, 32);
             this.helpToolStripMenuItem.Text = "Help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
             // frmCourseAssign
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.wp3340065;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -200,6 +202,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.MaximizeBox = false;
