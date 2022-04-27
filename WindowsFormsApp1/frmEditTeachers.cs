@@ -37,26 +37,14 @@ namespace WindowsFormsApp1
 
         private void addNewTeacher()
         {
-            query = "SELECT * FROM group3fa212330.Employees";
+            
+            //inserting student information
+            query = "INSERT INTO group3fa212330.Employees(FirstName, LastName, Email, Phone, Role, Password) " +
+                    "VALUES (@FirstName, @LastName, @Email, @Phone, @Role, @Password);";
             SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
             SqlDataAdapter daTeacher = new SqlDataAdapter();
             teachersTable = new DataTable();
-            daTeacher.SelectCommand = dbCommand;
-            daTeacher.Fill(teachersTable);
-
-            for (int i = 0; i < teachersTable.Rows.Count; i++)
-            {
-                if (tbxEmployeeID.Text == teachersTable.Rows[i]["EmployeeID"].ToString())
-                {
-                    MessageBox.Show("EmployeeID is taken. Please enter a different ID number.", "EmployeeID Unavailable", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-            }
-            //inserting student information
-            query = "INSERT INTO group3fa212330.Employees(EmployeeID, FirstName, LastName, Email, Phone, Role, Password) " +
-                    "VALUES (@EmployeeID, @FirstName, @LastName, @Email, @Phone, @Role, @Password);";
             dbCommand = new SqlCommand(query, ProgOps.dbConnection);
-            dbCommand.Parameters.AddWithValue("@EmployeeID", tbxEmployeeID.Text);
             dbCommand.Parameters.AddWithValue("@FirstName", tbxFirstName.Text);
             dbCommand.Parameters.AddWithValue("@LastName", tbxLastName.Text);
             dbCommand.Parameters.AddWithValue("@Email", tbxEmail.Text);
@@ -78,7 +66,12 @@ namespace WindowsFormsApp1
                 if (editID == 0) //if no Teacher is selected, create new Teacher
                 {
                     lblEditTeachers.Text = "New Teacher Information";
-                    tbxEmployeeID.ReadOnly = false;
+                    query = "SELECT * FROM group3fa212330.Employees";
+                    SqlCommand dbCommand = new SqlCommand(query, ProgOps.dbConnection);
+                    SqlDataAdapter daTeacher = new SqlDataAdapter();
+                    teachersTable = new DataTable();
+                    daTeacher.SelectCommand = dbCommand;
+                    daTeacher.Fill(teachersTable);
                 }
                 else
                 {
