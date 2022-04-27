@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
             }
             catch
             {
-                MessageBox.Show("Please Select a Student and an Assignment to Change Grade.","Process Failed...", MessageBoxButtons.OK, , MessageBoxIcon.Error);
+                MessageBox.Show("Please Select a Student and an Assignment to Change Grade.","Process Failed...", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -232,6 +232,23 @@ namespace WindowsFormsApp1
 
             frmViewer.Show();
 
+        }
+
+        private void printMidtermGradesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            crptMidTermReport studentMTGReport = new crptMidTermReport();
+
+            // database logon
+            studentMTGReport.SetDatabaseLogon("group3fa212330", "3926456");
+
+            frmCrystalReportViiew frmViewer = new frmCrystalReportViiew();
+
+            // clearing view
+            frmViewer.crystalReportView.ReportSource = null;
+
+            frmViewer.crystalReportView.ReportSource = studentMTGReport;
+
+            frmViewer.Show();
         }
     }
 }
