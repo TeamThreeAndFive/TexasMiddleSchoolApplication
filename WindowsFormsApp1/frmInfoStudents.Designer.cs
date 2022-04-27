@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInfoStudents));
             this.lblStudentInfo = new System.Windows.Forms.Label();
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,70 +50,72 @@ namespace WindowsFormsApp1
             // 
             this.lblStudentInfo.BackColor = System.Drawing.Color.Transparent;
             this.lblStudentInfo.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStudentInfo.Location = new System.Drawing.Point(71, 80);
-            this.lblStudentInfo.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblStudentInfo.Location = new System.Drawing.Point(124, 145);
+            this.lblStudentInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStudentInfo.Name = "lblStudentInfo";
-            this.lblStudentInfo.Size = new System.Drawing.Size(779, 46);
+            this.lblStudentInfo.Size = new System.Drawing.Size(1363, 83);
             this.lblStudentInfo.TabIndex = 56;
             this.lblStudentInfo.Text = "Student Information";
             this.lblStudentInfo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // closeToolStripMenuItem
+            // printToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(224, 34);
-            this.closeToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(403, 58);
+            this.printToolStripMenuItem.Text = "Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.closeToolStripMenuItem});
+            this.printToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(69, 33);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(117, 53);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // menuStrip
             // 
             this.menuStrip.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(36, 36);
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip.Size = new System.Drawing.Size(936, 35);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1638, 57);
             this.menuStrip.TabIndex = 53;
             this.menuStrip.Text = "menuStrip1";
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(79, 33);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(135, 53);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // lbxStudents
             // 
             this.lbxStudents.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbxStudents.FormattingEnabled = true;
-            this.lbxStudents.ItemHeight = 23;
+            this.lbxStudents.ItemHeight = 41;
             this.lbxStudents.Items.AddRange(new object[] {
             "Student Information ",
             "Will Appear Here"});
-            this.lbxStudents.Location = new System.Drawing.Point(21, 167);
-            this.lbxStudents.Margin = new System.Windows.Forms.Padding(1);
+            this.lbxStudents.Location = new System.Drawing.Point(37, 303);
+            this.lbxStudents.Margin = new System.Windows.Forms.Padding(2);
             this.lbxStudents.Name = "lbxStudents";
-            this.lbxStudents.Size = new System.Drawing.Size(357, 487);
+            this.lbxStudents.Size = new System.Drawing.Size(622, 865);
             this.lbxStudents.TabIndex = 57;
             // 
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.White;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(44, 69);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(1);
+            this.btnEdit.Location = new System.Drawing.Point(77, 125);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(115, 49);
+            this.btnEdit.Size = new System.Drawing.Size(201, 89);
             this.btnEdit.TabIndex = 41;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -123,10 +125,10 @@ namespace WindowsFormsApp1
             // 
             this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(333, 69);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(1);
+            this.btnDelete.Location = new System.Drawing.Point(583, 125);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(115, 49);
+            this.btnDelete.Size = new System.Drawing.Size(201, 89);
             this.btnDelete.TabIndex = 42;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -136,10 +138,10 @@ namespace WindowsFormsApp1
             // 
             this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(192, 69);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(1);
+            this.btnAdd.Location = new System.Drawing.Point(336, 125);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(115, 49);
+            this.btnAdd.Size = new System.Drawing.Size(201, 89);
             this.btnAdd.TabIndex = 43;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -152,11 +154,11 @@ namespace WindowsFormsApp1
             this.gbxMakeChanges.Controls.Add(this.btnDelete);
             this.gbxMakeChanges.Controls.Add(this.btnAdd);
             this.gbxMakeChanges.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxMakeChanges.Location = new System.Drawing.Point(408, 167);
-            this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(1);
+            this.gbxMakeChanges.Location = new System.Drawing.Point(714, 303);
+            this.gbxMakeChanges.Margin = new System.Windows.Forms.Padding(2);
             this.gbxMakeChanges.Name = "gbxMakeChanges";
-            this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(1);
-            this.gbxMakeChanges.Size = new System.Drawing.Size(491, 235);
+            this.gbxMakeChanges.Padding = new System.Windows.Forms.Padding(2);
+            this.gbxMakeChanges.Size = new System.Drawing.Size(859, 426);
             this.gbxMakeChanges.TabIndex = 58;
             this.gbxMakeChanges.TabStop = false;
             this.gbxMakeChanges.Text = "Make Changes";
@@ -165,10 +167,10 @@ namespace WindowsFormsApp1
             // 
             this.btnSave.BackColor = System.Drawing.Color.White;
             this.btnSave.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(192, 138);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(1);
+            this.btnSave.Location = new System.Drawing.Point(336, 250);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 49);
+            this.btnSave.Size = new System.Drawing.Size(201, 89);
             this.btnSave.TabIndex = 50;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -178,10 +180,10 @@ namespace WindowsFormsApp1
             // 
             this.btnBack.BackColor = System.Drawing.Color.White;
             this.btnBack.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(439, 605);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(1);
+            this.btnBack.Location = new System.Drawing.Point(768, 1097);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(115, 49);
+            this.btnBack.Size = new System.Drawing.Size(201, 89);
             this.btnBack.TabIndex = 51;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -189,11 +191,11 @@ namespace WindowsFormsApp1
             // 
             // frmInfoStudents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(936, 738);
+            this.ClientSize = new System.Drawing.Size(1638, 1338);
             this.ControlBox = false;
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblStudentInfo);
@@ -201,10 +203,10 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.lbxStudents);
             this.Controls.Add(this.gbxMakeChanges);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(938, 740);
+            this.MinimumSize = new System.Drawing.Size(1620, 1277);
             this.Name = "frmInfoStudents";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Texas Middle School - Students";
@@ -219,7 +221,7 @@ namespace WindowsFormsApp1
 
         #endregion
         private System.Windows.Forms.Label lblStudentInfo;
-        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;

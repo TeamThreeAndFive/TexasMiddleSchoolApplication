@@ -187,5 +187,22 @@ namespace WindowsFormsApp1
         {
             this.Close();
         }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StudentInfoReport StudentInfoReport = new StudentInfoReport();
+
+            // database logon
+            StudentInfoReport.SetDatabaseLogon("group3fa212330", "3926456");
+
+            frmCrystalReportViiew frmViewer = new frmCrystalReportViiew();
+
+            // clearing view
+            frmViewer.crystalReportView.ReportSource = null;
+
+            frmViewer.crystalReportView.ReportSource = StudentInfoReport;
+
+            frmViewer.Show();
+        }
     }
 }
