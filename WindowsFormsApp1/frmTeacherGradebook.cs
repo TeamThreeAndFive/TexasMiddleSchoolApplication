@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
             }
             catch
             {
-                MessageBox.Show("Please Select a Student and an Assignment to Change Grade.","Process Failed...", MessageBoxButtons.OK);
+                MessageBox.Show("Please Select a Student and an Assignment to Change Grade.","Process Failed...", MessageBoxButtons.OK, , MessageBoxIcon.Error);
             }
         }
 
